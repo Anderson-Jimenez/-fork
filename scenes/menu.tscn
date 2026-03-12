@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://ck0f474u7id33"]
+
+[ext_resource type="Script" uid="uid://blr8vekbp0vjb" path="res://scripts/menu.gd" id="1_vjb58"]
+[ext_resource type="Texture2D" uid="uid://kgtibhic4ogh" path="res://images/balatro.jpeg" id="1_yqeox"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yqeox"]
+font_size = 60
+font_color = Color(0.58383155, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yqeox"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjb58"]
+bg_color = Color(3.2247603e-06, 0.72463894, 0.22641802, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_con2f"]
+bg_color = Color(0.798921, 0.62377065, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mhnvy"]
+bg_color = Color(0.8480407, 0, 0.22024578, 1)
+
+[node name="Control" type="Control" unique_id=550548801]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vjb58")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=730125917]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_yqeox")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="." unique_id=1620581620]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.51600003
+anchor_top = 0.26200002
+anchor_right = 0.51600003
+anchor_bottom = 0.26200002
+offset_left = -231.432
+offset_top = -41.776016
+offset_right = 231.568
+offset_bottom = 41.223984
+grow_horizontal = 2
+grow_vertical = 2
+text = "FORK: :(){ :|:& };:"
+label_settings = SubResource("LabelSettings_yqeox")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1793855753]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.521
+anchor_top = 0.61600006
+anchor_right = 0.521
+anchor_bottom = 0.61600006
+offset_left = -252.19202
+offset_top = -22.16803
+offset_right = 255.80798
+offset_bottom = 30.83197
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Settings" type="Button" parent="HBoxContainer" unique_id=965060673]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_yqeox")
+text = "Opciones"
+
+[node name="Start" type="Button" parent="HBoxContainer" unique_id=205049549]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_vjb58")
+text = "Jugar"
+
+[node name="Stats" type="Button" parent="HBoxContainer" unique_id=2024615879]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_con2f")
+text = "Estadisticas"
+
+[node name="Quit" type="Button" parent="HBoxContainer" unique_id=270279086]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_mhnvy")
+text = "Salir"
+
+[connection signal="pressed" from="HBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="HBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="HBoxContainer/Stats" to="." method="_on_stats_pressed"]
+[connection signal="pressed" from="HBoxContainer/Quit" to="." method="_on_quit_pressed"]
