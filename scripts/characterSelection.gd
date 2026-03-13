@@ -11,7 +11,7 @@ var nameC
 var hp
 var slots
 var inv
-
+var selectedCharacter = {}
 var characters = {
 	char1={"NAME":"Anderson","HP":"100","SLOTS":"3","INV":"8"},
 	char2={"NAME":"Pep","HP":"200","SLOTS":"2","INV":"6"},
@@ -26,6 +26,14 @@ func _ready() -> void:
 
 
 func setParameters(characterName, characterHp, characterSlots, characterInv):
+	selectedCharacter = {
+		"NAME": characterName,
+		"HP": characterHp,
+		"SLOTS": characterSlots,
+		"INV": characterInv
+	}
+	
+	
 	nameC=characterName
 	CharName.text=nameC
 	
@@ -45,6 +53,7 @@ func _process(delta: float) -> void:
 	
 	
 func _on_start_game_pressed() -> void:
+	GameManager.setCharacter(selectedCharacter)
 	get_tree().change_scene_to_file("res://scenes/playScreen.tscn")
 	
 func _on_texture_button_char_1_pressed() -> void:
