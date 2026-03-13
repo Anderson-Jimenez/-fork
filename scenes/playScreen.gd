@@ -9,10 +9,10 @@ extends Control
 
 	
 func showStats(name,hp,slots,inv) -> void:
-	CharName.text = str(name)
-	CharHp.text = str(hp)
-	CharSlots.text = str(slots)
-	CharInv.text = str(inv)
+	CharName.text = name
+	CharHp.text = hp
+	CharSlots.text = slots
+	CharInv.text = inv
 
 
 
