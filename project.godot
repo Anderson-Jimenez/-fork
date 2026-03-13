@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name=":FORK"
+run/main_scene="uid://ck0f474u7id33"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+CharacterStats="*uid://buw8qruadg71y"
 
 [physics]
 
