@@ -44,13 +44,13 @@ anchor_left = 0.51600003
 anchor_top = 0.26200002
 anchor_right = 0.51600003
 anchor_bottom = 0.26200002
-offset_left = -231.432
-offset_top = -41.776016
-offset_right = 231.568
-offset_bottom = 41.223984
+offset_left = -95.43201
+offset_top = -42.776016
+offset_right = 82.56799
+offset_bottom = 40.223984
 grow_horizontal = 2
 grow_vertical = 2
-text = "FORK: :(){ :|:& };:"
+text = ":FORK"
 label_settings = SubResource("LabelSettings_yqeox")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1793855753]
