@@ -13,13 +13,13 @@ func showStats(name,hp,slots,inv) -> void:
 	CharInv.text = inv
 
 
-
-
 func _ready() -> void:
 	var characterConditions = FuncionsCondicions.obtainRandomFunction()
 	print(characterConditions)
 	print(FuncionsCondicions.call(characterConditions[1]))
 	
+	GameManager.routeGenerator()
+	print(GameManager.stages)
 	
 	var char = GameManager.selectedCharacter
 	showStats(char["NAME"],char["HP"],char["SLOTS"],char["INV"])

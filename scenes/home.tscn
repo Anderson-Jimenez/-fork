@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://p0d5bkkhgt0h"]
 
-[ext_resource type="Script" uid="uid://dl641qy08gqr6" path="res://scenes/playScreen.gd" id="1_5w2bl"]
+[ext_resource type="Script" uid="uid://dl641qy08gqr6" path="res://scripts/home.gd" id="1_5w2bl"]
 
 [node name="PlayScreen" type="Control" unique_id=748475291]
 custom_minimum_size = Vector2(1152, 648)
