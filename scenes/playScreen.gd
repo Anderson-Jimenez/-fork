@@ -5,19 +5,22 @@ extends Control
 @onready var CharSlots= $Label/VBoxContainer/HBoxContainer4/Slots
 @onready var CharInv= $Label/VBoxContainer/HBoxContainer3/Inventori
 
-
-
 	
 func showStats(name,hp,slots,inv) -> void:
-	CharName.text = str(name)
-	CharHp.text = str(hp)
-	CharSlots.text = str(slots)
-	CharInv.text = str(inv)
+	CharName.text = name
+	CharHp.text = hp
+	CharSlots.text = slots
+	CharInv.text = inv
 
 
 
 
 func _ready() -> void:
+	var characterConditions = FuncionsCondicions.obtainRandomFunction()
+	print(characterConditions)
+	print(FuncionsCondicions.call(characterConditions[1]))
+	
+	
 	var char = GameManager.selectedCharacter
 	showStats(char["NAME"],char["HP"],char["SLOTS"],char["INV"])
 	
