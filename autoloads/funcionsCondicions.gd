@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 func obtainRandomFunction():
 	var characterCondicions=[]
 	for i in range(4):
-		var rand = randi_range(1,8)
+		var rand = randi_range(1,4)
 		var nomObj="obj"+str(rand)
 		characterCondicions.append(nomObj)
 	
@@ -29,15 +29,3 @@ func obj3():
 
 func obj4():
 	return "obj4"
-
-func obj5():
-	return "obj5"
-
-func obj6():
-	return "obj6"
-
-func obj7():
-	return "obj7"
-
-func obj8():
-	return "obj8"

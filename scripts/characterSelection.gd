@@ -54,7 +54,7 @@ func _process(delta: float) -> void:
 	
 func _on_start_game_pressed() -> void:
 	GameManager.setCharacter(selectedCharacter)
-	get_tree().change_scene_to_file("res://scenes/playScreen.tscn")
+	get_tree().change_scene_to_file("res://scenes/home.tscn")
 	
 func _on_texture_button_char_1_pressed() -> void:
 	setParameters(characters["char1"]["NAME"],characters["char1"]["HP"],characters["char1"]["SLOTS"],characters["char1"]["INV"])

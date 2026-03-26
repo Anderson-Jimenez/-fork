@@ -5,7 +5,7 @@ var selectedCharacter = {}
 
 var currentStage=0
 var stages={}
-var stageTypes=['battle','shop','randomEvent']
+var stageTypes=['battle','randomEvent']
 
 var functionsInInventory = {}
 
@@ -18,4 +18,5 @@ func routeGenerator():
 		stages[i]=rand
 	
 	stages[0]='home'
+	stages[5]='shop'
 	stages[10]='boss'
