@@ -24,3 +24,7 @@ func _ready() -> void:
 	var char = GameManager.selectedCharacter
 	showStats(char["NAME"],char["HP"],char["SLOTS"],char["INV"])
 	
+
+
+func _on_button_up_next_stage() -> void:
+	GameManager.nextStage()

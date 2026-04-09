@@ -1,0 +1,113 @@
+[gd_scene format=3 uid="uid://csepcn0qbxaq1"]
+
+[ext_resource type="Script" uid="uid://dbunqywheim8a" path="res://scripts/random_event.gd" id="1_osrvf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1rm8n"]
+bg_color = Color(4.813075e-07, 0.6844356, 0.70187896, 1)
+
+[node name="RandomEvent" type="Control" unique_id=204702936]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_osrvf")
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1788854505]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.004333329, 0.13, 1)
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=2084276907]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.003
+anchor_right = 0.096
+anchor_bottom = 0.045
+offset_top = 0.055999994
+offset_right = 0.40799713
+offset_bottom = -0.16000175
+text = "Current Stage:"
+
+[node name="Stage" type="RichTextLabel" parent="ColorRect" unique_id=1061992253]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.098090276
+anchor_top = 0.0030864198
+anchor_right = 0.19645834
+anchor_bottom = 0.045024697
+offset_right = -0.3199997
+offset_bottom = -0.1760025
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="ColorRect" unique_id=1759386730]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = -50.0
+offset_right = 75.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_1rm8n")
+text = "Next"
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect" unique_id=553373743]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021701388
+anchor_top = 0.047839507
+anchor_right = 0.36052084
+anchor_bottom = 0.22403704
+offset_right = -0.3199997
+offset_bottom = -0.1760025
+color = Color(0, 0.4333334, 1, 0.3529412)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect3" type="ColorRect" parent="ColorRect" unique_id=130366196]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3828125
+anchor_top = 0.047839507
+anchor_right = 0.96902776
+anchor_bottom = 0.22403704
+offset_right = -0.3199997
+offset_bottom = -0.1760025
+color = Color(0.14999998, 1, 0, 0.1882353)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect" unique_id=486830031]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021701388
+anchor_top = 0.53858024
+anchor_right = 0.36052084
+anchor_bottom = 0.90613586
+offset_right = -0.3199997
+offset_bottom = -0.1760025
+color = Color(0.5500002, 0, 1, 0.49803922)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1084786612]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3828125
+anchor_top = 0.2654321
+anchor_right = 0.96902776
+anchor_bottom = 0.90613586
+offset_right = -0.3199997
+offset_bottom = -0.1760025
+color = Color(1, 0.9333334, 0, 0.25490198)
+metadata/_edit_use_anchors_ = true
+
+[connection signal="button_up" from="ColorRect/Button" to="." method="_on_button_button_up"]
