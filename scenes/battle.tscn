@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://bhlllfddrfaj7"]
+
+[ext_resource type="Script" uid="uid://c7c1vvaurmc1a" path="res://scripts/battle.gd" id="1_dn72j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mgoel"]
+bg_color = Color(0.92446744, 0.4446274, 0, 1)
+
+[node name="Battle" type="Control" unique_id=416529015]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dn72j")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1570290577]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.35, 0.11666668, 0, 1)
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=1800575555]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.003
+anchor_right = 0.096
+anchor_bottom = 0.045
+offset_top = 0.055999994
+offset_right = 0.40799713
+offset_bottom = -0.16000175
+text = "Current Stage:"
+
+[node name="Stage" type="RichTextLabel" parent="ColorRect" unique_id=819636788]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.098090276
+anchor_top = 0.0030864198
+anchor_right = 0.19109029
+anchor_bottom = 0.045024697
+offset_right = -0.32000732
+offset_bottom = -0.1760025
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="ColorRect" unique_id=985109610]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = -50.0
+offset_right = 75.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_mgoel")
+text = "Next"
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect" unique_id=740927196]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.020833334
+anchor_top = 0.25
+anchor_right = 0.36052084
+anchor_bottom = 0.96632105
+offset_right = -0.3199997
+offset_bottom = -0.1760025
+color = Color(1, 0.48235294, 0, 0.23529412)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect" unique_id=1283931269]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021701388
+anchor_top = 0.047839507
+anchor_right = 0.36052084
+anchor_bottom = 0.22403704
+offset_right = -0.3199997
+offset_bottom = -0.1760025
+color = Color(0, 0.4333334, 1, 0.3529412)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect3" type="ColorRect" parent="ColorRect" unique_id=1260788371]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3828125
+anchor_top = 0.047839507
+anchor_right = 0.96902776
+anchor_bottom = 0.22403704
+offset_right = -0.3199997
+offset_bottom = -0.1760025
+color = Color(0.14999998, 1, 0, 0.1882353)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect4" type="ColorRect" parent="ColorRect" unique_id=2103252410]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6293403
+anchor_top = 0.24845679
+anchor_right = 0.96902776
+anchor_bottom = 0.96632105
+offset_right = -0.3199997
+offset_bottom = -0.1760025
+color = Color(1, 0, 0, 0.19215687)
+metadata/_edit_use_anchors_ = true
+
+[connection signal="button_up" from="ColorRect/Button" to="." method="_on_button_up_next_stage"]
