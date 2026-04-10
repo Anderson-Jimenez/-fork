@@ -1,22 +1,55 @@
 [gd_scene format=3 uid="uid://ck0f474u7id33"]
 
 [ext_resource type="Script" uid="uid://blr8vekbp0vjb" path="res://scripts/menu.gd" id="1_vjb58"]
-[ext_resource type="Texture2D" uid="uid://kgtibhic4ogh" path="res://images/balatro.jpeg" id="1_yqeox"]
+[ext_resource type="Texture2D" uid="uid://b3admlsnssgvu" path="res://images/mainScreen.png" id="2_vjb58"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_yqeox"]
-font_size = 60
-font_color = Color(0.58383155, 1, 1, 1)
+paragraph_spacing = 2.0
+font_size = 120
+font_color = Color(0.13333334, 0.827451, 0.93333334, 1)
+shadow_size = 0
+shadow_color = Color(0.5098712, 0.001033271, 0.6544658, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yqeox"]
+[sub_resource type="LabelSettings" id="LabelSettings_vjb58"]
+font_size = 120
+font_color = Color(0.13333334, 0.827451, 0.93333334, 0.3019608)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjb58"]
-bg_color = Color(3.2247603e-06, 0.72463894, 0.22641802, 1)
+[sub_resource type="LabelSettings" id="LabelSettings_con2f"]
+font_size = 120
+font_color = Color(0.7529412, 0.5176471, 0.9882353, 0.38039216)
+shadow_size = 0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_con2f"]
-bg_color = Color(0.798921, 0.62377065, 0, 1)
+bg_color = Color(0.38410568, 0.33003333, 0.8389701, 0.39800003)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7529412, 0.5176471, 0.9882353, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjb58"]
+bg_color = Color(0.025840001, 0.5684909, 0.69789743, 0.35500002)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.13333334, 0.827451, 0.93333334, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yqeox"]
+bg_color = Color(0.14901961, 0.3882353, 0.92156863, 0.4117647)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.14509805, 0.3882353, 0.92156863, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mhnvy"]
-bg_color = Color(0.8480407, 0, 0.22024578, 1)
+bg_color = Color(0.8494162, 0.050708726, 0, 0.39100003)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8509804, 0.050980393, 0, 1)
 
 [node name="Control" type="Control" unique_id=550548801]
 layout_mode = 3
@@ -34,68 +67,101 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_yqeox")
+texture = ExtResource("2_vjb58")
 expand_mode = 3
 
 [node name="Label" type="Label" parent="." unique_id=1620581620]
+z_index = 1
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.51600003
-anchor_top = 0.26200002
-anchor_right = 0.51600003
-anchor_bottom = 0.26200002
-offset_left = -95.43201
-offset_top = -42.776016
-offset_right = 82.56799
-offset_bottom = 40.223984
+anchor_left = 0.50600004
+anchor_top = 0.263
+anchor_right = 0.50600004
+anchor_bottom = 0.263
+offset_left = -171.91205
+offset_top = -82.42401
+offset_right = 172.08795
+offset_bottom = 82.57599
 grow_horizontal = 2
 grow_vertical = 2
 text = ":FORK"
 label_settings = SubResource("LabelSettings_yqeox")
+horizontal_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1793855753]
+[node name="Label3" type="Label" parent="." unique_id=701329016]
+layout_mode = 0
+offset_left = 391.0
+offset_top = 88.0
+offset_right = 735.0
+offset_bottom = 253.0
+text = ":FORK"
+label_settings = SubResource("LabelSettings_vjb58")
+
+[node name="Label2" type="Label" parent="." unique_id=843448471]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.521
-anchor_top = 0.61600006
-anchor_right = 0.521
-anchor_bottom = 0.61600006
-offset_left = -252.19202
-offset_top = -22.16803
-offset_right = 255.80798
-offset_bottom = 30.83197
-theme_override_constants/separation = 20
-alignment = 1
+anchor_bottom = 0.006
+offset_left = 427.0
+offset_top = 89.0
+offset_right = 771.0
+offset_bottom = 253.01001
+text = ":FORK"
+label_settings = SubResource("LabelSettings_con2f")
 
-[node name="Settings" type="Button" parent="HBoxContainer" unique_id=965060673]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_styles/normal = SubResource("StyleBoxFlat_yqeox")
-text = "Opciones"
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1530463801]
+layout_mode = 0
+offset_left = 333.0
+offset_top = 230.0
+offset_right = 876.0
+offset_bottom = 233.0
+color = Color(0.13335153, 0.827222, 0.9333369, 0.367)
 
-[node name="Start" type="Button" parent="HBoxContainer" unique_id=205049549]
-layout_mode = 2
+[node name="Stats" type="Button" parent="." unique_id=2024615879]
+layout_mode = 0
+offset_left = 445.0
+offset_top = 367.0
+offset_right = 755.0
+offset_bottom = 407.0
 size_flags_horizontal = 3
-theme_override_styles/normal = SubResource("StyleBoxFlat_vjb58")
-text = "Jugar"
-
-[node name="Stats" type="Button" parent="HBoxContainer" unique_id=2024615879]
-layout_mode = 2
-size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.84705883, 0.7058824, 0.99607843, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_con2f")
-text = "Estadisticas"
+text = "ESTADISTICAS"
 
-[node name="Quit" type="Button" parent="HBoxContainer" unique_id=270279086]
-layout_mode = 2
+[node name="Start" type="Button" parent="." unique_id=205049549]
+layout_mode = 0
+offset_left = 361.0
+offset_top = 302.0
+offset_right = 839.0
+offset_bottom = 350.0
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.13333334, 0.827451, 0.93333334, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_vjb58")
+text = "INICIAR SISTEMA"
+
+[node name="Settings" type="Button" parent="." unique_id=965060673]
+layout_mode = 0
+offset_left = 445.0
+offset_top = 423.0
+offset_right = 755.0
+offset_bottom = 459.0
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.06873588, 0.4275245, 0.837577, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_yqeox")
+text = "CONFIGURACION"
+
+[node name="Quit" type="Button" parent="." unique_id=270279086]
+layout_mode = 0
+offset_left = 445.0
+offset_top = 472.0
+offset_right = 755.0
+offset_bottom = 508.0
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.8509804, 0.050980393, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_mhnvy")
 text = "Salir"
 
-[node name="Button" type="Button" parent="HBoxContainer" unique_id=1759773814]
-layout_mode = 2
-text = "test"
-
-[connection signal="pressed" from="HBoxContainer/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="HBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="HBoxContainer/Stats" to="." method="_on_stats_pressed"]
-[connection signal="pressed" from="HBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Stats" to="." method="_on_stats_pressed"]
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
