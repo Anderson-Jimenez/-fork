@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://di2pa0rly4bph" path="res://scripts/characterSelection.gd" id="1_dd54q"]
 [ext_resource type="Texture2D" uid="uid://c78dnx50gl21x" path="res://images/test.png" id="1_q54je"]
+[ext_resource type="Texture2D" uid="uid://b3admlsnssgvu" path="res://images/mainScreen.png" id="2_o5bvq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dd54q"]
 bg_color = Color(1, 1, 1, 1)
@@ -29,14 +30,22 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_dd54q")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=35922614]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1189194354]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0.72650677, 0.59778005, 1)
+texture = ExtResource("2_o5bvq")
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect" unique_id=1979731407]
+layout_mode = 0
+offset_left = 195.0
+offset_top = 190.0
+offset_right = 1340.0
+offset_bottom = 836.0
+color = Color(0, 1, 1, 0.36862746)
 
 [node name="Panel" type="Panel" parent="." unique_id=1831947637]
 layout_mode = 1
@@ -45,7 +54,7 @@ anchor_left = 0.1
 anchor_top = 0.05
 anchor_right = 0.9
 anchor_bottom = 0.193
-offset_bottom = 7.335991
+offset_bottom = 7.3359604
 theme_override_styles/panel = SubResource("StyleBoxFlat_dd54q")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=2040632634]
