@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="RandomEventData" format=3 uid="uid://yn70wvo3fowp"]
+
+[ext_resource type="Script" uid="uid://copokv2ebi74j" path="res://scripts/randomEvent/ranodmEventData.gd" id="1_nxf5h"]
+
+[resource]
+script = ExtResource("1_nxf5h")
+name = "No passa res"
+context = "No "
+opcio1 = "Nothing"
+opcio1Value = "continuar"
+opcio2 = "Nothing"
+opcio2Value = "continuar"
+opcio3 = "Nothing"
+opcio3Value = "continuar"
+metadata/_custom_type_script = "uid://copokv2ebi74j"

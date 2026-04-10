@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://csepcn0qbxaq1"]
 
 [ext_resource type="Script" uid="uid://dbunqywheim8a" path="res://scripts/random_event.gd" id="1_osrvf"]
+[ext_resource type="Script" uid="uid://copokv2ebi74j" path="res://scripts/randomEvent/ranodmEventData.gd" id="2_iq6nv"]
+
+[sub_resource type="Resource" id="Resource_iq6nv"]
+script = ExtResource("2_iq6nv")
+metadata/_custom_type_script = "uid://copokv2ebi74j"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1rm8n"]
 bg_color = Color(4.813075e-07, 0.6844356, 0.70187896, 1)
@@ -13,6 +18,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_osrvf")
+info = SubResource("Resource_iq6nv")
 metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1788854505]
@@ -98,6 +104,73 @@ offset_bottom = -0.1760025
 color = Color(0.5500002, 0, 1, 0.49803922)
 metadata/_edit_use_anchors_ = true
 
+[node name="ColorRect" type="ColorRect" parent="ColorRect/ColorRect" unique_id=1705832417]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.03846154
+anchor_top = 0.10504202
+anchor_right = 0.96117955
+anchor_bottom = 0.3110336
+offset_right = 0.13998413
+offset_bottom = 0.973999
+color = Color(0.4499998, 0, 1, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Opcio1" type="Label" parent="ColorRect/ColorRect/ColorRect" unique_id=1410145409]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.008333334
+anchor_top = 0.26
+anchor_right = 0.98877776
+anchor_bottom = 0.72
+offset_right = 0.0399971
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect/ColorRect" unique_id=1942406158]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.03846154
+anchor_top = 0.39915967
+anchor_right = 0.96146154
+anchor_bottom = 0.6091596
+offset_right = 0.02999878
+offset_bottom = 0.019996643
+color = Color(0.4509804, 0, 1, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Opcio2" type="Label" parent="ColorRect/ColorRect/ColorRect2" unique_id=1999884482]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.011111111
+anchor_top = 0.26000017
+anchor_right = 0.98877776
+anchor_bottom = 0.72000015
+offset_right = 0.0399971
+offset_bottom = 1.335144e-05
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect3" type="ColorRect" parent="ColorRect/ColorRect" unique_id=136763524]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.03846154
+anchor_top = 0.6932773
+anchor_right = 0.96146154
+anchor_bottom = 0.90327734
+offset_right = 0.02999878
+offset_bottom = 0.019996643
+color = Color(0.4509804, 0, 1, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Opcio3" type="Label" parent="ColorRect/ColorRect/ColorRect3" unique_id=2140586811]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.016666668
+anchor_top = 0.28
+anchor_right = 0.9832222
+anchor_bottom = 0.74000007
+offset_right = 0.0399971
+metadata/_edit_use_anchors_ = true
+
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=1084786612]
 layout_mode = 1
 anchors_preset = -1
@@ -108,6 +181,28 @@ anchor_bottom = 0.90613586
 offset_right = -0.3199997
 offset_bottom = -0.1760025
 color = Color(1, 0.9333334, 0, 0.25490198)
+metadata/_edit_use_anchors_ = true
+
+[node name="Title" type="Label" parent="ColorRect2" unique_id=1970404930]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.017777778
+anchor_top = 0.028915662
+anchor_right = 0.46640742
+anchor_bottom = 0.083915666
+offset_right = 0.17499542
+offset_bottom = 0.17499924
+metadata/_edit_use_anchors_ = true
+
+[node name="Context" type="RichTextLabel" parent="ColorRect2" unique_id=1520687144]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.017777778
+anchor_top = 0.10843374
+anchor_right = 0.9730741
+anchor_bottom = 0.9658795
+offset_right = 0.17499542
+offset_bottom = 0.15999985
 metadata/_edit_use_anchors_ = true
 
 [connection signal="button_up" from="ColorRect/Button" to="." method="_on_button_button_up"]
