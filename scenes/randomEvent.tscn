@@ -1,14 +1,20 @@
-[gd_scene format=3 uid="uid://csepcn0qbxaq1"]
+[gd_scene format=3 uid="uid://b3rwcd7i5rqve"]
 
 [ext_resource type="Script" uid="uid://dbunqywheim8a" path="res://scripts/random_event.gd" id="1_osrvf"]
-[ext_resource type="Script" uid="uid://copokv2ebi74j" path="res://scripts/randomEvent/ranodmEventData.gd" id="2_iq6nv"]
+[ext_resource type="Script" uid="uid://copokv2ebi74j" path="res://scripts/ranodmEventData.gd" id="2_iq6nv"]
 
 [sub_resource type="Resource" id="Resource_iq6nv"]
 script = ExtResource("2_iq6nv")
 metadata/_custom_type_script = "uid://copokv2ebi74j"
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1rm8n"]
-bg_color = Color(4.813075e-07, 0.6844356, 0.70187896, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iq6nv"]
+bg_color = Color(0.4509804, 0, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0qfj4"]
+bg_color = Color(0.4509804, 0, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o6fx3"]
+bg_color = Color(0.4509804, 0, 1, 1)
 
 [node name="RandomEvent" type="Control" unique_id=204702936]
 layout_mode = 3
@@ -52,22 +58,6 @@ offset_right = -0.3199997
 offset_bottom = -0.1760025
 metadata/_edit_use_anchors_ = true
 
-[node name="Button" type="Button" parent="ColorRect" unique_id=1759386730]
-custom_minimum_size = Vector2(150, 50)
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -75.0
-offset_top = -50.0
-offset_right = 75.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_1rm8n")
-text = "Next"
-
 [node name="ColorRect2" type="ColorRect" parent="ColorRect" unique_id=553373743]
 layout_mode = 1
 anchors_preset = -1
@@ -92,7 +82,7 @@ offset_bottom = -0.1760025
 color = Color(0.14999998, 1, 0, 0.1882353)
 metadata/_edit_use_anchors_ = true
 
-[node name="ColorRect" type="ColorRect" parent="ColorRect" unique_id=486830031]
+[node name="Responses" type="ColorRect" parent="ColorRect" unique_id=486830031]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.021701388
@@ -104,71 +94,40 @@ offset_bottom = -0.1760025
 color = Color(0.5500002, 0, 1, 0.49803922)
 metadata/_edit_use_anchors_ = true
 
-[node name="ColorRect" type="ColorRect" parent="ColorRect/ColorRect" unique_id=1705832417]
+[node name="Opcio1" type="Button" parent="ColorRect/Responses" unique_id=1017544364]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.03846154
 anchor_top = 0.10504202
-anchor_right = 0.96117955
-anchor_bottom = 0.3110336
-offset_right = 0.13998413
-offset_bottom = 0.973999
-color = Color(0.4499998, 0, 1, 1)
+anchor_right = 0.96202564
+anchor_bottom = 0.31551263
+offset_right = -0.19000244
+offset_bottom = -0.09200287
+theme_override_styles/normal = SubResource("StyleBoxFlat_iq6nv")
 metadata/_edit_use_anchors_ = true
 
-[node name="Opcio1" type="Label" parent="ColorRect/ColorRect/ColorRect" unique_id=1410145409]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.008333334
-anchor_top = 0.26
-anchor_right = 0.98877776
-anchor_bottom = 0.72
-offset_right = 0.0399971
-metadata/_edit_use_anchors_ = true
-
-[node name="ColorRect2" type="ColorRect" parent="ColorRect/ColorRect" unique_id=1942406158]
+[node name="Opcio2" type="Button" parent="ColorRect/Responses" unique_id=48316356]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.03846154
 anchor_top = 0.39915967
-anchor_right = 0.96146154
-anchor_bottom = 0.6091596
-offset_right = 0.02999878
-offset_bottom = 0.019996643
-color = Color(0.4509804, 0, 1, 1)
+anchor_right = 0.96202564
+anchor_bottom = 0.6096302
+offset_right = -0.19000244
+offset_bottom = -0.09199524
+theme_override_styles/normal = SubResource("StyleBoxFlat_0qfj4")
 metadata/_edit_use_anchors_ = true
 
-[node name="Opcio2" type="Label" parent="ColorRect/ColorRect/ColorRect2" unique_id=1999884482]
+[node name="Opcio3" type="Button" parent="ColorRect/Responses" unique_id=191565464]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.011111111
-anchor_top = 0.26000017
-anchor_right = 0.98877776
-anchor_bottom = 0.72000015
-offset_right = 0.0399971
-offset_bottom = 1.335144e-05
-metadata/_edit_use_anchors_ = true
-
-[node name="ColorRect3" type="ColorRect" parent="ColorRect/ColorRect" unique_id=136763524]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.03846154
+anchor_left = 0.038461544
 anchor_top = 0.6932773
-anchor_right = 0.96146154
-anchor_bottom = 0.90327734
-offset_right = 0.02999878
-offset_bottom = 0.019996643
-color = Color(0.4509804, 0, 1, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="Opcio3" type="Label" parent="ColorRect/ColorRect/ColorRect3" unique_id=2140586811]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.016666668
-anchor_top = 0.28
-anchor_right = 0.9832222
-anchor_bottom = 0.74000007
-offset_right = 0.0399971
+anchor_right = 0.96202564
+anchor_bottom = 0.90374786
+offset_right = -0.19000053
+offset_bottom = -0.09200001
+theme_override_styles/normal = SubResource("StyleBoxFlat_o6fx3")
 metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=1084786612]
@@ -205,4 +164,6 @@ offset_right = 0.17499542
 offset_bottom = 0.15999985
 metadata/_edit_use_anchors_ = true
 
-[connection signal="button_up" from="ColorRect/Button" to="." method="_on_button_button_up"]
+[connection signal="button_up" from="ColorRect/Responses/Opcio1" to="." method="_on_opcio_1_button_up"]
+[connection signal="button_up" from="ColorRect/Responses/Opcio2" to="." method="_on_opcio_2_button_up"]
+[connection signal="button_up" from="ColorRect/Responses/Opcio3" to="." method="_on_opcio_3_button_up"]

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="RandomEventData" format=3 uid="uid://cj4mimc1fp7b6"]
+
+[ext_resource type="Script" uid="uid://copokv2ebi74j" path="res://scripts/ranodmEventData.gd" id="1_cwgcc"]
+
+[resource]
+script = ExtResource("1_cwgcc")
+name = "Proba"
+context = "Aixo es una proba, no se que tan llarg pot ser aixo aixi que vaig a ficar un Lorem Ipsum, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+opcio1 = "Una pena"
+opcio1Value = "continuar"
+opcio2 = "pero de moment"
+opcio2Value = "continuar"
+opcio3 = "sol passant al seguent"
+opcio3Value = "continuar"
+metadata/_custom_type_script = "uid://copokv2ebi74j"

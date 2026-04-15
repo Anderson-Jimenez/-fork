@@ -13,5 +13,8 @@ extends Resource
 @export var opcio3: String
 @export var opcio3Value: String
 
+#No crec que sigui lo millor, aqui van totes les funcions dels events
+
+#Funcions General
 func continuar():
-	GameManager.nextStage
+	GameManager.nextStage()
