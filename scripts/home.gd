@@ -4,13 +4,14 @@ extends Control
 @onready var CharHp= $Label/VBoxContainer/HBoxContainer5/HP
 @onready var CharSlots= $Label/VBoxContainer/HBoxContainer4/Slots
 @onready var CharInv= $Label/VBoxContainer/HBoxContainer3/Inventori
-
+@onready var CharSprite = $TextureRect
 	
-func showStats(name,hp,slots,inv) -> void:
+func showStats(name,hp,slots,inv,sprite) -> void:
 	CharName.text = name
 	CharHp.text = hp
 	CharSlots.text = slots
 	CharInv.text = inv
+	CharSprite.texture = sprite
 
 
 func _ready() -> void:
@@ -22,7 +23,7 @@ func _ready() -> void:
 	print(GameManager.stages)
 	
 	var char = GameManager.selectedCharacter
-	showStats(char["NAME"],char["HP"],char["SLOTS"],char["INV"])
+	showStats(char["NAME"],char["HP"],char["SLOTS"],char["INV"],char["SPRITE"])
 	
 
 

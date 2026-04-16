@@ -112,4 +112,11 @@ custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 fit_content = true
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1051009026]
+layout_mode = 0
+offset_left = 623.0
+offset_top = 218.0
+offset_right = 878.0
+offset_bottom = 340.0
+
 [connection signal="button_up" from="ColorRect/Button" to="." method="_on_button_up_next_stage"]
