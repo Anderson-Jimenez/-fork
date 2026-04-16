@@ -21,8 +21,7 @@ func _ready() -> void:
 	GameManager.routeGenerator()
 	print(GameManager.stages)
 	
-	var char = GameManager.selectedCharacter
-	showStats(char["NAME"],char["HP"],char["SLOTS"],char["INV"])
+	showStats(CharacterStats.nameChar,str(CharacterStats.hp),str(CharacterStats.slots),str(CharacterStats.inv))
 	
 
 

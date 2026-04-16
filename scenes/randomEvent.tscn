@@ -36,6 +36,20 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0.004333329, 0.13, 1)
 
+[node name="Character" type="ColorRect" parent="ColorRect" unique_id=1068112575]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.022111125
+anchor_top = 0.26508644
+anchor_right = 0.19511117
+anchor_bottom = 0.41651854
+offset_left = -0.47201538
+offset_top = 0.2239685
+offset_right = 0.2319336
+offset_bottom = 0.09597778
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
 [node name="Label" type="Label" parent="ColorRect" unique_id=2084276907]
 layout_mode = 1
 anchors_preset = -1
@@ -130,19 +144,19 @@ offset_bottom = -0.09200001
 theme_override_styles/normal = SubResource("StyleBoxFlat_o6fx3")
 metadata/_edit_use_anchors_ = true
 
-[node name="ColorRect2" type="ColorRect" parent="." unique_id=1084786612]
+[node name="ColorRect4" type="ColorRect" parent="ColorRect" unique_id=1084786612]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.3828125
 anchor_top = 0.2654321
 anchor_right = 0.96902776
 anchor_bottom = 0.90613586
-offset_right = -0.3199997
-offset_bottom = -0.1760025
+offset_right = -0.3199463
+offset_bottom = -0.17602539
 color = Color(1, 0.9333334, 0, 0.25490198)
 metadata/_edit_use_anchors_ = true
 
-[node name="Title" type="Label" parent="ColorRect2" unique_id=1970404930]
+[node name="Title" type="Label" parent="ColorRect/ColorRect4" unique_id=1970404930]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.017777778
@@ -153,7 +167,7 @@ offset_right = 0.17499542
 offset_bottom = 0.17499924
 metadata/_edit_use_anchors_ = true
 
-[node name="Context" type="RichTextLabel" parent="ColorRect2" unique_id=1520687144]
+[node name="Context" type="RichTextLabel" parent="ColorRect/ColorRect4" unique_id=1520687144]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.017777778
@@ -162,6 +176,57 @@ anchor_right = 0.9730741
 anchor_bottom = 0.9658795
 offset_right = 0.17499542
 offset_bottom = 0.15999985
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect" unique_id=1389490932]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.20500001
+anchor_top = 0.2651358
+anchor_right = 0.36008334
+anchor_bottom = 0.41674075
+offset_left = -0.16001892
+offset_top = 0.19200134
+offset_right = 0.18399048
+offset_bottom = -0.04800415
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Name" type="Label" parent="ColorRect/VBoxContainer" unique_id=1723422827]
+layout_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/VBoxContainer" unique_id=847955177]
+layout_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="HPlabel" type="Label" parent="ColorRect/VBoxContainer/HBoxContainer" unique_id=884962159]
+layout_mode = 2
+text = "HP:"
+metadata/_edit_use_anchors_ = true
+
+[node name="HP" type="Label" parent="ColorRect/VBoxContainer/HBoxContainer" unique_id=1421434541]
+layout_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="ColorRect/VBoxContainer/HBoxContainer" unique_id=2054328847]
+layout_mode = 2
+text = "/"
+
+[node name="maxHP" type="Label" parent="ColorRect/VBoxContainer/HBoxContainer" unique_id=1210731370]
+layout_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ColorRect/VBoxContainer" unique_id=372788856]
+layout_mode = 2
+
+[node name="MoneyLabel" type="Label" parent="ColorRect/VBoxContainer/HBoxContainer2" unique_id=598365550]
+layout_mode = 2
+text = "Money:"
+metadata/_edit_use_anchors_ = true
+
+[node name="Money" type="Label" parent="ColorRect/VBoxContainer/HBoxContainer2" unique_id=348106363]
+layout_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [connection signal="button_up" from="ColorRect/Responses/Opcio1" to="." method="_on_opcio_1_button_up"]

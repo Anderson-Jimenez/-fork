@@ -1,11 +1,15 @@
 extends Node
 
+var nameChar;
+var hp;
+var maxHp;
+var slots;
+var money=50
+var inv;
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func setCharacter(char):
+	nameChar=char["NAME"]
+	hp=int(char["HP"])
+	maxHp=int(char["HP"])
+	slots=int(char["SLOTS"])
+	inv=int(char["INV"])

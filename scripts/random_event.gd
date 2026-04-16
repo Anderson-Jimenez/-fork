@@ -6,8 +6,16 @@ extends Control
 @onready var Opcio2 = $ColorRect/Responses/Opcio2
 @onready var Opcio3 = $ColorRect/Responses/Opcio3
 
-@onready var Title = $ColorRect2/Title
-@onready var Context = $ColorRect2/Context
+@onready var HP = $ColorRect/VBoxContainer/HBoxContainer/HP
+@onready var MaxHP = $ColorRect/VBoxContainer/HBoxContainer/maxHP
+@onready var Money = $ColorRect/VBoxContainer/HBoxContainer2/Money
+@onready var NameChar = $ColorRect/VBoxContainer/Name
+
+@onready var Title = $ColorRect/ColorRect4/Title
+@onready var Context = $ColorRect/ColorRect4/Context
+
+
+@onready var hp
 
 var rng = RandomNumberGenerator.new()
 
@@ -34,6 +42,12 @@ func _ready() -> void:
 	Opcio3.text = info.opcio3
 	Title.text = info.name
 	Context.text = info.context
+	
+	#Carregar info del personatge
+	NameChar.text = CharacterStats.nameChar
+	HP.text = str(CharacterStats.hp)
+	MaxHP.text = str(CharacterStats.maxHp)
+	Money.text = str(CharacterStats.money)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

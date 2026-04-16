@@ -38,7 +38,7 @@ offset_right = -0.3199997
 offset_bottom = -0.1760025
 metadata/_edit_use_anchors_ = true
 
-[node name="ColorRect2" type="ColorRect" parent="ColorRect" unique_id=283393975]
+[node name="Variables" type="ColorRect" parent="ColorRect" unique_id=283393975]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.021701388
@@ -50,7 +50,7 @@ offset_bottom = -0.1760025
 color = Color(0, 0.4333334, 1, 0.3529412)
 metadata/_edit_use_anchors_ = true
 
-[node name="ColorRect3" type="ColorRect" parent="ColorRect" unique_id=1039728162]
+[node name="Objects" type="ColorRect" parent="ColorRect" unique_id=1039728162]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.3828125
@@ -62,7 +62,7 @@ offset_bottom = -0.1760025
 color = Color(0.14999998, 1, 0, 0.1882353)
 metadata/_edit_use_anchors_ = true
 
-[node name="ColorRect4" type="ColorRect" parent="ColorRect" unique_id=1759159823]
+[node name="Slot1" type="ColorRect" parent="ColorRect" unique_id=1759159823]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.023000002
@@ -74,6 +74,45 @@ offset_top = 0.22399902
 offset_right = -0.31201172
 offset_bottom = 0.09597778
 color = Color(0.9833336, 0, 1, 0.39215687)
+
+[node name="Slot2" type="ColorRect" parent="ColorRect" unique_id=1884797404]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.21400002
+anchor_top = 0.26200002
+anchor_right = 0.39534032
+anchor_bottom = 0.39800003
+offset_left = -0.52801514
+offset_top = 0.2239685
+offset_right = 0.56796265
+offset_bottom = 0.09597778
+color = Color(0.9843137, 0, 1, 0.39215687)
+
+[node name="Slot3" type="ColorRect" parent="ColorRect" unique_id=1838141618]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.596
+anchor_top = 0.26200002
+anchor_right = 0.7789237
+anchor_bottom = 0.39800003
+offset_left = 0.40795898
+offset_top = 0.2239685
+offset_right = -0.32000732
+offset_bottom = 0.09597778
+color = Color(0.9843137, 0, 1, 0.39215687)
+
+[node name="Slot4" type="ColorRect" parent="ColorRect" unique_id=408847460]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.786
+anchor_top = 0.26200002
+anchor_right = 0.96902776
+anchor_bottom = 0.39800003
+offset_left = 0.5279541
+offset_top = 0.2239685
+offset_right = -0.3199463
+offset_bottom = 0.09597778
+color = Color(0.9843137, 0, 1, 0.39215687)
 
 [node name="Button" type="Button" parent="ColorRect" unique_id=82640346]
 layout_mode = 1
@@ -90,33 +129,7 @@ grow_vertical = 0
 theme_override_styles/normal = SubResource("StyleBoxFlat_fg286")
 text = "Next"
 
-[node name="ColorRect6" type="ColorRect" parent="ColorRect" unique_id=1838141618]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.596
-anchor_top = 0.26200002
-anchor_right = 0.7789237
-anchor_bottom = 0.39800003
-offset_left = 0.40795898
-offset_top = 0.2239685
-offset_right = -0.32000732
-offset_bottom = 0.09597778
-color = Color(0.9843137, 0, 1, 0.39215687)
-
-[node name="ColorRect7" type="ColorRect" parent="ColorRect" unique_id=1884797404]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.21400002
-anchor_top = 0.26200002
-anchor_right = 0.39534032
-anchor_bottom = 0.39800003
-offset_left = -0.52801514
-offset_top = 0.2239685
-offset_right = 0.56796265
-offset_bottom = 0.09597778
-color = Color(0.9843137, 0, 1, 0.39215687)
-
-[node name="ColorRect5" type="ColorRect" parent="ColorRect" unique_id=1985071903]
+[node name="Character" type="ColorRect" parent="ColorRect" unique_id=1985071903]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.411
@@ -129,7 +142,7 @@ offset_right = 0.2319336
 offset_bottom = 0.09597778
 color = Color(0, 0, 0, 1)
 
-[node name="ColorRect9" type="ColorRect" parent="ColorRect" unique_id=59701641]
+[node name="SelectedCard" type="ColorRect" parent="ColorRect" unique_id=59701641]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.7248264
@@ -141,20 +154,7 @@ offset_bottom = -0.1760025
 color = Color(0.9843137, 0, 1, 0.39215687)
 metadata/_edit_use_anchors_ = true
 
-[node name="ColorRect8" type="ColorRect" parent="ColorRect" unique_id=408847460]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.786
-anchor_top = 0.26200002
-anchor_right = 0.96902776
-anchor_bottom = 0.39800003
-offset_left = 0.5279541
-offset_top = 0.2239685
-offset_right = -0.3199463
-offset_bottom = 0.09597778
-color = Color(0.9843137, 0, 1, 0.39215687)
-
-[node name="ColorRect" type="ColorRect" parent="ColorRect" unique_id=262736647]
+[node name="Inventory" type="ColorRect" parent="ColorRect" unique_id=262736647]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0234375
@@ -166,33 +166,7 @@ offset_bottom = -0.1760025
 color = Color(1, 0.7166667, 0, 0.29803923)
 metadata/_edit_use_anchors_ = true
 
-[node name="ColorRect11" type="ColorRect" parent="ColorRect" unique_id=2034037064]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.8871043
-anchor_top = 0.7392717
-anchor_right = 0.96910423
-anchor_bottom = 0.8012716
-offset_left = 0.055908203
-offset_top = -0.048034668
-offset_right = -0.40808105
-offset_bottom = -0.22399902
-color = Color(0.3, 0.3, 0.3, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="ColorRect10" type="ColorRect" parent="ColorRect" unique_id=358230569]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.8871528
-anchor_top = 0.8132716
-anchor_right = 0.96902776
-anchor_bottom = 0.8752716
-offset_right = -0.3199997
-offset_bottom = -0.1760025
-color = Color(0.3, 0.3, 0.3, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="ColorRect13" type="ColorRect" parent="ColorRect" unique_id=757506174]
+[node name="MoveToSlot1" type="ColorRect" parent="ColorRect" unique_id=757506174]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.88734937
@@ -206,7 +180,7 @@ offset_bottom = 0.30047607
 color = Color(0.3, 0.3, 0.3, 1)
 metadata/_edit_use_anchors_ = true
 
-[node name="ColorRect12" type="ColorRect" parent="ColorRect" unique_id=1277400110]
+[node name="MoveToSlot2" type="ColorRect" parent="ColorRect" unique_id=1277400110]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.8868681
@@ -217,5 +191,31 @@ offset_left = 0.3279419
 offset_top = 0.19198608
 offset_right = -0.1361084
 offset_bottom = 0.015930176
+color = Color(0.3, 0.3, 0.3, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="MoveToSlot3" type="ColorRect" parent="ColorRect" unique_id=2034037064]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8871043
+anchor_top = 0.7392717
+anchor_right = 0.96910423
+anchor_bottom = 0.8012716
+offset_left = 0.055908203
+offset_top = -0.048034668
+offset_right = -0.40808105
+offset_bottom = -0.22399902
+color = Color(0.3, 0.3, 0.3, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="MoveToSlot4" type="ColorRect" parent="ColorRect" unique_id=358230569]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8871528
+anchor_top = 0.8132716
+anchor_right = 0.96902776
+anchor_bottom = 0.8752716
+offset_right = -0.3199463
+offset_bottom = -0.17602539
 color = Color(0.3, 0.3, 0.3, 1)
 metadata/_edit_use_anchors_ = true
