@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b3rwcd7i5rqve"]
 
 [ext_resource type="Script" uid="uid://dbunqywheim8a" path="res://scripts/random_event.gd" id="1_osrvf"]
-[ext_resource type="Script" uid="uid://copokv2ebi74j" path="res://scripts/ranodmEventData.gd" id="2_iq6nv"]
+[ext_resource type="Script" uid="uid://copokv2ebi74j" path="res://scripts/resources/ranodmEventData.gd" id="2_iq6nv"]
 
 [sub_resource type="Resource" id="Resource_iq6nv"]
 script = ExtResource("2_iq6nv")

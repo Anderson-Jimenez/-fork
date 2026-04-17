@@ -21,21 +21,13 @@ var rng = RandomNumberGenerator.new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	#Agafo Carpeta amb random events
-	var dir = DirAccess.open("res://scripts/randomEvent")
-	
-	#Agafo tots els arxius
-	if dir:
-		dir = dir.get_files()
-	else:
-		print("Error: No s'ha pogut obrir la carpeta.")
-	
-	#Els compto i esculleixo un aleatori
-	var event = rng.randi_range(1, dir.size())
-	print(event)
+	#Agafo arxiu d'event aleatori
+	var resourceFiles = DirAccess.get_files_at("res://resources/randomEvent")
+	var randomResource = resourceFiles[randi() % resourceFiles.size()]
 	
 	#Carrego el event escollit aleatoriament
-	info = load("res://scripts/randomEvent/event"+str(event)+".tres")
+	info = load("res://resources/randomEvent/"+randomResource)
+	
 	CurrentStage.text=str(GameManager.currentStage)
 	Opcio1.text = info.opcio1
 	Opcio2.text = info.opcio2

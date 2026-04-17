@@ -1,11 +1,13 @@
 [gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://clhbj6x4lvrmo"]
 
-[ext_resource type="Script" uid="uid://d1mmp7cbsynok" path="res://scripts/enemies/enemyData.gd" id="1_23tew"]
+[ext_resource type="Script" uid="uid://d1mmp7cbsynok" path="res://scripts/resources/enemyData.gd" id="1_23tew"]
 
 [resource]
 script = ExtResource("1_23tew")
 name = "Jorge"
 enemyType = "normal"
 hp = 100
+maxHp = 100
 passiveDmg = 1
+sprite = "res://images/malo.png"
 metadata/_custom_type_script = "uid://d1mmp7cbsynok"

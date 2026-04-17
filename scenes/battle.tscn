@@ -61,7 +61,7 @@ grow_vertical = 0
 theme_override_styles/normal = SubResource("StyleBoxFlat_mgoel")
 text = "Next"
 
-[node name="ColorRect" type="ColorRect" parent="ColorRect" unique_id=740927196]
+[node name="CharacterArea" type="ColorRect" parent="ColorRect" unique_id=740927196]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.020833334
@@ -73,7 +73,58 @@ offset_bottom = -0.1760025
 color = Color(1, 0.48235294, 0, 0.23529412)
 metadata/_edit_use_anchors_ = true
 
-[node name="ColorRect2" type="ColorRect" parent="ColorRect" unique_id=1283931269]
+[node name="characterSprite" type="TextureRect" parent="ColorRect/CharacterArea" unique_id=1767679493]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.04859335
+anchor_top = 0.24568966
+anchor_right = 0.43259335
+anchor_bottom = 0.43568966
+offset_right = -0.14399719
+offset_bottom = -0.16000366
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="characterName" type="Label" parent="ColorRect/CharacterArea" unique_id=1495439821]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.04859335
+anchor_top = 0.43534482
+anchor_right = 0.43259335
+anchor_bottom = 0.48534483
+offset_right = -0.14399719
+offset_bottom = -0.20000076
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/CharacterArea" unique_id=476922350]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.04859335
+anchor_top = 0.4847931
+anchor_right = 0.43192843
+anchor_bottom = 0.5709138
+offset_top = 0.055999756
+offset_right = 0.115982056
+offset_bottom = 0.09599304
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="ColorRect/CharacterArea/HBoxContainer" unique_id=1372191059]
+layout_mode = 2
+text = "HP:"
+
+[node name="hp" type="Label" parent="ColorRect/CharacterArea/HBoxContainer" unique_id=1099802650]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="ColorRect/CharacterArea/HBoxContainer" unique_id=101385259]
+layout_mode = 2
+text = "/"
+
+[node name="maxHp" type="Label" parent="ColorRect/CharacterArea/HBoxContainer" unique_id=989070191]
+layout_mode = 2
+
+[node name="Variables" type="ColorRect" parent="ColorRect" unique_id=1283931269]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.021701388
@@ -85,7 +136,7 @@ offset_bottom = -0.1760025
 color = Color(0, 0.4333334, 1, 0.3529412)
 metadata/_edit_use_anchors_ = true
 
-[node name="ColorRect3" type="ColorRect" parent="ColorRect" unique_id=1260788371]
+[node name="Items" type="ColorRect" parent="ColorRect" unique_id=1260788371]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.3828125
@@ -97,7 +148,7 @@ offset_bottom = -0.1760025
 color = Color(0.14999998, 1, 0, 0.1882353)
 metadata/_edit_use_anchors_ = true
 
-[node name="ColorRect4" type="ColorRect" parent="ColorRect" unique_id=2103252410]
+[node name="EnemyArea" type="ColorRect" parent="ColorRect" unique_id=2103252410]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.6293403
@@ -108,5 +159,57 @@ offset_right = -0.3199997
 offset_bottom = -0.1760025
 color = Color(1, 0, 0, 0.19215687)
 metadata/_edit_use_anchors_ = true
+
+[node name="enemySprite" type="TextureRect" parent="ColorRect/EnemyArea" unique_id=2006698831]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.50383633
+anchor_top = 0.2924731
+anchor_right = 0.88716626
+anchor_bottom = 0.48169893
+offset_right = 0.117996216
+offset_bottom = 0.0099983215
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="enemyName" type="Label" parent="ColorRect/EnemyArea" unique_id=2020232579]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.50383633
+anchor_top = 0.48602152
+anchor_right = 0.8874067
+anchor_bottom = 0.5353549
+offset_right = 0.023986816
+offset_bottom = 0.0599823
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/EnemyArea" unique_id=1584183319]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.50383633
+anchor_top = 0.54215056
+anchor_right = 0.8877341
+anchor_bottom = 0.62793547
+offset_top = -0.099975586
+offset_right = -0.104034424
+offset_bottom = 0.010040283
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="ColorRect/EnemyArea/HBoxContainer" unique_id=1436431133]
+layout_mode = 2
+text = "HP:"
+metadata/_edit_use_anchors_ = true
+
+[node name="enemyHp" type="Label" parent="ColorRect/EnemyArea/HBoxContainer" unique_id=54855317]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="ColorRect/EnemyArea/HBoxContainer" unique_id=1414834216]
+layout_mode = 2
+text = "/"
+
+[node name="enemyMaxHp" type="Label" parent="ColorRect/EnemyArea/HBoxContainer" unique_id=1893558731]
+layout_mode = 2
 
 [connection signal="button_up" from="ColorRect/Button" to="." method="_on_button_up_next_stage"]
