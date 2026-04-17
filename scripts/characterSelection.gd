@@ -12,41 +12,41 @@ var selectedCharacter = {}
 var characters = {
 	"char1": {
 		"NAME": "Anderson",
-		"HP": 100,
-		"SLOTS": 3,
-		"INV": 8,
+		"HP": "100",
+		"SLOTS": "3",
+		"INV": "8",
 		"SPRITE": "res://images/test.png"
 	},
 
 	"char2": {
 		"NAME": "Pep",
-		"HP": 200,
-		"SLOTS": 2,
-		"INV": 6,
-		"SPRITE": "res://images/test.png"
+		"HP": "200",
+		"SLOTS": "2",
+		"INV": "6",
+		"SPRITE": "res://images/template.png"
 	},
 
 	"char3": {
 		"NAME": "Luciano",
-		"HP": 50,
-		"SLOTS": 4,
-		"INV": 4,
+		"HP": "50",
+		"SLOTS": "4",
+		"INV": "4",
 		"SPRITE": "res://images/test.png"
 	},
 
 	"char4": {
 		"NAME": "Aptyp",
-		"HP": 10,
-		"SLOTS": 4,
-		"INV": 10,
-		"SPRITE": "res://images/test.png"
+		"HP": "10",
+		"SLOTS": "4",
+		"INV": "10",
+		"SPRITE": "res://images/template.png"
 	},
 
 	"char5": {
 		"NAME": "lepepeyt",
-		"HP": 150,
-		"SLOTS": 3,
-		"INV": 0,
+		"HP": "150",
+		"SLOTS": "3",
+		"INV": "0",
 		"SPRITE": "res://images/test.png"
 	}
 }
@@ -56,16 +56,16 @@ func show_character(id):
 	selectedCharacter = characters[id]
 
 	CharName.text = selectedCharacter["NAME"]
-	CharHp.text = str(selectedCharacter["HP"])
-	CharSlots.text = str(selectedCharacter["SLOTS"])
-	CharInv.text = str(selectedCharacter["INV"])
+	CharHp.text = selectedCharacter["HP"]
+	CharSlots.text = selectedCharacter["SLOTS"]
+	CharInv.text = selectedCharacter["INV"]
 
 	Portrait.texture = load(selectedCharacter["SPRITE"])
 
 
 func _on_start_game_pressed() -> void:
 	GameManager.setCharacter(selectedCharacter)
-	get_tree().change_scene_to_file("res://scenes/home.tscn")
+	get_tree().change_scene_to_file("res://scenes/inventory.tscn")
 
 
 func _on_texture_button_char_1_pressed() -> void:

@@ -11,7 +11,7 @@ func showStats(name,hp,slots,inv,sprite) -> void:
 	CharHp.text = hp
 	CharSlots.text = slots
 	CharInv.text = inv
-	CharSprite.texture = sprite
+	CharSprite.texture = load(sprite)
 
 
 func _ready() -> void:
