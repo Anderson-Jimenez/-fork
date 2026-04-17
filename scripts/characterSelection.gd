@@ -67,7 +67,7 @@ func _on_start_game_pressed() -> void:
 	CharacterStats.setCharacter(selectedCharacter)
 	
 	GameManager.setCharacter(selectedCharacter)
-	get_tree().change_scene_to_file("res://scenes/inventory.tscn")
+	get_tree().change_scene_to_file("res://scenes/inventary.tscn")
 
 
 func _on_texture_button_char_1_pressed() -> void:

@@ -12,6 +12,11 @@ extends Control
 @onready var MaxHp = $ColorRect/CharacterArea/HBoxContainer/maxHp
 @onready var CharacterName = $ColorRect/CharacterArea/characterName
 
+@onready var timer = $BattleTimer
+@onready var TimerLabel = $ColorRect/Time
+
+@onready var basicTime = $BasicAttackTimer
+@onready var BasicAttackProgress = $ColorRect/EnemyArea/BasicAttackProgress
 
 var enemy;
 
@@ -38,8 +43,16 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
-
+	var remainingTime = timer.time_left
+	TimerLabel.text = str(remainingTime)
+	
+	var basicAttackTime = basicTime.time_left
+	BasicAttackProgress.value = basicAttackTime
 
 func _on_button_up_next_stage() -> void:
 	GameManager.nextStage()
+
+
+func _on_basic_attack_timer_timeout() -> void:
+	CharacterStats.hp = CharacterStats.hp - enemy.passiveDmg
+	Hp.text = str(CharacterStats.hp)

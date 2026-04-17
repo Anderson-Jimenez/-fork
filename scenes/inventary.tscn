@@ -219,3 +219,5 @@ offset_right = -0.3199463
 offset_bottom = -0.17602539
 color = Color(0.3, 0.3, 0.3, 1)
 metadata/_edit_use_anchors_ = true
+
+[connection signal="button_up" from="ColorRect/Button" to="." method="_on_button_button_up"]
