@@ -6,12 +6,6 @@ extends Control
 @onready var CharInv= $Label/VBoxContainer/HBoxContainer3/Inventori
 @onready var CharSprite = $TextureRect
 	
-func showStats(name,hp,slots,inv,sprite) -> void:
-	CharName.text = name
-	CharHp.text = hp
-	CharSlots.text = slots
-	CharInv.text = inv
-	CharSprite.texture = load(sprite)
 
 
 func _ready() -> void:
@@ -22,9 +16,12 @@ func _ready() -> void:
 	GameManager.routeGenerator()
 	print(GameManager.stages)
 	
-	var char = GameManager.selectedCharacter
-	showStats(char["NAME"],char["HP"],char["SLOTS"],char["INV"],char["SPRITE"])
-	
+	#CharName.text = CharacterStats.nameChar
+	#CharHp.text = str(CharacterStats.hp)
+	#CharSlots.text = str(CharacterStats.slots)
+	#CharInv.text = str(CharacterStats.inv)
+	#CharSprite.texture = load(CharacterStats.sprite)
+
 
 
 func _on_button_up_next_stage() -> void:
