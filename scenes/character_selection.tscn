@@ -2,20 +2,17 @@
 
 [ext_resource type="Script" uid="uid://di2pa0rly4bph" path="res://scripts/characterSelection.gd" id="1_dd54q"]
 [ext_resource type="Texture2D" uid="uid://c78dnx50gl21x" path="res://images/test.png" id="1_q54je"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dd54q"]
-bg_color = Color(1, 1, 1, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
+[ext_resource type="Texture2D" uid="uid://b3admlsnssgvu" path="res://images/mainScreen.png" id="2_o5bvq"]
+[ext_resource type="Texture2D" uid="uid://cxikn1g5m6jta" path="res://images/template.png" id="4_l56u2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o5bvq"]
-bg_color = Color(1, 0.33478352, 0.34245682, 1)
+bg_color = Color(0, 0.6901961, 0.67058825, 0.9882353)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(1, 1, 1, 1)
+shadow_size = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l56u2"]
 bg_color = Color(1, 0.35492012, 0.12384782, 1)
@@ -29,103 +26,22 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_dd54q")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=35922614]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1189194354]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0.72650677, 0.59778005, 1)
+texture = ExtResource("2_o5bvq")
 
-[node name="Panel" type="Panel" parent="." unique_id=1831947637]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.1
-anchor_top = 0.05
-anchor_right = 0.9
-anchor_bottom = 0.193
-offset_bottom = 7.335991
-theme_override_styles/panel = SubResource("StyleBoxFlat_dd54q")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=2040632634]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 18
-
-[node name="MarginContainer" type="MarginContainer" parent="Panel/HBoxContainer" unique_id=766943859]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="TextureButtonChar1" type="TextureButton" parent="Panel/HBoxContainer/MarginContainer" unique_id=1471787927]
-custom_minimum_size = Vector2(150.41, 11.655)
-layout_mode = 2
-texture_normal = ExtResource("1_q54je")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="MarginContainer2" type="MarginContainer" parent="Panel/HBoxContainer" unique_id=1480902799]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="TextureButtonChar2" type="TextureButton" parent="Panel/HBoxContainer/MarginContainer2" unique_id=1487791200]
-custom_minimum_size = Vector2(150.41, 11.655)
-layout_mode = 2
-texture_normal = ExtResource("1_q54je")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="MarginContainer3" type="MarginContainer" parent="Panel/HBoxContainer" unique_id=186684866]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="TextureButtonChar3" type="TextureButton" parent="Panel/HBoxContainer/MarginContainer3" unique_id=1024505594]
-custom_minimum_size = Vector2(150.41, 11.655)
-layout_mode = 2
-texture_normal = ExtResource("1_q54je")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="MarginContainer4" type="MarginContainer" parent="Panel/HBoxContainer" unique_id=1996944269]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="TextureButtonChar4" type="TextureButton" parent="Panel/HBoxContainer/MarginContainer4" unique_id=1911188199]
-custom_minimum_size = Vector2(150.41, 11.655)
-layout_mode = 2
-texture_normal = ExtResource("1_q54je")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="MarginContainer5" type="MarginContainer" parent="Panel/HBoxContainer" unique_id=1038630856]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="TextureButtonChar5" type="TextureButton" parent="Panel/HBoxContainer/MarginContainer5" unique_id=1073299242]
-custom_minimum_size = Vector2(150.41, 11.655)
-layout_mode = 2
-texture_normal = ExtResource("1_q54je")
-ignore_texture_size = true
-stretch_mode = 0
+[node name="ColorRect" type="ColorRect" parent="TextureRect" unique_id=1979731407]
+layout_mode = 0
+offset_left = 195.0
+offset_top = 190.0
+offset_right = 1340.0
+offset_bottom = 836.0
+color = Color(0.8805861, 0.8761922, 0.87020653, 0.6666667)
 
 [node name="Panel2" type="Panel" parent="." unique_id=1900568336]
 custom_minimum_size = Vector2(922, 300)
@@ -158,6 +74,7 @@ alignment = 1
 
 [node name="CharPortrait" type="TextureRect" parent="Panel2/HBoxContainer2" unique_id=2061384403]
 layout_mode = 2
+expand_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel2/HBoxContainer2" unique_id=1441180933]
 layout_mode = 2
@@ -215,21 +132,105 @@ fit_content = true
 custom_minimum_size = Vector2(150, 40)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.448
-anchor_top = 0.87700003
-anchor_right = 0.578
-anchor_bottom = 0.938
-offset_left = -0.0960083
-offset_top = -0.2960205
-offset_right = 0.14398193
-offset_bottom = 0.17596436
+anchor_left = 0.402
+anchor_top = 0.86300004
+anchor_right = 0.606
+anchor_bottom = 0.975
+offset_left = 1.8959961
+offset_top = -4.223999
+offset_right = 1.8880005
+offset_bottom = -3.7999878
+theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_o5bvq")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_l56u2")
-text = "Començar"
+text = "Comenzar"
 
-[connection signal="pressed" from="Panel/HBoxContainer/MarginContainer/TextureButtonChar1" to="." method="_on_texture_button_char_1_pressed"]
-[connection signal="pressed" from="Panel/HBoxContainer/MarginContainer2/TextureButtonChar2" to="." method="_on_texture_button_char_2_pressed"]
-[connection signal="pressed" from="Panel/HBoxContainer/MarginContainer3/TextureButtonChar3" to="." method="_on_texture_button_char_3_pressed"]
-[connection signal="pressed" from="Panel/HBoxContainer/MarginContainer4/TextureButtonChar4" to="." method="_on_texture_button_char_4_pressed"]
-[connection signal="pressed" from="Panel/HBoxContainer/MarginContainer5/TextureButtonChar5" to="." method="_on_texture_button_char_5_pressed"]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=2040632634]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 115.0
+offset_top = 41.0
+offset_right = -115.0
+offset_bottom = -458.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 18
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer" unique_id=766943859]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureButtonChar1" type="TextureButton" parent="HBoxContainer/MarginContainer" unique_id=1471787927]
+custom_minimum_size = Vector2(150.41, 11.655)
+layout_mode = 2
+texture_normal = ExtResource("1_q54je")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer" unique_id=1480902799]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureButtonChar2" type="TextureButton" parent="HBoxContainer/MarginContainer2" unique_id=1487791200]
+custom_minimum_size = Vector2(150.41, 11.655)
+layout_mode = 2
+texture_normal = ExtResource("4_l56u2")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer" unique_id=186684866]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureButtonChar3" type="TextureButton" parent="HBoxContainer/MarginContainer3" unique_id=1024505594]
+custom_minimum_size = Vector2(150.41, 11.655)
+layout_mode = 2
+texture_normal = ExtResource("1_q54je")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MarginContainer4" type="MarginContainer" parent="HBoxContainer" unique_id=1996944269]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureButtonChar4" type="TextureButton" parent="HBoxContainer/MarginContainer4" unique_id=1911188199]
+custom_minimum_size = Vector2(150.41, 11.655)
+layout_mode = 2
+texture_normal = ExtResource("4_l56u2")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MarginContainer5" type="MarginContainer" parent="HBoxContainer" unique_id=1038630856]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureButtonChar5" type="TextureButton" parent="HBoxContainer/MarginContainer5" unique_id=1073299242]
+custom_minimum_size = Vector2(150.41, 11.655)
+layout_mode = 2
+texture_normal = ExtResource("1_q54je")
+ignore_texture_size = true
+stretch_mode = 0
+
 [connection signal="pressed" from="StartGame" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="HBoxContainer/MarginContainer/TextureButtonChar1" to="." method="_on_texture_button_char_1_pressed"]
+[connection signal="pressed" from="HBoxContainer/MarginContainer2/TextureButtonChar2" to="." method="_on_texture_button_char_2_pressed"]
+[connection signal="pressed" from="HBoxContainer/MarginContainer3/TextureButtonChar3" to="." method="_on_texture_button_char_3_pressed"]
+[connection signal="pressed" from="HBoxContainer/MarginContainer4/TextureButtonChar4" to="." method="_on_texture_button_char_4_pressed"]
+[connection signal="pressed" from="HBoxContainer/MarginContainer5/TextureButtonChar5" to="." method="_on_texture_button_char_5_pressed"]
