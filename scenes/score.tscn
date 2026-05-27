@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://dqdut167ox3kg"]
+
+[ext_resource type="Script" uid="uid://becsud1c7sr4" path="res://scripts/score.gd" id="1_8juob"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bak1h"]
+bg_color = Color(1, 0, 0, 0.4627451)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_plgac"]
+bg_color = Color(0.28627452, 0.70980394, 0, 0.45882353)
+
+[node name="Score" type="Control" unique_id=1453837980]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8juob")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=971066243]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.007843138, 0, 0.2509804, 1)
+
+[node name="BackToMenu" type="Button" parent="ColorRect" unique_id=1963568488]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2013889
+anchor_top = 0.8734568
+anchor_right = 0.48647916
+anchor_bottom = 0.9679876
+offset_right = -0.42401123
+offset_bottom = -0.2559967
+theme_override_styles/normal = SubResource("StyleBoxFlat_bak1h")
+text = "Tornar al Menu"
+metadata/_edit_use_anchors_ = true
+
+[node name="NewGame" type="Button" parent="ColorRect" unique_id=1463559032]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.53125
+anchor_top = 0.8734568
+anchor_right = 0.8158543
+anchor_bottom = 0.9670988
+offset_right = 0.1359253
+offset_bottom = 0.32000732
+theme_override_styles/normal = SubResource("StyleBoxFlat_plgac")
+text = "Nova Partida"
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect" unique_id=1218571052]
+custom_minimum_size = Vector2(1000, 400)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.066
+anchor_top = 0.13255556
+anchor_right = 0.934
+anchor_bottom = 0.809
+offset_left = -0.03199768
+offset_top = 0.10399628
+offset_right = 0.031982422
+offset_bottom = -0.23199463
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.26666668)
+metadata/_edit_use_anchors_ = true
+
+[connection signal="button_up" from="ColorRect/BackToMenu" to="." method="_on_back_to_menu_button_up"]
+[connection signal="button_up" from="ColorRect/NewGame" to="." method="_on_new_game_button_up"]

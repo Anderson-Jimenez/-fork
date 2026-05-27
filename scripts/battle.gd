@@ -44,7 +44,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	var remainingTime = timer.time_left
-	TimerLabel.text = str(remainingTime)
+	TimerLabel.text = str(round(remainingTime))
 	
 	var basicAttackTime = basicTime.time_left
 	BasicAttackProgress.value = basicAttackTime

@@ -13,8 +13,12 @@ func setCharacter(data):
 	selectedCharacter= data
 
 func nextStage():
-	currentStage+=1
-	get_tree().change_scene_to_file("res://scenes/"+stages[currentStage]+".tscn")
+	if currentStage == 30:
+		get_tree().change_scene_to_file("res://scenes/score.tscn")
+	
+	else:
+		currentStage+=1
+		get_tree().change_scene_to_file("res://scenes/"+stages[currentStage]+".tscn")
 
 
 func routeGenerator():
@@ -29,3 +33,10 @@ func routeGenerator():
 	stages[10]='bossBattle'
 	stages[20]='bossBattle'
 	stages[30]='bossBattle'
+
+
+func emptyAllGameManager():
+	stages={}
+	currentStage=0
+	selectedCharacter = {}
+	functionsInInventory = {}

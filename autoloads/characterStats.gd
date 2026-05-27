@@ -15,3 +15,12 @@ func setCharacter(char):
 	slots=int(char["SLOTS"])
 	inv=int(char["INV"])
 	sprite=char["SPRITE"]
+
+func emptyCharacterStats():
+	nameChar;
+	hp;
+	maxHp;
+	slots;
+	money=50;
+	inv;
+	sprite;
