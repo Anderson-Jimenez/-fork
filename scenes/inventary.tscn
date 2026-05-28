@@ -5,6 +5,9 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fg286"]
 bg_color = Color(0.6, 0, 0, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_fg286"]
+font_size = 28
+
 [node name="Inventary" type="Node" unique_id=1537500108]
 script = ExtResource("1_fg286")
 
@@ -165,6 +168,27 @@ offset_right = -0.3199997
 offset_bottom = -0.1760025
 color = Color(1, 0.7166667, 0, 0.29803923)
 metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="ColorRect/Inventory" unique_id=1315260684]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 3.0
+offset_right = 155.0
+offset_bottom = 26.0
+text = "Cards Disponibles"
+label_settings = SubResource("LabelSettings_fg286")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/Inventory" unique_id=564114840]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 26.0
+offset_top = 42.0
+offset_right = -31.999939
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="MoveToSlot1" type="ColorRect" parent="ColorRect" unique_id=757506174]
 layout_mode = 1
