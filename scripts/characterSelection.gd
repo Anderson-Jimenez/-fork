@@ -15,7 +15,12 @@ var characters = {
 		"HP": "100",
 		"SLOTS": "3",
 		"INV": "8",
-		"SPRITE": "res://images/test.png"
+		"SPRITE": "res://images/test.png",
+		"CARDS": [
+			{"NAME": "Golpe fuerte", "TYPE": "ataque", "DESC": "Pega muy fuerte"},
+			{"NAME": "Escudo", "TYPE": "defensa", "DESC": "Bloquea daño"},
+			{"NAME": "Curar", "TYPE": "destructive", "DESC": "quita vida al enemigo y baja un porcentaje de la tuya"},
+		]
 	},
 
 	"char2": {
@@ -23,7 +28,12 @@ var characters = {
 		"HP": "200",
 		"SLOTS": "2",
 		"INV": "6",
-		"SPRITE": "res://images/template.png"
+		"SPRITE": "res://images/template.png",
+		"CARDS": [
+			{"NAME": "Golpe fuerte", "TYPE": "ataque", "DESC": "Pega muy fuerte"},
+			{"NAME": "Escudo", "TYPE": "defensa", "DESC": "Bloquea daño"},
+			{"NAME": "Curar", "TYPE": "magia", "DESC": "Recupera vida"},
+		]
 	},
 
 	"char3": {
@@ -31,7 +41,12 @@ var characters = {
 		"HP": "50",
 		"SLOTS": "4",
 		"INV": "4",
-		"SPRITE": "res://images/test.png"
+		"SPRITE": "res://images/test.png",
+		"CARDS": [
+			{"NAME": "Golpe fuerte", "TYPE": "ataque", "DESC": "Pega muy fuerte"},
+			{"NAME": "Escudo", "TYPE": "defensa", "DESC": "Bloquea daño"},
+			{"NAME": "Curar", "TYPE": "magia", "DESC": "Recupera vida"},
+		]
 	},
 
 	"char4": {
@@ -39,7 +54,12 @@ var characters = {
 		"HP": "10",
 		"SLOTS": "4",
 		"INV": "10",
-		"SPRITE": "res://images/template.png"
+		"SPRITE": "res://images/template.png",
+		"CARDS": [
+			{"NAME": "Golpe fuerte", "TYPE": "ataque", "DESC": "Pega muy fuerte"},
+			{"NAME": "Escudo", "TYPE": "defensa", "DESC": "Bloquea daño"},
+			{"NAME": "Curar", "TYPE": "magia", "DESC": "Recupera vida"},
+		]
 	},
 
 	"char5": {
@@ -47,7 +67,12 @@ var characters = {
 		"HP": "150",
 		"SLOTS": "3",
 		"INV": "0",
-		"SPRITE": "res://images/test.png"
+		"SPRITE": "res://images/test.png",
+		"CARDS": [
+			{"NAME": "Golpe fuerte", "TYPE": "ataque", "DESC": "Pega muy fuerte"},
+			{"NAME": "Escudo", "TYPE": "defensa", "DESC": "Bloquea daño"},
+			{"NAME": "Curar", "TYPE": "magia", "DESC": "Recupera vida"},
+		]
 	}
 }
 
@@ -61,7 +86,6 @@ func show_character(id):
 	CharInv.text = selectedCharacter["INV"]
 
 	Portrait.texture = load(selectedCharacter["SPRITE"])
-
 
 func _on_start_game_pressed() -> void:
 	CharacterStats.setCharacter(selectedCharacter)

@@ -1,18 +1,13 @@
 extends Node
 
-#https://www.youtube.com/watch?v=STyN8fVI1Ew Video que explica cosas d'inventari, el canal te dos videos o tres en el qual explica
-@onready var CurrentStage = $ColorRect/Stage
+@onready var CardContainer = $ScrollContainer/VBoxContainer
+var card_scene = preload("res://scenes/cardScene.tscn")
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	CurrentStage.text=str(GameManager.currentStage)
-	GameManager.routeGenerator()
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
-func _on_button_button_up() -> void:
-	GameManager.nextStage()
+func _ready():
+	var character = CharacterStats.getCharacter()
+	for card in character["CARDS"]:
+		var card_node = card_scene.instantiate()
+		card_node.get_node("CardName").text = card["NAME"]
+		card_node.get_node("CardType").text = card["TYPE"]
+		card_node.get_node("CardDesc").text = card["DESC"]
+		CardContainer.add_child(card_node)
