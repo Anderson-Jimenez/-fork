@@ -13,8 +13,7 @@ var characters = {
 	"char1": {
 		"NAME": "Anderson",
 		"HP": "100",
-		"SLOTS": "3",
-		"INV": "8",
+		"SLOTS": [{}, {}, {}, {}],
 		"SPRITE": "res://images/test.png",
 		"CARDS": [
 			{"NAME": "Golpe fuerte", "TYPE": "ataque", "DESC": "Pega muy fuerte"},
@@ -26,8 +25,7 @@ var characters = {
 	"char2": {
 		"NAME": "Pep",
 		"HP": "200",
-		"SLOTS": "2",
-		"INV": "6",
+		"SLOTS": [{}, {}, {}, {}],
 		"SPRITE": "res://images/template.png",
 		"CARDS": [
 			{"NAME": "Golpe fuerte", "TYPE": "ataque", "DESC": "Pega muy fuerte"},
@@ -39,8 +37,7 @@ var characters = {
 	"char3": {
 		"NAME": "Luciano",
 		"HP": "50",
-		"SLOTS": "4",
-		"INV": "4",
+		"SLOTS": [{}, {}, {}, {}],
 		"SPRITE": "res://images/test.png",
 		"CARDS": [
 			{"NAME": "Golpe fuerte", "TYPE": "ataque", "DESC": "Pega muy fuerte"},
@@ -52,8 +49,7 @@ var characters = {
 	"char4": {
 		"NAME": "Aptyp",
 		"HP": "10",
-		"SLOTS": "4",
-		"INV": "10",
+		"SLOTS": [{}, {}, {}, {}],
 		"SPRITE": "res://images/template.png",
 		"CARDS": [
 			{"NAME": "Golpe fuerte", "TYPE": "ataque", "DESC": "Pega muy fuerte"},
@@ -65,8 +61,7 @@ var characters = {
 	"char5": {
 		"NAME": "lepepeyt",
 		"HP": "150",
-		"SLOTS": "3",
-		"INV": "0",
+		"SLOTS": [{}, {}, {}, {}],
 		"SPRITE": "res://images/test.png",
 		"CARDS": [
 			{"NAME": "Golpe fuerte", "TYPE": "ataque", "DESC": "Pega muy fuerte"},
@@ -82,8 +77,7 @@ func show_character(id):
 
 	CharName.text = selectedCharacter["NAME"]
 	CharHp.text = selectedCharacter["HP"]
-	CharSlots.text = selectedCharacter["SLOTS"]
-	CharInv.text = selectedCharacter["INV"]
+	CharSlots.text = "4"
 
 	Portrait.texture = load(selectedCharacter["SPRITE"])
 

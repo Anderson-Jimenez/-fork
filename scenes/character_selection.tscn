@@ -116,18 +116,6 @@ custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 fit_content = true
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="Panel2/HBoxContainer2/VBoxContainer" unique_id=588955145]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Panel2/HBoxContainer2/VBoxContainer/HBoxContainer3" unique_id=155961992]
-layout_mode = 2
-text = "Inventory:"
-
-[node name="Inventori" type="RichTextLabel" parent="Panel2/HBoxContainer2/VBoxContainer/HBoxContainer3" unique_id=727868465]
-custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
-fit_content = true
-
 [node name="StartGame" type="Button" parent="." unique_id=1389058600]
 custom_minimum_size = Vector2(150, 40)
 layout_mode = 1
