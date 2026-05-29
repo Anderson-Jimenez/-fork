@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://dq0jecoq87la3"]
+
+[ext_resource type="Script" uid="uid://d1mmp7cbsynok" path="res://scripts/resources/enemyData.gd" id="1_cqb8b"]
+[ext_resource type="Texture2D" uid="uid://bm6nxf31760kw" path="res://images/provisionalSprites/winrar.png" id="2_1oxaa"]
+
+[resource]
+script = ExtResource("1_cqb8b")
+name = "uinrer"
+enemyStage = 3
+hp = 3000
+maxHp = 3000
+passiveDmg = 1
+sprite = ExtResource("2_1oxaa")
+metadata/_custom_type_script = "uid://d1mmp7cbsynok"

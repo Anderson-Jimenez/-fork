@@ -2,9 +2,10 @@ extends Resource
 class_name EnemyData
 
 @export var name: String
-@export var enemyType: String
+@export var enemyStage: int
 @export var hp: int
 @export var maxHp: int
-@export var slots: int
+@export var cardSlots: Array
+@export var pasiveSlots: Array
 @export var passiveDmg: int
-@export var sprite: String
+@export var sprite: Texture2D

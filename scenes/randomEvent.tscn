@@ -59,7 +59,7 @@ anchor_bottom = 0.045
 offset_top = 0.055999994
 offset_right = 0.40799713
 offset_bottom = -0.16000175
-text = "Current Stage:"
+text = "Current window:"
 
 [node name="Stage" type="RichTextLabel" parent="ColorRect" unique_id=1061992253]
 layout_mode = 1

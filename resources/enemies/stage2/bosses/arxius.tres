@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://cicmhh1e8rwli"]
+
+[ext_resource type="Script" uid="uid://d1mmp7cbsynok" path="res://scripts/resources/enemyData.gd" id="1_0d0ry"]
+[ext_resource type="Texture2D" uid="uid://bov1wkf8njbjb" path="res://images/provisionalSprites/fileExplorer.png" id="2_83l1h"]
+
+[resource]
+script = ExtResource("1_0d0ry")
+name = "Arxius"
+enemyStage = 2
+hp = 3000
+maxHp = 3000
+passiveDmg = 30
+sprite = ExtResource("2_83l1h")
+metadata/_custom_type_script = "uid://d1mmp7cbsynok"

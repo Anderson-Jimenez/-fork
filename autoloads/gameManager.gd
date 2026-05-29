@@ -3,7 +3,8 @@ extends Node
 
 var selectedCharacter = {}
 
-var currentStage=0
+var currentWindow=0
+var currentStage=1
 var stages={}
 var stageTypes=['battle','randomEvent']
 
@@ -13,12 +14,12 @@ func setCharacter(data):
 	selectedCharacter= data
 
 func nextStage():
-	if currentStage == 30:
+	if currentWindow == 30:
 		get_tree().change_scene_to_file("res://scenes/score.tscn")
 	
 	else:
-		currentStage+=1
-		get_tree().change_scene_to_file("res://scenes/"+stages[currentStage]+".tscn")
+		currentWindow+=1
+		get_tree().change_scene_to_file("res://scenes/"+stages[currentWindow]+".tscn")
 
 
 func routeGenerator():
@@ -37,6 +38,6 @@ func routeGenerator():
 
 func emptyAllGameManager():
 	stages={}
-	currentStage=0
+	currentWindow=0
 	selectedCharacter = {}
 	functionsInInventory = {}

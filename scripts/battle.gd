@@ -19,16 +19,18 @@ extends Control
 @onready var BasicAttackProgress = $ColorRect/EnemyArea/BasicAttackProgress
 
 var enemy;
+var enemies: Array[EnemyData] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	CurrentStage.text=str(GameManager.currentStage)
+	CurrentStage.text=str(GameManager.currentWindow)
 	
 	var resourceFiles = DirAccess.get_files_at("res://resources/enemies/")
 	var randomResource = resourceFiles[randi() % resourceFiles.size()]
+	load_enemies()
+	enemy=get_random_enemy()
 	
-	enemy = load("res://resources/enemies/"+randomResource)
-	EnemySprite.texture = load(enemy.sprite)
+	EnemySprite.texture = enemy.sprite
 	EnemyHp.text= str(enemy.hp)
 	EnemyMaxHp.text = str(enemy.maxHp)
 	EnemyName.text = enemy.name
@@ -39,6 +41,29 @@ func _ready() -> void:
 	Hp.text= str(CharacterStats.hp)
 	MaxHp.text = str(CharacterStats.maxHp)
 	CharacterName.text = CharacterStats.nameChar
+
+
+
+func load_enemies():
+	var path = "res://resources/enemies/stage"+str(GameManager.currentStage)+"/basicEnemies/"
+	var dir = DirAccess.open(path)
+	if not dir:
+		return
+	
+	dir.list_dir_begin()
+	var file_name = dir.get_next()
+	
+	while file_name != "":
+		if file_name.ends_with(".tres"):
+			var resource = load(path + file_name)
+			enemies.append(resource)
+		file_name = dir.get_next()
+	
+	dir.list_dir_end()
+
+
+func get_random_enemy() -> EnemyData:
+	return enemies[randi() % enemies.size()]
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
