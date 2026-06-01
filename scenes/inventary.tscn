@@ -8,6 +8,20 @@ bg_color = Color(0.6, 0, 0, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_fg286"]
 font_size = 28
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8m5ol"]
+bg_color = Color(0.5921838, 0.54321235, 0.55162406, 0.6156863)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gqg4k"]
+bg_color = Color(0.63529414, 0.5921569, 0.56078434, 0.61960787)
+
 [node name="Inventary" type="Node" unique_id=1537500108]
 script = ExtResource("1_fg286")
 
@@ -18,6 +32,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0.16, 0.11733333, 1)
+
+[node name="Character" type="TextureRect" parent="ColorRect" unique_id=2087898592]
+layout_mode = 0
+offset_left = 470.0
+offset_top = 169.0
+offset_right = 677.0
+offset_bottom = 276.0
+expand_mode = 2
+stretch_mode = 6
 
 [node name="Label" type="Label" parent="ColorRect" unique_id=1033913147]
 layout_mode = 1
@@ -65,6 +88,21 @@ offset_bottom = -0.1760025
 color = Color(0.14999998, 1, 0, 0.1882353)
 metadata/_edit_use_anchors_ = true
 
+[node name="Label" type="Label" parent="ColorRect/Objects" unique_id=631175170]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -87.0
+offset_top = -11.5
+offset_right = 87.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "en desarrollo (objetos)"
+
 [node name="Slot1" type="ColorRect" parent="ColorRect" unique_id=1759159823]
 layout_mode = 1
 anchors_preset = -1
@@ -77,6 +115,20 @@ offset_top = 0.22399902
 offset_right = -0.31201172
 offset_bottom = 0.09597778
 color = Color(0.9833336, 0, 1, 0.39215687)
+
+[node name="cardN" type="Label" parent="ColorRect/Slot1" unique_id=1061412214]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Slot2" type="ColorRect" parent="ColorRect" unique_id=1884797404]
 layout_mode = 1
@@ -91,6 +143,20 @@ offset_right = 0.56796265
 offset_bottom = 0.09597778
 color = Color(0.9843137, 0, 1, 0.39215687)
 
+[node name="cardN" type="Label" parent="ColorRect/Slot2" unique_id=1566913227]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="Slot3" type="ColorRect" parent="ColorRect" unique_id=1838141618]
 layout_mode = 1
 anchors_preset = -1
@@ -104,7 +170,21 @@ offset_right = -0.32000732
 offset_bottom = 0.09597778
 color = Color(0.9843137, 0, 1, 0.39215687)
 
-[node name="Slot4" type="ColorRect" parent="ColorRect" unique_id=408847460]
+[node name="cardN" type="Label" parent="ColorRect/Slot3" unique_id=790186408]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="cardN" type="ColorRect" parent="ColorRect" unique_id=408847460]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.786
@@ -132,30 +212,29 @@ grow_vertical = 0
 theme_override_styles/normal = SubResource("StyleBoxFlat_fg286")
 text = "Next"
 
-[node name="Character" type="ColorRect" parent="ColorRect" unique_id=1985071903]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.411
-anchor_top = 0.26200002
-anchor_right = 0.58400005
-anchor_bottom = 0.39800003
-offset_left = -0.47201538
-offset_top = 0.2239685
-offset_right = 0.2319336
-offset_bottom = 0.09597778
-color = Color(0, 0, 0, 1)
-
 [node name="SelectedCard" type="ColorRect" parent="ColorRect" unique_id=59701641]
+custom_minimum_size = Vector2(150, 250)
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.7248264
-anchor_top = 0.47067901
-anchor_right = 0.8700694
-anchor_bottom = 0.8752716
-offset_right = -0.3199997
-offset_bottom = -0.1760025
+anchor_left = 0.73
+anchor_top = 0.5
+anchor_right = 0.855
+anchor_bottom = 0.874
 color = Color(0.9843137, 0, 1, 0.39215687)
-metadata/_edit_use_anchors_ = true
+
+[node name="cInfo" type="Label" parent="ColorRect/SelectedCard" unique_id=1518213855]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Inventory" type="ColorRect" parent="ColorRect" unique_id=262736647]
 layout_mode = 1
@@ -190,58 +269,73 @@ offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MoveToSlot1" type="ColorRect" parent="ColorRect" unique_id=757506174]
+[node name="MoveToSlot1" type="Button" parent="ColorRect" unique_id=45944734]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.88734937
-anchor_top = 0.59131396
-anchor_right = 0.96834934
-anchor_bottom = 0.65231425
-offset_left = -0.22644043
-offset_top = -0.17144775
-offset_right = 0.46154785
-offset_bottom = 0.30047607
-color = Color(0.3, 0.3, 0.3, 1)
-metadata/_edit_use_anchors_ = true
+anchor_left = 0.92800003
+anchor_top = 0.62200004
+anchor_right = 0.92800003
+anchor_bottom = 0.62200004
+offset_left = -47.05603
+offset_top = -20.05603
+offset_right = 46.94397
+offset_bottom = 19.94397
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_8m5ol")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_gqg4k")
+text = "Assignar Slot 1"
 
-[node name="MoveToSlot2" type="ColorRect" parent="ColorRect" unique_id=1277400110]
+[node name="MoveToSlot2" type="Button" parent="ColorRect" unique_id=1432002336]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.8868681
-anchor_top = 0.66482735
-anchor_right = 0.96886814
-anchor_bottom = 0.72682726
-offset_left = 0.3279419
-offset_top = 0.19198608
-offset_right = -0.1361084
-offset_bottom = 0.015930176
-color = Color(0.3, 0.3, 0.3, 1)
-metadata/_edit_use_anchors_ = true
+anchor_left = 0.92800003
+anchor_top = 0.69600004
+anchor_right = 0.92800003
+anchor_bottom = 0.69600004
+offset_left = -47.05603
+offset_top = -20.008026
+offset_right = 46.94397
+offset_bottom = 19.991974
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_8m5ol")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_gqg4k")
+text = "Assignar Slot 2"
 
-[node name="MoveToSlot3" type="ColorRect" parent="ColorRect" unique_id=2034037064]
+[node name="MoveToSlot3" type="Button" parent="ColorRect" unique_id=1977068074]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.8871043
-anchor_top = 0.7392717
-anchor_right = 0.96910423
-anchor_bottom = 0.8012716
-offset_left = 0.055908203
-offset_top = -0.048034668
-offset_right = -0.40808105
-offset_bottom = -0.22399902
-color = Color(0.3, 0.3, 0.3, 1)
-metadata/_edit_use_anchors_ = true
+anchor_left = 0.92800003
+anchor_top = 0.77000004
+anchor_right = 0.92800003
+anchor_bottom = 0.77000004
+offset_left = -47.05603
+offset_top = -19.960022
+offset_right = 47.94397
+offset_bottom = 20.039978
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_8m5ol")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_gqg4k")
+text = "Assignar Slot 3
+"
 
-[node name="MoveToSlot4" type="ColorRect" parent="ColorRect" unique_id=358230569]
+[node name="MoveToSlot4" type="Button" parent="ColorRect" unique_id=847828768]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.8871528
-anchor_top = 0.8132716
-anchor_right = 0.96902776
-anchor_bottom = 0.8752716
-offset_right = -0.3199463
-offset_bottom = -0.17602539
-color = Color(0.3, 0.3, 0.3, 1)
-metadata/_edit_use_anchors_ = true
+anchor_left = 0.92800003
+anchor_top = 0.84400004
+anchor_right = 0.92800003
+anchor_bottom = 0.84400004
+offset_left = -47.05603
+offset_top = -19.912048
+offset_right = 46.94397
+offset_bottom = 20.087952
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_8m5ol")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_gqg4k")
+text = "Assignar Slot 4"
 
 [connection signal="button_up" from="ColorRect/Button" to="." method="_on_button_button_up"]
+[connection signal="pressed" from="ColorRect/MoveToSlot1" to="." method="_on_move_to_slot_1_pressed"]
+[connection signal="pressed" from="ColorRect/MoveToSlot2" to="." method="_on_move_to_slot_2_pressed"]
+[connection signal="pressed" from="ColorRect/MoveToSlot3" to="." method="_on_move_to_slot_3_pressed"]
+[connection signal="pressed" from="ColorRect/MoveToSlot4" to="." method="_on_move_to_slot_4_pressed"]
