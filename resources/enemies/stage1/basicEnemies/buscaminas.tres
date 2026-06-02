@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://dnkfmwyyvoaya"]
 
 [ext_resource type="Script" uid="uid://d1mmp7cbsynok" path="res://scripts/resources/enemyData.gd" id="1_av6vk"]
-[ext_resource type="Texture2D" uid="uid://dnpbx4b8e10ev" path="res://images/provisionalSprites/paint.png" id="2_dfo3g"]
+[ext_resource type="Texture2D" uid="uid://c0i6w7wh30x8t" path="res://images/provisionalSprites/minesweeper.png" id="2_dfo3g"]
 
 [resource]
 script = ExtResource("1_av6vk")
@@ -9,5 +9,6 @@ name = "Buscaminas"
 enemyStage = 1
 hp = 100
 maxHp = 100
+passiveDmg = 1
 sprite = ExtResource("2_dfo3g")
 metadata/_custom_type_script = "uid://d1mmp7cbsynok"

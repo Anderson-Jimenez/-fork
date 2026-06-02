@@ -28,7 +28,7 @@ func _on_button_button_up() -> void:
 
 func _on_card_clicked(card_data):
 	currentSelectedCard = card_data
-	selectedCard.text = card_data["NAME"] + "\n" + card_data["TYPE"] + "\n" + card_data["DESC"]
+	selectedCard.text = card_data["name"] + "\n" + card_data["description"]
 
 
 #===================================================================#
@@ -37,22 +37,25 @@ func _on_card_clicked(card_data):
 
 func _on_move_to_slot_1_pressed() -> void:
 	CharacterStats.slots[0] = currentSelectedCard
-	slot1.text = currentSelectedCard["NAME"]
+	slot1.text = currentSelectedCard["name"]
 	print(CharacterStats.slots[0])
+	
+	#if CharacterStats.cards.has(currentSelectedCard):
+	#	CharacterStats.cards.erase(currentSelectedCard)
 
 
 func _on_move_to_slot_2_pressed() -> void:
 	CharacterStats.slots[1] = currentSelectedCard
-	slot2.text = currentSelectedCard["NAME"]
+	slot2.text = currentSelectedCard["name"]
 	print(CharacterStats.slots[1])
 
 
 func _on_move_to_slot_3_pressed() -> void:
 	CharacterStats.slots[2] = currentSelectedCard
-	slot3.text = currentSelectedCard["NAME"]
+	slot3.text = currentSelectedCard["name"]
 	print(CharacterStats.slots[2])
 
 func _on_move_to_slot_4_pressed() -> void:
 	CharacterStats.slots[3] = currentSelectedCard
-	slot4.text = currentSelectedCard["NAME"]
+	slot4.text = currentSelectedCard["name"]
 	print(CharacterStats.slots[3])

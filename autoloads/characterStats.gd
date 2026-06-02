@@ -6,7 +6,17 @@ var maxHp;
 var slots = [];
 var money=50
 var sprite;
+var startingHand;
 var cards = [];
+
+var cardActivated = 0;
+var dmgRecived = 0;
+var dmgDealed = 0;
+
+
+func gameOver():
+	if hp==0:
+		get_tree().change_scene_to_file("res://scenes/score.tscn")
 
 func setCharacter(char):
 	nameChar=char["NAME"]
@@ -14,7 +24,27 @@ func setCharacter(char):
 	maxHp=int(char["HP"])
 	slots=char["SLOTS"]
 	sprite=char["SPRITE"]
+	startingHand=char["SARTING_HAND"]
 	cards = char["CARDS"] 
+
+func setStartingCards():
+	var results = []
+	var dir = DirAccess.open("res://resources/cards")  # la teva carpeta
+	
+	if dir:
+		dir.list_dir_begin()
+		var file_name = dir.get_next()
+		
+		while file_name != "":
+			if file_name.ends_with(".tres"):
+				var resource = load("res://resources/cards/" + file_name)
+				if resource and resource.rarity == startingHand:
+					results.append(resource)
+			file_name = dir.get_next()
+		
+		dir.list_dir_end()
+		
+	cards=results
 
 func emptyCharacterStats():
 	nameChar;

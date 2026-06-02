@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://cwf1q4n0vcjb7"]
+
+[ext_resource type="Script" uid="uid://cm1ba75cnyn12" path="res://scripts/game_over.gd" id="1_gob2e"]
+[ext_resource type="Texture2D" uid="uid://cxikn1g5m6jta" path="res://images/template.png" id="1_ouftm"]
+[ext_resource type="Texture2D" uid="uid://buc021f05bip0" path="res://images/gameoverComponent.png" id="2_dh54o"]
+
+[sub_resource type="SystemFont" id="SystemFont_dh54o"]
+font_weight = 200
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gob2e"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="GameOver" type="Control" unique_id=1357769164]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gob2e")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=964244851]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.5294118, 1, 1)
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=252282322]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08680555
+anchor_top = 0.41512346
+anchor_right = 0.6609514
+anchor_bottom = 0.6069753
+offset_right = -0.41601563
+offset_bottom = -0.32000732
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_dh54o")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_gob2e")
+text = "El teu PC ha topat amb un problema i necessita reiniciar. Estem 
+recollint informació sobre el error i després reiniciarem l'ordinador 
+per tu."
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1026415528]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.086375
+anchor_top = 0.10011113
+anchor_right = 0.13563193
+anchor_bottom = 0.43489498
+offset_left = 0.49599457
+offset_top = 165.12799
+offset_right = 53.751984
+offset_bottom = 110.887955
+rotation = -1.5707964
+texture = ExtResource("1_ouftm")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="." unique_id=396487366]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.13368055
+anchor_top = 0.6049382
+anchor_right = 0.20253474
+anchor_bottom = 0.64765424
+offset_right = -0.3199997
+offset_bottom = 0.3199997
+theme_override_font_sizes/font_size = 20
+text = "complet"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="." unique_id=469698043]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.16145833
+anchor_top = 0.697531
+anchor_right = 0.74267364
+anchor_bottom = 0.7313952
+offset_right = 0.43988037
+offset_bottom = 0.055999756
+theme_override_font_sizes/font_size = 12
+text = "Per a mes informació sobre aquest error i possibles solucions, visita https://www.inslapineda.com/"
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1803915396]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08680555
+anchor_top = 0.7021605
+anchor_right = 0.15131944
+anchor_bottom = 0.80891365
+offset_right = -0.3199997
+offset_bottom = -0.1760025
+texture = ExtResource("2_dh54o")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="." unique_id=2075357001]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.163
+anchor_top = 0.7453704
+anchor_right = 0.52454865
+anchor_bottom = 0.81000006
+offset_left = 0.22399902
+offset_right = -153.28003
+offset_bottom = 0.11993408
+theme_override_font_sizes/font_size = 8
+text = "Si tu truques una persona de suport, donal'ls-hi aquesta informació:
+
+Codi: HE_MORT_EN_EL_JOC"
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="." unique_id=1460441093]
+wait_time = 10.0
+autostart = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=482492383]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.089409724
+anchor_top = 0.595679
+anchor_right = 0.12875001
+anchor_bottom = 0.657679
+offset_right = -0.3199997
+offset_bottom = -0.1760025
+metadata/_edit_use_anchors_ = true
+
+[node name="Quantitat" type="Label" parent="HBoxContainer" unique_id=1984356920]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "99"
+metadata/_edit_use_anchors_ = true
+
+[node name="Percentatge" type="Label" parent="HBoxContainer" unique_id=1567902253]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "%"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

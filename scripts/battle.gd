@@ -43,7 +43,6 @@ func _ready() -> void:
 	CharacterName.text = CharacterStats.nameChar
 
 
-
 func load_enemies():
 	var path = "res://resources/enemies/stage"+str(GameManager.currentStage)+"/basicEnemies/"
 	var dir = DirAccess.open(path)
@@ -81,3 +80,7 @@ func _on_button_up_next_stage() -> void:
 func _on_basic_attack_timer_timeout() -> void:
 	CharacterStats.hp = CharacterStats.hp - enemy.passiveDmg
 	Hp.text = str(CharacterStats.hp)
+
+
+func battle():
+	pass

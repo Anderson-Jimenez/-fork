@@ -15,11 +15,8 @@ var characters = {
 		"HP": "100",
 		"SLOTS": [{}, {}, {}, {}],
 		"SPRITE": "res://images/test.png",
-		"CARDS": [
-			{"NAME": "Golpe fuerte", "TYPE": "ataque", "DESC": "Pega muy fuerte"},
-			{"NAME": "Escudo", "TYPE": "defensa", "DESC": "Bloquea daño"},
-			{"NAME": "Curar", "TYPE": "destructive", "DESC": "quita vida al enemigo y baja un porcentaje de la tuya"},
-		]
+		"SARTING_HAND": 11,
+		"CARDS": []
 	},
 
 	"char2": {
@@ -27,11 +24,8 @@ var characters = {
 		"HP": "200",
 		"SLOTS": [{}, {}, {}, {}],
 		"SPRITE": "res://images/template.png",
-		"CARDS": [
-			{"NAME": "Golpe fuerte", "TYPE": "ataque", "DESC": "Pega muy fuerte"},
-			{"NAME": "Escudo", "TYPE": "defensa", "DESC": "Bloquea daño"},
-			{"NAME": "Curar", "TYPE": "magia", "DESC": "Recupera vida"},
-		]
+		"SARTING_HAND": 12,
+		"CARDS": []
 	},
 
 	"char3": {
@@ -39,11 +33,8 @@ var characters = {
 		"HP": "50",
 		"SLOTS": [{}, {}, {}, {}],
 		"SPRITE": "res://images/test.png",
-		"CARDS": [
-			{"NAME": "Golpe fuerte", "TYPE": "ataque", "DESC": "Pega muy fuerte"},
-			{"NAME": "Escudo", "TYPE": "defensa", "DESC": "Bloquea daño"},
-			{"NAME": "Curar", "TYPE": "magia", "DESC": "Recupera vida"},
-		]
+		"SARTING_HAND": 13,
+		"CARDS": []
 	},
 
 	"char4": {
@@ -51,11 +42,7 @@ var characters = {
 		"HP": "10",
 		"SLOTS": [{}, {}, {}, {}],
 		"SPRITE": "res://images/template.png",
-		"CARDS": [
-			{"NAME": "Golpe fuerte", "TYPE": "ataque", "DESC": "Pega muy fuerte"},
-			{"NAME": "Escudo", "TYPE": "defensa", "DESC": "Bloquea daño"},
-			{"NAME": "Curar", "TYPE": "magia", "DESC": "Recupera vida"},
-		]
+		"CARDS": []
 	},
 
 	"char5": {
@@ -63,11 +50,7 @@ var characters = {
 		"HP": "150",
 		"SLOTS": [{}, {}, {}, {}],
 		"SPRITE": "res://images/test.png",
-		"CARDS": [
-			{"NAME": "Golpe fuerte", "TYPE": "ataque", "DESC": "Pega muy fuerte"},
-			{"NAME": "Escudo", "TYPE": "defensa", "DESC": "Bloquea daño"},
-			{"NAME": "Curar", "TYPE": "magia", "DESC": "Recupera vida"},
-		]
+		"CARDS": []
 	}
 }
 
@@ -83,6 +66,7 @@ func show_character(id):
 
 func _on_start_game_pressed() -> void:
 	CharacterStats.setCharacter(selectedCharacter)
+	CharacterStats.setStartingCards()
 	GameManager.routeGenerator()
 	GameManager.setCharacter(selectedCharacter)
 	get_tree().change_scene_to_file("res://scenes/inventary.tscn")
