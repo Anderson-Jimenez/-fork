@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cwf1q4n0vcjb7"]
 
 [ext_resource type="Script" uid="uid://cm1ba75cnyn12" path="res://scripts/game_over.gd" id="1_gob2e"]
-[ext_resource type="Texture2D" uid="uid://cxikn1g5m6jta" path="res://images/template.png" id="1_ouftm"]
 [ext_resource type="Texture2D" uid="uid://buc021f05bip0" path="res://images/gameoverComponent.png" id="2_dh54o"]
+[ext_resource type="Texture2D" uid="uid://4iqmqvrbxjdv" path="res://images/laimg.png" id="2_gob2e"]
 
 [sub_resource type="SystemFont" id="SystemFont_dh54o"]
 font_weight = 200
@@ -49,16 +49,16 @@ metadata/_edit_use_anchors_ = true
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1026415528]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.086375
-anchor_top = 0.10011113
-anchor_right = 0.13563193
-anchor_bottom = 0.43489498
-offset_left = 0.49599457
-offset_top = 165.12799
-offset_right = 53.751984
-offset_bottom = 110.887955
-rotation = -1.5707964
-texture = ExtResource("1_ouftm")
+anchor_left = 0.06290281
+anchor_top = 0.2085309
+anchor_right = 0.1579028
+anchor_bottom = 0.45953092
+offset_left = -0.46403503
+offset_top = -0.12802124
+offset_right = 0.09593201
+offset_bottom = -0.07614136
+rotation = -0.0013668537
+texture = ExtResource("2_gob2e")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
@@ -135,7 +135,6 @@ metadata/_edit_use_anchors_ = true
 [node name="Quantitat" type="Label" parent="HBoxContainer" unique_id=1984356920]
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
-text = "99"
 metadata/_edit_use_anchors_ = true
 
 [node name="Percentatge" type="Label" parent="HBoxContainer" unique_id=1567902253]

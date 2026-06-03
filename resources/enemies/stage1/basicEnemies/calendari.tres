@@ -9,6 +9,6 @@ name = "Calendari"
 enemyStage = 1
 hp = 31
 maxHp = 31
-passiveDmg = 1
+passiveDmg = 31
 sprite = ExtResource("2_ibdy1")
 metadata/_custom_type_script = "uid://d1mmp7cbsynok"

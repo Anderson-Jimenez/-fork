@@ -9,6 +9,6 @@ name = "Buscaminas"
 enemyStage = 1
 hp = 100
 maxHp = 100
-passiveDmg = 1
+passiveDmg = 50
 sprite = ExtResource("2_dfo3g")
 metadata/_custom_type_script = "uid://d1mmp7cbsynok"

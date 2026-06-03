@@ -1,6 +1,6 @@
 extends Control
 
-@onready var CurrentStage = $ColorRect/Stage
+@onready var CurrentWindow = $ColorRect/Stage
 
 @onready var EnemySprite = $ColorRect/EnemyArea/enemySprite
 @onready var EnemyHp = $ColorRect/EnemyArea/HBoxContainer/enemyHp
@@ -23,7 +23,7 @@ var enemies: Array[EnemyData] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	CurrentStage.text=str(GameManager.currentWindow)
+	CurrentWindow.text=str(GameManager.currentWindow)
 	
 	var resourceFiles = DirAccess.get_files_at("res://resources/enemies/")
 	var randomResource = resourceFiles[randi() % resourceFiles.size()]
@@ -67,6 +67,9 @@ func get_random_enemy() -> EnemyData:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	if CharacterStats.hp <= 0:
+		get_tree().change_scene_to_file("res://scenes/gameOver.tscn")
+	
 	var remainingTime = timer.time_left
 	TimerLabel.text = str(round(remainingTime))
 	

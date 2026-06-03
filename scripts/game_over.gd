@@ -4,8 +4,8 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	quantity.text=str(GameManager.currentWindow/100*30)
-	pass # Replace with function body.
+	var value = (GameManager.currentWindow / 30.0) * 100
+	quantity.text = str(int(value))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
