@@ -184,7 +184,7 @@ offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="cardN" type="ColorRect" parent="ColorRect" unique_id=408847460]
+[node name="Slot4" type="ColorRect" parent="ColorRect" unique_id=408847460]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.786
@@ -196,6 +196,20 @@ offset_top = 0.2239685
 offset_right = -0.3199463
 offset_bottom = 0.09597778
 color = Color(0.9843137, 0, 1, 0.39215687)
+
+[node name="cardN" type="Label" parent="ColorRect/Slot4" unique_id=1611728678]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Button" type="Button" parent="ColorRect" unique_id=82640346]
 layout_mode = 1

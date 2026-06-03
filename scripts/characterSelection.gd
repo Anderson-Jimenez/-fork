@@ -4,7 +4,7 @@ extends Node
 @onready var CharName = $Panel2/HBoxContainer2/VBoxContainer/HBoxContainer/Name
 @onready var CharHp = $Panel2/HBoxContainer2/VBoxContainer/HBoxContainer5/HP
 @onready var CharSlots = $Panel2/HBoxContainer2/VBoxContainer/HBoxContainer4/Slots
-@onready var CharInv = $Panel2/HBoxContainer2/VBoxContainer/HBoxContainer3/Inventori
+#@onready var CharInv = $Panel2/HBoxContainer2/VBoxContainer/HBoxContainer3/Inventori
 
 
 var selectedCharacter = {}

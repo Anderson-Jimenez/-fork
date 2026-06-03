@@ -1,9 +1,13 @@
 extends Control
 
+@onready var ScoreContent = $ScoreContent
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	
+	$TextSpam.play("text_spam")
+	$ScoreContent/AnimationPlayer.play("scorePopup")
+	$ScoreContent/Label/AnimationPlayer.play("text_wobble")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

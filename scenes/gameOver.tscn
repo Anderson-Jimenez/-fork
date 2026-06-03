@@ -2,13 +2,151 @@
 
 [ext_resource type="Script" uid="uid://cm1ba75cnyn12" path="res://scripts/game_over.gd" id="1_gob2e"]
 [ext_resource type="Texture2D" uid="uid://buc021f05bip0" path="res://images/gameoverComponent.png" id="2_dh54o"]
-[ext_resource type="Texture2D" uid="uid://4iqmqvrbxjdv" path="res://images/laimg.png" id="2_gob2e"]
 
 [sub_resource type="SystemFont" id="SystemFont_dh54o"]
 font_weight = 200
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gob2e"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dh54o"]
+bg_color = Color(1, 0, 0, 0.4627451)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d1w46"]
+bg_color = Color(0.28627452, 0.70980394, 0, 0.45882353)
+
+[sub_resource type="Animation" id="Animation_bak1h"]
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BackToMenu:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NewGame:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_plgac"]
+resource_name = "scorePopup"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NewGame:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BackToMenu:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_twys0"]
+_data = {
+&"RESET": SubResource("Animation_bak1h"),
+&"scorePopup": SubResource("Animation_plgac")
+}
 
 [node name="GameOver" type="Control" unique_id=1357769164]
 layout_mode = 3
@@ -28,6 +166,19 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0.5294118, 1, 1)
 
+[node name="Label4" type="Label" parent="ColorRect" unique_id=584379941]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.088541664
+anchor_top = 0.22993827
+anchor_right = 0.12614584
+anchor_bottom = 0.3775926
+offset_right = -0.3199997
+offset_bottom = 0.3199997
+theme_override_font_sizes/font_size = 64
+text = ":)"
+metadata/_edit_use_anchors_ = true
+
 [node name="TextEdit" type="TextEdit" parent="." unique_id=252282322]
 layout_mode = 1
 anchors_preset = -1
@@ -44,22 +195,6 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_gob2e")
 text = "El teu PC ha topat amb un problema i necessita reiniciar. Estem 
 recollint informació sobre el error i després reiniciarem l'ordinador 
 per tu."
-metadata/_edit_use_anchors_ = true
-
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1026415528]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.06290281
-anchor_top = 0.2085309
-anchor_right = 0.1579028
-anchor_bottom = 0.45953092
-offset_left = -0.46403503
-offset_top = -0.12802124
-offset_right = 0.09593201
-offset_bottom = -0.07614136
-rotation = -0.0013668537
-texture = ExtResource("2_gob2e")
-expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="." unique_id=396487366]
@@ -117,10 +252,6 @@ text = "Si tu truques una persona de suport, donal'ls-hi aquesta informació:
 Codi: HE_MORT_EN_EL_JOC"
 metadata/_edit_use_anchors_ = true
 
-[node name="Timer" type="Timer" parent="." unique_id=1460441093]
-wait_time = 10.0
-autostart = true
-
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=482492383]
 layout_mode = 1
 anchors_preset = -1
@@ -143,4 +274,79 @@ theme_override_font_sizes/font_size = 20
 text = "%"
 metadata/_edit_use_anchors_ = true
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="ScoreContent" type="ColorRect" parent="." unique_id=421567100]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.007843138, 0, 0.2509804, 0.47058824)
+
+[node name="BackToMenu" type="Button" parent="ScoreContent" unique_id=2049281310]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2013889
+anchor_top = 0.8734568
+anchor_right = 0.48647916
+anchor_bottom = 0.9679876
+offset_right = -0.42401123
+offset_bottom = -0.2559967
+theme_override_styles/normal = SubResource("StyleBoxFlat_dh54o")
+text = "Tornar al Menu"
+metadata/_edit_use_anchors_ = true
+
+[node name="NewGame" type="Button" parent="ScoreContent" unique_id=2069786181]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.53125
+anchor_top = 0.8734568
+anchor_right = 0.8158543
+anchor_bottom = 0.9670988
+offset_right = 0.1359253
+offset_bottom = 0.32000732
+theme_override_styles/normal = SubResource("StyleBoxFlat_d1w46")
+text = "Nova Partida"
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="ScoreContent" unique_id=1119615986]
+visible = false
+custom_minimum_size = Vector2(1000, 400)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -200.0
+offset_right = 500.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.26666668)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ScoreContent" unique_id=280318335]
+libraries/ = SubResource("AnimationLibrary_twys0")
+
+[node name="Label" type="Label" parent="ScoreContent" unique_id=816659362]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.065972224
+anchor_top = 0.064814806
+anchor_right = 0.9343055
+anchor_bottom = 0.1754321
+offset_right = -0.3199463
+offset_bottom = 0.3199997
+pivot_offset = Vector2(488, 34.000008)
+theme_override_font_sizes/font_size = 52
+text = "EL SISTEMA TA MATAT"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="button_up" from="ScoreContent/BackToMenu" to="." method="_on_back_to_menu_button_up"]
+[connection signal="button_up" from="ScoreContent/NewGame" to="." method="_on_new_game_button_up"]

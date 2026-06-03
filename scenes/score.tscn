@@ -1,12 +1,627 @@
 [gd_scene format=3 uid="uid://dqdut167ox3kg"]
 
 [ext_resource type="Script" uid="uid://becsud1c7sr4" path="res://scripts/score.gd" id="1_8juob"]
+[ext_resource type="Texture2D" uid="uid://buc021f05bip0" path="res://images/gameoverComponent.png" id="2_bak1h"]
+
+[sub_resource type="SystemFont" id="SystemFont_plgac"]
+font_weight = 200
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lew60"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bak1h"]
 bg_color = Color(1, 0, 0, 0.4627451)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_plgac"]
 bg_color = Color(0.28627452, 0.70980394, 0, 0.45882353)
+
+[sub_resource type="Animation" id="Animation_bak1h"]
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BackToMenu:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NewGame:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_plgac"]
+resource_name = "scorePopup"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NewGame:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BackToMenu:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Label:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lew60"]
+_data = {
+&"RESET": SubResource("Animation_bak1h"),
+&"scorePopup": SubResource("Animation_plgac")
+}
+
+[sub_resource type="Animation" id="Animation_lew60"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_xcjqx"]
+resource_name = "textWobble"
+
+[sub_resource type="Animation" id="Animation_68bkv"]
+resource_name = "text_wobble"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.08726646259971647, -0.08726646259971647, 0.08726646]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xcjqx"]
+_data = {
+&"RESET": SubResource("Animation_lew60"),
+&"textWobble": SubResource("Animation_xcjqx"),
+&"text_wobble": SubResource("Animation_68bkv")
+}
+
+[sub_resource type="Animation" id="Animation_3eqfp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SadFace/SadFace1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SadFace/SadFace1/SadFace2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SadFace/SadFace1/SadFace2/SadFace3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SadFace/SadFace1/SadFace2/SadFace3/SadFace4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SadFace/SadFace1/SadFace2/SadFace3/SadFace4/SadFace5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("ErrorInfo/ErrorInfo1:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ErrorInfo/ErrorInfo1/ErrorInfo2:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ErrorInfo/ErrorInfo1/ErrorInfo2/ErrorInfo3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("ErrorInfo/ErrorInfo1/ErrorInfo2/ErrorInfo3/ErrorInfo4:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("ErrorInfo/ErrorInfo1/ErrorInfo2/ErrorInfo3/ErrorInfo4/ErrorInfo5:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("ErrorInfo/ErrorInfo1/ErrorInfo2/ErrorInfo3/ErrorInfo4/ErrorInfo5/ErrorInfo6:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Percentatge/Percentatge1:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Percentatge/Percentatge1/Percentatge2:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Percentatge/Percentatge1/Percentatge2/Percentatge3:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Percentatge/Percentatge1/Percentatge2/Percentatge3/Percentatge4:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Percentatge/Percentatge1/Percentatge2/Percentatge3/Percentatge4/Percentatge5:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Percentatge/Percentatge1/Percentatge2/Percentatge3/Percentatge4/Percentatge5/Percentatge6:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_x4ir2"]
+resource_name = "text_spam"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SadFace/SadFace1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SadFace/SadFace1/SadFace2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SadFace/SadFace1/SadFace2/SadFace3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.9),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SadFace/SadFace1/SadFace2/SadFace3/SadFace4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SadFace/SadFace1/SadFace2/SadFace3/SadFace4/SadFace5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SadFace/SadFace1/SadFace2/SadFace3/SadFace4/SadFace5/SadFace6:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.8),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ErrorInfo/ErrorInfo1:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ErrorInfo/ErrorInfo1/ErrorInfo2:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("ErrorInfo/ErrorInfo1/ErrorInfo2/ErrorInfo3:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.9),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("ErrorInfo/ErrorInfo1/ErrorInfo2/ErrorInfo3/ErrorInfo4:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(1.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("ErrorInfo/ErrorInfo1/ErrorInfo2/ErrorInfo3/ErrorInfo4/ErrorInfo5:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("ErrorInfo/ErrorInfo1/ErrorInfo2/ErrorInfo3/ErrorInfo4/ErrorInfo5/ErrorInfo6:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(1.8),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Percentatge/Percentatge1:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Percentatge/Percentatge1/Percentatge2:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Percentatge/Percentatge1/Percentatge2/Percentatge3:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0.9),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Percentatge/Percentatge1/Percentatge2/Percentatge3/Percentatge4:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(1.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Percentatge/Percentatge1/Percentatge2/Percentatge3/Percentatge4/Percentatge5:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Percentatge/Percentatge1/Percentatge2/Percentatge3/Percentatge4/Percentatge5/Percentatge6:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(1.8),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7w2o3"]
+_data = {
+&"RESET": SubResource("Animation_3eqfp"),
+&"text_spam": SubResource("Animation_x4ir2")
+}
 
 [node name="Score" type="Control" unique_id=1453837980]
 layout_mode = 3
@@ -17,16 +632,413 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8juob")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=971066243]
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=2102803240]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.007843138, 0, 0.2509804, 1)
+color = Color(0, 0.5294118, 1, 1)
 
-[node name="BackToMenu" type="Button" parent="ColorRect" unique_id=1963568488]
+[node name="SadFace" type="Label" parent="." unique_id=1390475687]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.088541664
+anchor_top = 0.22993827
+anchor_right = 0.12614584
+anchor_bottom = 0.3775926
+offset_right = -0.3199997
+offset_bottom = 0.3199997
+theme_override_font_sizes/font_size = 64
+text = ":("
+metadata/_edit_use_anchors_ = true
+
+[node name="SadFace1" type="Label" parent="SadFace" unique_id=154124938]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.48837215
+anchor_top = 0.104166746
+anchor_right = 1.3795348
+anchor_bottom = 1.0175
+offset_right = -0.3199997
+offset_bottom = 0.3199997
+theme_override_font_sizes/font_size = 64
+text = ":("
+metadata/_edit_use_anchors_ = true
+
+[node name="SadFace2" type="Label" parent="SadFace/SadFace1" unique_id=1432301254]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.48837215
+anchor_top = 0.104166746
+anchor_right = 1.3795348
+anchor_bottom = 1.0175
+offset_right = -0.3199997
+offset_bottom = 0.3199997
+theme_override_font_sizes/font_size = 64
+text = ":("
+metadata/_edit_use_anchors_ = true
+
+[node name="SadFace3" type="Label" parent="SadFace/SadFace1/SadFace2" unique_id=238620001]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.48837215
+anchor_top = 0.104166746
+anchor_right = 1.3795348
+anchor_bottom = 1.0175
+offset_right = -0.3199997
+offset_bottom = 0.3199997
+theme_override_font_sizes/font_size = 64
+text = ":("
+metadata/_edit_use_anchors_ = true
+
+[node name="SadFace4" type="Label" parent="SadFace/SadFace1/SadFace2/SadFace3" unique_id=640013789]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.48837215
+anchor_top = 0.104166746
+anchor_right = 1.3795348
+anchor_bottom = 1.0175
+offset_right = -0.3199997
+offset_bottom = 0.3199997
+theme_override_font_sizes/font_size = 64
+text = ":("
+metadata/_edit_use_anchors_ = true
+
+[node name="SadFace5" type="Label" parent="SadFace/SadFace1/SadFace2/SadFace3/SadFace4" unique_id=628949733]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.48837215
+anchor_top = 0.104166746
+anchor_right = 1.3795348
+anchor_bottom = 1.0175
+offset_right = -0.3199997
+offset_bottom = 0.3199997
+theme_override_font_sizes/font_size = 64
+text = ":("
+metadata/_edit_use_anchors_ = true
+
+[node name="SadFace6" type="Label" parent="SadFace/SadFace1/SadFace2/SadFace3/SadFace4/SadFace5" unique_id=474388927]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.48837215
+anchor_top = 0.104166746
+anchor_right = 1.3795348
+anchor_bottom = 1.0175
+offset_right = -0.3199997
+offset_bottom = 0.3199997
+theme_override_font_sizes/font_size = 64
+text = ":("
+metadata/_edit_use_anchors_ = true
+
+[node name="ErrorInfo" type="TextEdit" parent="." unique_id=1494672553]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08680555
+anchor_top = 0.41512346
+anchor_right = 0.6609514
+anchor_bottom = 0.6069753
+offset_right = -0.41601563
+offset_bottom = -0.32000732
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_plgac")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_lew60")
+text = "El teu PC ha topat amb un problema i necessita reiniciar. Estem 
+recollint informació sobre el error i després reiniciarem l'ordinador 
+per tu."
+metadata/_edit_use_anchors_ = true
+
+[node name="ErrorInfo1" type="TextEdit" parent="ErrorInfo" unique_id=1487562485]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.022692878
+anchor_top = -0.088709675
+anchor_right = 1.0535794
+anchor_bottom = 0.86548394
+offset_right = -0.41601563
+offset_bottom = -0.32000732
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_plgac")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_lew60")
+text = "El teu PC ha topat amb un problema i necessita reiniciar. Estem 
+recollint informació sobre el error i després reiniciarem l'ordinador 
+per tu."
+metadata/_edit_use_anchors_ = true
+
+[node name="ErrorInfo2" type="TextEdit" parent="ErrorInfo/ErrorInfo1" unique_id=2103610314]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.022692878
+anchor_top = -0.088709675
+anchor_right = 1.0535794
+anchor_bottom = 0.86548394
+offset_right = -0.41601563
+offset_bottom = -0.32000732
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_plgac")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_lew60")
+text = "El teu PC ha topat amb un problema i necessita reiniciar. Estem 
+recollint informació sobre el error i després reiniciarem l'ordinador 
+per tu."
+metadata/_edit_use_anchors_ = true
+
+[node name="ErrorInfo3" type="TextEdit" parent="ErrorInfo/ErrorInfo1/ErrorInfo2" unique_id=945191972]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.022692878
+anchor_top = -0.088709675
+anchor_right = 1.0535794
+anchor_bottom = 0.86548394
+offset_right = -0.41601563
+offset_bottom = -0.32000732
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_plgac")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_lew60")
+text = "El teu PC ha topat amb un problema i necessita reiniciar. Estem 
+recollint informació sobre el error i després reiniciarem l'ordinador 
+per tu."
+metadata/_edit_use_anchors_ = true
+
+[node name="ErrorInfo4" type="TextEdit" parent="ErrorInfo/ErrorInfo1/ErrorInfo2/ErrorInfo3" unique_id=1424450215]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.022692878
+anchor_top = -0.088709675
+anchor_right = 1.0535794
+anchor_bottom = 0.86548394
+offset_right = -0.41601563
+offset_bottom = -0.32000732
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_plgac")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_lew60")
+text = "El teu PC ha topat amb un problema i necessita reiniciar. Estem 
+recollint informació sobre el error i després reiniciarem l'ordinador 
+per tu."
+metadata/_edit_use_anchors_ = true
+
+[node name="ErrorInfo5" type="TextEdit" parent="ErrorInfo/ErrorInfo1/ErrorInfo2/ErrorInfo3/ErrorInfo4" unique_id=1736246114]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.022692878
+anchor_top = -0.088709675
+anchor_right = 1.0535794
+anchor_bottom = 0.9864528
+offset_right = -0.41601563
+offset_bottom = -0.32000732
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_plgac")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_lew60")
+text = "El teu PC ha topat amb un problema i necessita reiniciar. Estem 
+recollint informació sobre el error i després reiniciarem l'ordinador 
+per tu."
+metadata/_edit_use_anchors_ = true
+
+[node name="ErrorInfo6" type="TextEdit" parent="ErrorInfo/ErrorInfo1/ErrorInfo2/ErrorInfo3/ErrorInfo4/ErrorInfo5" unique_id=759698840]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.022692878
+anchor_top = -0.088709675
+anchor_right = 1.0535794
+anchor_bottom = 0.86548394
+offset_right = -0.41601563
+offset_bottom = -0.32000732
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_plgac")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_lew60")
+text = "El teu PC ha topat amb un problema i necessita reiniciar. Estem 
+recollint informació sobre el error i després reiniciarem l'ordinador 
+per tu."
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="." unique_id=538861394]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.16145833
+anchor_top = 0.697531
+anchor_right = 0.74267364
+anchor_bottom = 0.7313952
+offset_right = 0.43988037
+offset_bottom = 0.055999756
+theme_override_font_sizes/font_size = 12
+text = "Per a mes informació sobre aquest error i possibles solucions, visita https://www.inslapineda.com/"
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=801237413]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08680555
+anchor_top = 0.7021605
+anchor_right = 0.15131944
+anchor_bottom = 0.80891365
+offset_right = -0.3199997
+offset_bottom = -0.1760025
+texture = ExtResource("2_bak1h")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="." unique_id=1851576809]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.163
+anchor_top = 0.7453704
+anchor_right = 0.52454865
+anchor_bottom = 0.81000006
+offset_left = 0.22399902
+offset_right = -153.28003
+offset_bottom = 0.11993408
+theme_override_font_sizes/font_size = 8
+text = "Si tu truques una persona de suport, donal'ls-hi aquesta informació:
+
+Codi: HE_MORT_EN_EL_JOC"
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="." unique_id=1056105230]
+wait_time = 10.0
+autostart = true
+
+[node name="Percentatge" type="Label" parent="." unique_id=1534586747]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.087000005
+anchor_top = 0.605
+anchor_right = 0.20500001
+anchor_bottom = 0.648
+offset_left = -0.22400665
+offset_top = -0.040039063
+offset_right = -84.16002
+offset_bottom = 0.09597778
+theme_override_font_sizes/font_size = 20
+text = "100% complet"
+metadata/_edit_use_anchors_ = true
+
+[node name="Percentatge1" type="Label" parent="Percentatge" unique_id=1326668328]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0016471078
+anchor_top = 0.32285956
+anchor_right = 1.0002942
+anchor_bottom = 1.3212858
+offset_left = -0.22400665
+offset_top = -0.040039063
+offset_right = -0.040008545
+offset_bottom = 0.0040283203
+theme_override_font_sizes/font_size = 20
+text = "100% complet"
+metadata/_edit_use_anchors_ = true
+
+[node name="Percentatge2" type="Label" parent="Percentatge/Percentatge1" unique_id=1797701983]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0016471078
+anchor_top = 0.32285956
+anchor_right = 1.0002942
+anchor_bottom = 1.3212858
+offset_left = -0.22400665
+offset_top = -0.040039063
+offset_right = -0.040008545
+offset_bottom = 0.0040283203
+theme_override_font_sizes/font_size = 20
+text = "100% complet"
+metadata/_edit_use_anchors_ = true
+
+[node name="Percentatge3" type="Label" parent="Percentatge/Percentatge1/Percentatge2" unique_id=142654655]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0016471078
+anchor_top = 0.32285956
+anchor_right = 1.0002942
+anchor_bottom = 1.3212858
+offset_left = -0.22400665
+offset_top = -0.040039063
+offset_right = -0.040008545
+offset_bottom = 0.0040283203
+theme_override_font_sizes/font_size = 20
+text = "100% complet"
+metadata/_edit_use_anchors_ = true
+
+[node name="Percentatge4" type="Label" parent="Percentatge/Percentatge1/Percentatge2/Percentatge3" unique_id=1920001000]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0016471078
+anchor_top = 0.32285956
+anchor_right = 1.0002942
+anchor_bottom = 1.3212858
+offset_left = -0.22400665
+offset_top = -0.040039063
+offset_right = -0.040008545
+offset_bottom = 0.0040283203
+theme_override_font_sizes/font_size = 20
+text = "100% complet"
+metadata/_edit_use_anchors_ = true
+
+[node name="Percentatge5" type="Label" parent="Percentatge/Percentatge1/Percentatge2/Percentatge3/Percentatge4" unique_id=2076608202]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0016471078
+anchor_top = 0.32285956
+anchor_right = 1.0002942
+anchor_bottom = 1.3212858
+offset_left = -0.22400665
+offset_top = -0.040039063
+offset_right = -0.040008545
+offset_bottom = 0.0040283203
+theme_override_font_sizes/font_size = 20
+text = "100% complet"
+metadata/_edit_use_anchors_ = true
+
+[node name="Percentatge6" type="Label" parent="Percentatge/Percentatge1/Percentatge2/Percentatge3/Percentatge4/Percentatge5" unique_id=994413762]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0016471078
+anchor_top = 0.32285956
+anchor_right = 1.0002942
+anchor_bottom = 1.3212858
+offset_left = -0.22400665
+offset_top = -0.040039063
+offset_right = -0.040008545
+offset_bottom = 0.0040283203
+theme_override_font_sizes/font_size = 20
+text = "100% complet"
+metadata/_edit_use_anchors_ = true
+
+[node name="ScoreContent" type="ColorRect" parent="." unique_id=971066243]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.007843138, 0, 0.2509804, 0.47058824)
+
+[node name="BackToMenu" type="Button" parent="ScoreContent" unique_id=1963568488]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.2013889
@@ -39,7 +1051,8 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_bak1h")
 text = "Tornar al Menu"
 metadata/_edit_use_anchors_ = true
 
-[node name="NewGame" type="Button" parent="ColorRect" unique_id=1463559032]
+[node name="NewGame" type="Button" parent="ScoreContent" unique_id=1463559032]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.53125
@@ -52,22 +1065,47 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_plgac")
 text = "Nova Partida"
 metadata/_edit_use_anchors_ = true
 
-[node name="ColorRect" type="ColorRect" parent="ColorRect" unique_id=1218571052]
+[node name="ColorRect" type="ColorRect" parent="ScoreContent" unique_id=1218571052]
+visible = false
 custom_minimum_size = Vector2(1000, 400)
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.066
-anchor_top = 0.13255556
-anchor_right = 0.934
-anchor_bottom = 0.809
-offset_left = -0.03199768
-offset_top = 0.10399628
-offset_right = 0.031982422
-offset_bottom = -0.23199463
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -200.0
+offset_right = 500.0
+offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.26666668)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ScoreContent" unique_id=830238873]
+libraries/ = SubResource("AnimationLibrary_lew60")
+
+[node name="Label" type="Label" parent="ScoreContent" unique_id=770937280]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.065972224
+anchor_top = 0.064814806
+anchor_right = 0.9343055
+anchor_bottom = 0.1754321
+offset_right = -0.3199463
+offset_bottom = 0.3199997
+pivot_offset = Vector2(488, 34.000008)
+theme_override_font_sizes/font_size = 52
+text = "SISTEMA DERROTAT !!!"
+horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[connection signal="button_up" from="ColorRect/BackToMenu" to="." method="_on_back_to_menu_button_up"]
-[connection signal="button_up" from="ColorRect/NewGame" to="." method="_on_new_game_button_up"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ScoreContent/Label" unique_id=649337034]
+libraries/ = SubResource("AnimationLibrary_xcjqx")
+
+[node name="TextSpam" type="AnimationPlayer" parent="." unique_id=923563819]
+libraries/ = SubResource("AnimationLibrary_7w2o3")
+
+[connection signal="button_up" from="ScoreContent/BackToMenu" to="." method="_on_back_to_menu_button_up"]
+[connection signal="button_up" from="ScoreContent/NewGame" to="." method="_on_new_game_button_up"]
