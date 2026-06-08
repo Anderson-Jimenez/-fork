@@ -12,11 +12,15 @@ extends Control
 @onready var MaxHp = $ColorRect/CharacterArea/HBoxContainer/maxHp
 @onready var CharacterName = $ColorRect/CharacterArea/characterName
 
+@onready var CardArea = $ColorRect/CharacterArea/CardArea
+
 @onready var timer = $BattleTimer
 @onready var TimerLabel = $ColorRect/Time
 
 @onready var basicTime = $BasicAttackTimer
 @onready var BasicAttackProgress = $ColorRect/EnemyArea/BasicAttackProgress
+
+var card_scene = preload("res://scenes/cardScene.tscn")
 
 var enemy;
 var enemies: Array[EnemyData] = []
@@ -41,7 +45,11 @@ func _ready() -> void:
 	Hp.text= str(CharacterStats.hp)
 	MaxHp.text = str(CharacterStats.maxHp)
 	CharacterName.text = CharacterStats.nameChar
-
+	
+	#for card in CharacterStats.slots:
+	#	var card_node = card_scene.instantiate()
+	#	CardArea.add_child(card_node)
+	#	#card_node.setup(card)
 
 func load_enemies():
 	var path = "res://resources/enemies/stage"+str(GameManager.currentStage)+"/basicEnemies/"

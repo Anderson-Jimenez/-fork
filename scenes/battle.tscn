@@ -124,6 +124,19 @@ text = "/"
 [node name="maxHp" type="Label" parent="ColorRect/CharacterArea/HBoxContainer" unique_id=989070191]
 layout_mode = 2
 
+[node name="CardArea" type="VBoxContainer" parent="ColorRect/CharacterArea" unique_id=2255035]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.028
+anchor_top = 0.37500003
+anchor_right = 0.957
+anchor_bottom = 0.9760001
+offset_left = 0.052000046
+offset_top = -1.5258789e-05
+offset_right = -0.18701172
+offset_bottom = 0.13595581
+metadata/_edit_use_anchors_ = true
+
 [node name="Variables" type="ColorRect" parent="ColorRect" unique_id=1283931269]
 layout_mode = 1
 anchors_preset = -1
