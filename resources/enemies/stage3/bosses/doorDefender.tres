@@ -1,14 +1,13 @@
 [gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://1sj7irnejwwt"]
 
 [ext_resource type="Script" uid="uid://d1mmp7cbsynok" path="res://scripts/resources/enemyData.gd" id="1_362ri"]
-[ext_resource type="Texture2D" uid="uid://cr8qpbx4ck84l" path="res://images/provisionalSprites/windowsDefender.jpg" id="2_qgy5l"]
+[ext_resource type="Texture2D" uid="uid://bjvt74mi445iu" path="res://images/enemies/final_boss.png" id="2_qgy5l"]
 
 [resource]
 script = ExtResource("1_362ri")
 name = "DoorDefender"
 enemyStage = 3
-hp = 10000
-maxHp = 10000
-passiveDmg = 20
+hp = 1000
+maxHp = 1000
 sprite = ExtResource("2_qgy5l")
 metadata/_custom_type_script = "uid://d1mmp7cbsynok"

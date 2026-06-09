@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://ddqh4mjkws8v3"]
+
+[ext_resource type="Script" uid="uid://d1mmp7cbsynok" path="res://scripts/resources/enemyData.gd" id="1_wfkbw"]
+[ext_resource type="Texture2D" uid="uid://cdmoitgfv7xjh" path="res://images/enemies/outllook.jpeg" id="2_dme84"]
+
+[resource]
+script = ExtResource("1_wfkbw")
+name = "outlook"
+enemyStage = 1
+hp = 100
+maxHp = 100
+sprite = ExtResource("2_dme84")
+metadata/_custom_type_script = "uid://d1mmp7cbsynok"

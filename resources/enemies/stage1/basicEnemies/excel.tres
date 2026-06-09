@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://dmjwnihydm7e6"]
 
 [ext_resource type="Script" uid="uid://d1mmp7cbsynok" path="res://scripts/resources/enemyData.gd" id="1_jkwtd"]
-[ext_resource type="Texture2D" uid="uid://bfhnw5i7gu8h1" path="res://images/provisionalSprites/calender.jpg" id="2_ibdy1"]
+[ext_resource type="Texture2D" uid="uid://c8ow5uypwblnw" path="res://images/enemies/excel.jpeg" id="2_asu47"]
 
 [resource]
 script = ExtResource("1_jkwtd")
-name = "Calendari"
+name = "Excel"
 enemyStage = 1
 hp = 31
 maxHp = 31
 passiveDmg = 31
-sprite = ExtResource("2_ibdy1")
+sprite = ExtResource("2_asu47")
 metadata/_custom_type_script = "uid://d1mmp7cbsynok"
