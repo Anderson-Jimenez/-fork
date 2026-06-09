@@ -14,7 +14,7 @@ var characters = {
 		"NAME": "Anderson",
 		"HP": "100",
 		"SLOTS": [{}, {}, {}, {}],
-		"SPRITE": "res://images/test.png",
+		"SPRITE": "res://images/p1.png",
 		"SARTING_HAND": 11,
 		"CARDS": []
 	},
@@ -23,7 +23,7 @@ var characters = {
 		"NAME": "Pep",
 		"HP": "200",
 		"SLOTS": [{}, {}, {}, {}],
-		"SPRITE": "res://images/template.png",
+		"SPRITE": "res://images/p2.png",
 		"SARTING_HAND": 12,
 		"CARDS": []
 	},
@@ -36,22 +36,6 @@ var characters = {
 		"SARTING_HAND": 13,
 		"CARDS": []
 	},
-
-	"char4": {
-		"NAME": "Aptyp",
-		"HP": "10",
-		"SLOTS": [{}, {}, {}, {}],
-		"SPRITE": "res://images/template.png",
-		"CARDS": []
-	},
-
-	"char5": {
-		"NAME": "lepepeyt",
-		"HP": "150",
-		"SLOTS": [{}, {}, {}, {}],
-		"SPRITE": "res://images/test.png",
-		"CARDS": []
-	}
 }
 
 
@@ -61,7 +45,6 @@ func show_character(id):
 	CharName.text = selectedCharacter["NAME"]
 	CharHp.text = selectedCharacter["HP"]
 	CharSlots.text = "4"
-
 	Portrait.texture = load(selectedCharacter["SPRITE"])
 
 func _on_start_game_pressed() -> void:

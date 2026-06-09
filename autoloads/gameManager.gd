@@ -10,6 +10,12 @@ var stageTypes=['battle','randomEvent']
 
 var functionsInInventory = {}
 
+var inventoryScene = preload("res://scenes/inventary.tscn")
+var inventoryInstance = null
+
+
+
+
 func setCharacter(data):
 	selectedCharacter= data
 
@@ -41,3 +47,19 @@ func emptyAllGameManager():
 	currentWindow=0
 	selectedCharacter = {}
 	functionsInInventory = {}
+
+
+
+func _input(event):
+	if event.is_action_pressed("toggle_inventory"):
+		var blockedScenes = ["battle", "bossBattle"]
+		if not blockedScenes.has(stages[currentWindow]):
+			_toggle_inventory()
+
+func _toggle_inventory():
+	if inventoryInstance == null:
+		inventoryInstance = inventoryScene.instantiate()
+		get_tree().current_scene.add_child(inventoryInstance)
+	else:
+		inventoryInstance.queue_free()
+		inventoryInstance = null

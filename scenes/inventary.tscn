@@ -35,12 +35,10 @@ color = Color(0, 0.16, 0.11733333, 1)
 
 [node name="Character" type="TextureRect" parent="ColorRect" unique_id=2087898592]
 layout_mode = 0
-offset_left = 470.0
-offset_top = 169.0
-offset_right = 677.0
-offset_bottom = 276.0
-expand_mode = 2
-stretch_mode = 6
+offset_left = 494.0
+offset_top = 168.0
+offset_right = 652.0
+offset_bottom = 289.0
 
 [node name="Label" type="Label" parent="ColorRect" unique_id=1033913147]
 layout_mode = 1
