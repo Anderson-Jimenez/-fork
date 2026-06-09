@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://xos7jbb37yul"]
+
+[ext_resource type="Script" uid="uid://bf0l5tn52vqvq" path="res://scripts/resources/cardData.gd" id="1_746kn"]
+
+[resource]
+script = ExtResource("1_746kn")
+idName = "idDotze"
+name = "Adicional Interests"
+description = "Cada vez que haces daño al enemigo, aplica 1 de daño adicional"
+rarity = 2
+metadata/_custom_type_script = "uid://bf0l5tn52vqvq"

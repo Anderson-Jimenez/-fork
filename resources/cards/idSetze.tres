@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://cx4be6h2p88e"]
+
+[ext_resource type="Script" uid="uid://bf0l5tn52vqvq" path="res://scripts/resources/cardData.gd" id="1_53dfo"]
+
+[resource]
+script = ExtResource("1_53dfo")
+idName = "idSetze"
+name = "Fork Bomb"
+description = "Al comienzo de la batalla, haces 0.5 de daño, y cada 3 segundos, pasivamente, se duplica el daño."
+rarity = 3
+metadata/_custom_type_script = "uid://bf0l5tn52vqvq"

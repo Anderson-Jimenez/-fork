@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://cx2aycpra0tqy"]
+
+[ext_resource type="Script" uid="uid://bf0l5tn52vqvq" path="res://scripts/resources/cardData.gd" id="1_1a7nv"]
+
+[resource]
+script = ExtResource("1_1a7nv")
+idName = "idVuit"
+name = "Healing Backup"
+description = "Cada 10 segundos te curas 15 de vida"
+rarity = 1
+metadata/_custom_type_script = "uid://bf0l5tn52vqvq"

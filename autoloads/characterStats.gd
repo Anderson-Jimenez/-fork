@@ -29,7 +29,7 @@ func setCharacter(char):
 
 func setStartingCards():
 	var results = []
-	var dir = DirAccess.open("res://resources/cards")  # la teva carpeta
+	var dir = DirAccess.open("res://resources/cards")
 	
 	if dir:
 		dir.list_dir_begin()

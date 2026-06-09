@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://ie6w0s1rj7i2"]
+
+[ext_resource type="Script" uid="uid://bf0l5tn52vqvq" path="res://scripts/resources/cardData.gd" id="1_kyqvl"]
+
+[resource]
+script = ExtResource("1_kyqvl")
+idName = "idDeu"
+name = "counter ping"
+description = "Al recibir daño, haces 5 de daño"
+rarity = 2
+metadata/_custom_type_script = "uid://bf0l5tn52vqvq"

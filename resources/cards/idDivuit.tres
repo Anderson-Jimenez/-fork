@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://qkwmj1w5ox0c"]
+
+[ext_resource type="Script" uid="uid://bf0l5tn52vqvq" path="res://scripts/resources/cardData.gd" id="1_024t5"]
+
+[resource]
+script = ExtResource("1_024t5")
+idName = "idDivuit"
+name = "Kill -9"
+description = "Matas al enemigo despues de que pasen 59 segundos."
+rarity = 3
+metadata/_custom_type_script = "uid://bf0l5tn52vqvq"

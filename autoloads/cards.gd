@@ -24,3 +24,7 @@ func idCinc():
 func idSis():
 	if CharacterStats.hp <= 15:
 		print("poca vida +5 de mal")
+
+func idSet():
+	if CharacterStats.hp <= 15:
+		print("Ola")
