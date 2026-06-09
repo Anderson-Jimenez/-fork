@@ -8,4 +8,5 @@ idName = "idDeu"
 name = "counter ping"
 description = "Al recibir daño, haces 5 de daño"
 rarity = 2
+type = "conditional"
 metadata/_custom_type_script = "uid://bf0l5tn52vqvq"

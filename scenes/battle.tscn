@@ -5,6 +5,9 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mgoel"]
 bg_color = Color(0.92446744, 0.4446274, 0, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dn72j"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
 [node name="Battle" type="Control" unique_id=416529015]
 layout_mode = 3
 anchors_preset = 15
@@ -76,14 +79,16 @@ metadata/_edit_use_anchors_ = true
 [node name="characterSprite" type="TextureRect" parent="ColorRect/CharacterArea" unique_id=1767679493]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.012787724
-anchor_top = 0.010775862
-anchor_right = 0.3967877
-anchor_bottom = 0.20077588
-offset_right = -0.14399719
-offset_bottom = -0.16000366
+anchor_left = 0.29900002
+anchor_top = 0.062000003
+anchor_right = 0.67300004
+anchor_bottom = 0.252
+offset_left = -3.9090118
+offset_top = -9.768002
+offset_right = -0.14300537
+offset_bottom = 0.071998596
+grow_horizontal = 2
 expand_mode = 1
-metadata/_edit_use_anchors_ = true
 
 [node name="characterName" type="Label" parent="ColorRect/CharacterArea" unique_id=1495439821]
 layout_mode = 1
@@ -100,10 +105,10 @@ metadata/_edit_use_anchors_ = true
 [node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/CharacterArea" unique_id=476922350]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.012787724
-anchor_top = 0.24987935
-anchor_right = 0.3961228
-anchor_bottom = 0.33600003
+anchor_left = 0.32992327
+anchor_top = 0.28005177
+anchor_right = 0.65954995
+anchor_bottom = 0.35108626
 offset_top = 0.055999756
 offset_right = 0.115982056
 offset_bottom = 0.09599304
@@ -124,18 +129,18 @@ text = "/"
 [node name="maxHp" type="Label" parent="ColorRect/CharacterArea/HBoxContainer" unique_id=989070191]
 layout_mode = 2
 
-[node name="CardArea" type="VBoxContainer" parent="ColorRect/CharacterArea" unique_id=2255035]
+[node name="CardArea" type="Panel" parent="ColorRect/CharacterArea" unique_id=2068766322]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.028
-anchor_top = 0.37500003
-anchor_right = 0.957
-anchor_bottom = 0.9760001
-offset_left = 0.052000046
-offset_top = -1.5258789e-05
-offset_right = -0.18701172
-offset_bottom = 0.13595581
-metadata/_edit_use_anchors_ = true
+anchor_left = 0.5
+anchor_top = 0.675
+anchor_right = 0.5
+anchor_bottom = 0.675
+offset_left = -178.5
+offset_top = -132.20001
+offset_right = 177.5
+offset_bottom = 131.79999
+theme_override_styles/panel = SubResource("StyleBoxFlat_dn72j")
 
 [node name="Variables" type="ColorRect" parent="ColorRect" unique_id=1283931269]
 layout_mode = 1
@@ -252,12 +257,12 @@ horizontal_alignment = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="BattleTimer" type="Timer" parent="." unique_id=573163317]
-wait_time = 120.0
+wait_time = 60.0
 one_shot = true
 autostart = true
 
 [node name="BasicAttackTimer" type="Timer" parent="." unique_id=1690015104]
-wait_time = 10.0
+wait_time = 2.0
 autostart = true
 
 [connection signal="button_up" from="ColorRect/Button" to="." method="_on_button_up_next_stage"]

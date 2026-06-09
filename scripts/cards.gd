@@ -11,8 +11,8 @@ var data = {}  # guardar datos en diccionario
 func setup(card_data):
 	data = card_data
 	CardName.text = card_data["name"]
-	CardType.text = card_data["description"]
-	CardDesc.text = "res, hola"
+	CardType.text = "ataque"
+	CardDesc.text = card_data["description"]
 	
 func _gui_input(event):
 	if event is InputEventMouseButton and event.pressed:

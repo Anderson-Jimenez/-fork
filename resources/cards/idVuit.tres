@@ -8,4 +8,5 @@ idName = "idVuit"
 name = "Healing Backup"
 description = "Cada 10 segundos te curas 15 de vida"
 rarity = 1
+type = "time"
 metadata/_custom_type_script = "uid://bf0l5tn52vqvq"

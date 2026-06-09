@@ -5,7 +5,8 @@ extends Node
 @onready var slot2 = $ColorRect/Slot2/cardN
 @onready var slot3 = $ColorRect/Slot3/cardN
 @onready var slot4 = $ColorRect/Slot4/cardN
-@onready var selectedCard = $ColorRect/SelectedCard/cInfo
+@onready var selectedCardName = $ColorRect/SelectedCard/cName
+@onready var selectedCardDesc = $ColorRect/SelectedCard/cDesc
 var card_scene = preload("res://scenes/cardScene.tscn")
 var currentSelectedCard = {}
 var cardNodes = {}
@@ -34,20 +35,22 @@ func _on_slot_input(event, slot_index, slot_label):
 
 func _assign_to_slot(slot_index, slot_label):
 	if currentSelectedCard == null:
-		selectedCard.text = "No tienes ninguna \n carta seleccionada!"
+		selectedCardDesc.text = "No tienes ninguna \n carta seleccionada!"
 	else:
 		CharacterStats.slots[slot_index] = currentSelectedCard
 		slot_label.text = currentSelectedCard["name"]
 		cardNodes[currentSelectedCard["name"]].visible = false
 		currentSelectedCard = null
-		selectedCard.text = ""
+		selectedCardName.text = ""
+		selectedCardDesc.text = ""
 		print(CharacterStats.slots[slot_index])
 func _on_button_button_up() -> void:
 	GameManager.nextStage()
 
 func _on_card_clicked(card_data):
 	currentSelectedCard = card_data
-	selectedCard.text = card_data["name"] + "\n" + card_data["description"]
+	selectedCardName.text = card_data["name"]
+	selectedCardDesc.text = card_data["description"]
 
 func _on_move_to_slot_1_pressed() -> void:
 	_assign_to_slot(0, slot1)

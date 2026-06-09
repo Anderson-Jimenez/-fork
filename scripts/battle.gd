@@ -41,7 +41,7 @@ func _ready() -> void:
 	
 	print(enemy)
 	
-	Sprite.texture = load("res://images/test.png")
+	Sprite.texture = load(CharacterStats.sprite)
 	Hp.text= str(CharacterStats.hp)
 	MaxHp.text = str(CharacterStats.maxHp)
 	CharacterName.text = CharacterStats.nameChar

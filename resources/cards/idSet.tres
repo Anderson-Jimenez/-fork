@@ -8,4 +8,5 @@ idName = "idSet"
 name = "Crohn"
 description = "cada 5 segundos, inflinges 10 de daño"
 rarity = 1
+type = "time"
 metadata/_custom_type_script = "uid://bf0l5tn52vqvq"

@@ -8,4 +8,5 @@ idName = "idTretze"
 name = "Rubberbanding"
 description = "Cada vez que te atacan, tienes un 10% de probabilidad de devolver el daño al enemigo."
 rarity = 3
+type = "conditional"
 metadata/_custom_type_script = "uid://bf0l5tn52vqvq"

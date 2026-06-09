@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://b6f78qa0qmmxt"]
+
+[ext_resource type="Script" uid="uid://bf0l5tn52vqvq" path="res://scripts/resources/cardData.gd" id="1_1od4b"]
+
+[resource]
+script = ExtResource("1_1od4b")
+idName = "idDinou"
+name = "Bit flip"
+description = "Cada 10 segundos, se aplica un efecto aleatorio: 10 de daño, Curarse 10, Robar 10 de vida"
+rarity = 12
+type = "time"
+metadata/_custom_type_script = "uid://bf0l5tn52vqvq"

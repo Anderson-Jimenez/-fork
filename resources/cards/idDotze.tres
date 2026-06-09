@@ -8,4 +8,5 @@ idName = "idDotze"
 name = "Adicional Interests"
 description = "Cada vez que haces daño al enemigo, aplica 1 de daño adicional"
 rarity = 2
+type = "conditional"
 metadata/_custom_type_script = "uid://bf0l5tn52vqvq"

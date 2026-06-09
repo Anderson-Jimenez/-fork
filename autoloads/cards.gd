@@ -26,5 +26,47 @@ func idSis():
 		print("poca vida +5 de mal")
 
 func idSet():
+	CharacterStats.dmgDealed += 10
+	
+func idVuit():
+	if CharacterStats.hp <= 15:
+		print("Ola")
+		
+func idNou():
+	if CharacterStats.hp <= 15:
+		print("Ola")
+		
+func idDeu():
+	if CharacterStats.hp <= 15:
+		print("Ola")
+
+func idOnze():
+	if CharacterStats.hp <= 15:
+		print("Ola")
+		
+func idDotze():
+	if CharacterStats.hp <= 15:
+		print("Ola")
+
+func idTretze():
+	if CharacterStats.hp <= 15:
+		print("Ola")
+		
+func idCatorze():
+	if CharacterStats.hp <= 15:
+		print("Ola")
+		
+func idQuinze():
+	if CharacterStats.hp <= 15:
+		print("Ola")
+func idSetze():
+	if CharacterStats.hp <= 15:
+		print("Ola")
+
+func idDivuit():
+	if CharacterStats.hp <= 15:
+		print("Ola")
+		
+func idDinou():
 	if CharacterStats.hp <= 15:
 		print("Ola")

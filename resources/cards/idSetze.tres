@@ -8,4 +8,5 @@ idName = "idSetze"
 name = "Fork Bomb"
 description = "Al comienzo de la batalla, haces 0.5 de daño, y cada 3 segundos, pasivamente, se duplica el daño."
 rarity = 3
+type = "time"
 metadata/_custom_type_script = "uid://bf0l5tn52vqvq"

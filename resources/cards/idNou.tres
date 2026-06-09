@@ -8,4 +8,5 @@ idName = "idNou"
 name = "placebo effect"
 description = "Al curarte, haces un 50% de la vida curada en daño al enemigo"
 rarity = 1
+type = "damage"
 metadata/_custom_type_script = "uid://bf0l5tn52vqvq"
