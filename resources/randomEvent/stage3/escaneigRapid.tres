@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RandomEventData" format=3 uid="uid://csw1qxrbn6432"]
+
+[ext_resource type="Script" uid="uid://copokv2ebi74j" path="res://scripts/resources/ranodmEventData.gd" id="1_q3cde"]
+
+[resource]
+script = ExtResource("1_q3cde")
+id = "event_stg3_6"
+name = "Escaneig Rapid"
+context = "El Windows defender esta fent un escaneig rapid!"
+opcio1 = "Confiar en que no et detecta"
+opcio1Value = 1
+opcio2 = "Fer-se passar per un arxiu (150€)"
+opcio2Value = 2
+metadata/_custom_type_script = "uid://copokv2ebi74j"

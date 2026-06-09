@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RandomEventData" format=3 uid="uid://x8kh3e8ljio2"]
+
+[ext_resource type="Script" uid="uid://copokv2ebi74j" path="res://scripts/resources/ranodmEventData.gd" id="1_lf0ay"]
+
+[resource]
+script = ExtResource("1_lf0ay")
+id = "event_stg3_3"
+name = "Laberint d'arxius"
+context = "Buscant informació t'acabas perdent en un laberint d'arxius"
+opcio1 = "Adintrar-te"
+opcio1Value = 1
+opcio2 = "Sortir del laberint"
+opcio2Value = 2
+metadata/_custom_type_script = "uid://copokv2ebi74j"

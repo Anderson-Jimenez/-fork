@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RandomEventData" format=3 uid="uid://de775yly1sr1c"]
+
+[ext_resource type="Script" uid="uid://copokv2ebi74j" path="res://scripts/resources/ranodmEventData.gd" id="1_7mljw"]
+
+[resource]
+script = ExtResource("1_7mljw")
+id = "event_stg3_7"
+name = "Buscant informació"
+context = "Estas buscant informació sensible en una carpeta pero et dones compte que windows defender s’esta apropant"
+opcio1 = "Arriesgar-se i seguir buscant"
+opcio1Value = 1
+opcio2 = "Escapar rapidament"
+opcio2Value = 2
+metadata/_custom_type_script = "uid://copokv2ebi74j"

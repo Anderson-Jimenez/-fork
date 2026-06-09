@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="RandomEventData" format=3 uid="uid://k3t1on6ste45"]
+
+[ext_resource type="Script" uid="uid://copokv2ebi74j" path="res://scripts/resources/ranodmEventData.gd" id="1_1tfrc"]
+
+[resource]
+script = ExtResource("1_1tfrc")
+id = "event_stg2_3"
+name = "Firefox"
+context = "Veus el firefox i penses en entrar per a veure si te alguna pestanya oberta o contrasenyas"
+opcio1 = "Comprovar contrasenyas"
+opcio1Value = 1
+opcio2 = "Comprovar pestanyes obertes"
+opcio2Value = 2
+opcio3 = "Ignorar"
+opcio3Value = 3
+metadata/_custom_type_script = "uid://copokv2ebi74j"
