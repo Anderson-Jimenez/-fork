@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://bbqapliwaafwn"]
+
+[ext_resource type="Script" uid="uid://d1mmp7cbsynok" path="res://scripts/resources/enemyData.gd" id="1_ux6oh"]
+[ext_resource type="Texture2D" uid="uid://b42l8ltdpcnys" path="res://images/enemies/office.jpeg" id="2_hgxca"]
+
+[resource]
+script = ExtResource("1_ux6oh")
+name = "office"
+enemyStage = 1
+hp = 400
+maxHp = 400
+sprite = ExtResource("2_hgxca")
+metadata/_custom_type_script = "uid://d1mmp7cbsynok"

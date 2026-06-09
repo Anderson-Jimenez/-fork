@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://dg2g61qxb4dms"]
+
+[ext_resource type="Script" uid="uid://d1mmp7cbsynok" path="res://scripts/resources/enemyData.gd" id="1_8y8ml"]
+[ext_resource type="Texture2D" uid="uid://eajyl4at8c37" path="res://images/enemies/clippy.jpeg" id="2_e183r"]
+
+[resource]
+script = ExtResource("1_8y8ml")
+name = "clippy"
+enemyStage = 2
+hp = 10
+maxHp = 10
+sprite = ExtResource("2_e183r")
+metadata/_custom_type_script = "uid://d1mmp7cbsynok"

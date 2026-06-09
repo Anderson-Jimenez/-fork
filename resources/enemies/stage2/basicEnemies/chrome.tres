@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://c1y2lkvfly8e5"]
+
+[ext_resource type="Script" uid="uid://d1mmp7cbsynok" path="res://scripts/resources/enemyData.gd" id="1_lthhg"]
+[ext_resource type="Texture2D" uid="uid://cr5nd4hpgra04" path="res://images/enemies/chrome.jpeg" id="2_gp5ld"]
+
+[resource]
+script = ExtResource("1_lthhg")
+name = "chrome"
+enemyStage = 2
+hp = 300
+maxHp = 300
+passiveDmg = 10
+sprite = ExtResource("2_gp5ld")
+metadata/_custom_type_script = "uid://d1mmp7cbsynok"

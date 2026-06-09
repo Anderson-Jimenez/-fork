@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://bqdtq1qjva7ov"]
 
 [ext_resource type="Script" uid="uid://d1mmp7cbsynok" path="res://scripts/resources/enemyData.gd" id="1_c4qa1"]
-[ext_resource type="Texture2D" uid="uid://l4tuqyw4inab" path="res://images/provisionalSprites/internetExplorerr.jpg" id="2_egv0b"]
+[ext_resource type="Texture2D" uid="uid://n6vhjb6puhup" path="res://images/enemies/explorer.jpeg" id="2_egv0b"]
 
 [resource]
 script = ExtResource("1_c4qa1")
-name = "Intlenet Explolel"
+name = "Explorer"
 enemyStage = 2
-hp = 1995
-maxHp = 1995
+hp = 300
+maxHp = 300
 passiveDmg = 10
 sprite = ExtResource("2_egv0b")
 metadata/_custom_type_script = "uid://d1mmp7cbsynok"

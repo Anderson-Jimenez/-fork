@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5er5wluygjpy"
-path="res://.godot/imported/final_boss.png-765012d4de9b6cbbf965d10f802a7774.ctex"
+uid="uid://bndeddgbnvmgx"
+path="res://.godot/imported/powerPoint.jpeg-353f10923116f8b6ee81b14246c12224.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/final_boss.png"
-dest_files=["res://.godot/imported/final_boss.png-765012d4de9b6cbbf965d10f802a7774.ctex"]
+source_file="res://images/enemies/powerPoint.jpeg"
+dest_files=["res://.godot/imported/powerPoint.jpeg-353f10923116f8b6ee81b14246c12224.ctex"]
 
 [params]
 

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://dnkfmwyyvoaya"]
+
+[ext_resource type="Script" uid="uid://d1mmp7cbsynok" path="res://scripts/resources/enemyData.gd" id="1_bh6fm"]
+[ext_resource type="Texture2D" uid="uid://bndeddgbnvmgx" path="res://images/enemies/powerPoint.jpeg" id="2_te6kr"]
+
+[resource]
+script = ExtResource("1_bh6fm")
+name = "PowerPoint"
+enemyStage = 1
+hp = 100
+maxHp = 100
+sprite = ExtResource("2_te6kr")
+metadata/_custom_type_script = "uid://d1mmp7cbsynok"
