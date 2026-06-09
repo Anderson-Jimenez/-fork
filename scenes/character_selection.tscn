@@ -3,7 +3,8 @@
 [ext_resource type="Script" uid="uid://di2pa0rly4bph" path="res://scripts/characterSelection.gd" id="1_dd54q"]
 [ext_resource type="Texture2D" uid="uid://c78dnx50gl21x" path="res://images/test.png" id="1_q54je"]
 [ext_resource type="Texture2D" uid="uid://b3admlsnssgvu" path="res://images/mainScreen.png" id="2_o5bvq"]
-[ext_resource type="Texture2D" uid="uid://cxikn1g5m6jta" path="res://images/template.png" id="4_l56u2"]
+[ext_resource type="Texture2D" uid="uid://cl7fq8rk1prnw" path="res://images/p1.png" id="4_7xed0"]
+[ext_resource type="Texture2D" uid="uid://14r3c0wwqjwb" path="res://images/p2.png" id="4_wh1ae"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o5bvq"]
 bg_color = Color(0, 0.6901961, 0.67058825, 0.9882353)
@@ -138,10 +139,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 115.0
-offset_top = 41.0
-offset_right = -115.0
-offset_bottom = -458.0
+offset_left = 295.0
+offset_top = 39.0
+offset_right = -306.0
+offset_bottom = -460.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 18
@@ -156,7 +157,7 @@ theme_override_constants/margin_bottom = 10
 [node name="TextureButtonChar1" type="TextureButton" parent="HBoxContainer/MarginContainer" unique_id=1471787927]
 custom_minimum_size = Vector2(150.41, 11.655)
 layout_mode = 2
-texture_normal = ExtResource("1_q54je")
+texture_normal = ExtResource("4_7xed0")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -170,7 +171,7 @@ theme_override_constants/margin_bottom = 10
 [node name="TextureButtonChar2" type="TextureButton" parent="HBoxContainer/MarginContainer2" unique_id=1487791200]
 custom_minimum_size = Vector2(150.41, 11.655)
 layout_mode = 2
-texture_normal = ExtResource("4_l56u2")
+texture_normal = ExtResource("4_wh1ae")
 ignore_texture_size = true
 stretch_mode = 0
 
@@ -188,37 +189,7 @@ texture_normal = ExtResource("1_q54je")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="MarginContainer4" type="MarginContainer" parent="HBoxContainer" unique_id=1996944269]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="TextureButtonChar4" type="TextureButton" parent="HBoxContainer/MarginContainer4" unique_id=1911188199]
-custom_minimum_size = Vector2(150.41, 11.655)
-layout_mode = 2
-texture_normal = ExtResource("4_l56u2")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="MarginContainer5" type="MarginContainer" parent="HBoxContainer" unique_id=1038630856]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="TextureButtonChar5" type="TextureButton" parent="HBoxContainer/MarginContainer5" unique_id=1073299242]
-custom_minimum_size = Vector2(150.41, 11.655)
-layout_mode = 2
-texture_normal = ExtResource("1_q54je")
-ignore_texture_size = true
-stretch_mode = 0
-
 [connection signal="pressed" from="StartGame" to="." method="_on_start_game_pressed"]
 [connection signal="pressed" from="HBoxContainer/MarginContainer/TextureButtonChar1" to="." method="_on_texture_button_char_1_pressed"]
 [connection signal="pressed" from="HBoxContainer/MarginContainer2/TextureButtonChar2" to="." method="_on_texture_button_char_2_pressed"]
 [connection signal="pressed" from="HBoxContainer/MarginContainer3/TextureButtonChar3" to="." method="_on_texture_button_char_3_pressed"]
-[connection signal="pressed" from="HBoxContainer/MarginContainer4/TextureButtonChar4" to="." method="_on_texture_button_char_4_pressed"]
-[connection signal="pressed" from="HBoxContainer/MarginContainer5/TextureButtonChar5" to="." method="_on_texture_button_char_5_pressed"]

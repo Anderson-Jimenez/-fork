@@ -4,7 +4,7 @@ var nameChar;
 var hp;
 var maxHp;
 var slots = [];
-var money=50
+var money=50;
 var sprite;
 var startingHand;
 var cards = [];
