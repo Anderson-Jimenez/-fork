@@ -1,9 +1,15 @@
-[gd_scene format=3 uid="uid://cy8epggn4kt05"]
+[gd_scene format=3 uid="uid://0njegebc0gsw"]
 
 [ext_resource type="Script" uid="uid://32hrh66tj6my" path="res://scripts/bossBattle.gd" id="1_wpumh"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_is8sf"]
-bg_color = Color(0.6, 0, 0, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wpumh"]
+bg_color = Color(0.92446744, 0.4446274, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1kegh"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x0mfj"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="BossBattle" type="Control" unique_id=1192347188]
 layout_mode = 3
@@ -14,28 +20,48 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wpumh")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=299906907]
+[node name="BattleTimer" type="Timer" parent="." unique_id=1275426512]
+wait_time = 60.0
+one_shot = true
+autostart = true
+
+[node name="BasicAttackTimer" type="Timer" parent="." unique_id=1731536276]
+wait_time = 10.0
+autostart = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1194872486]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.29, 0, 0, 1)
+color = Color(0.35, 0.11666668, 0, 1)
 
-[node name="Label" type="Label" parent="ColorRect" unique_id=728470646]
+[node name="Label" type="Label" parent="ColorRect" unique_id=115222648]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.002
+anchor_top = 0.003
 anchor_right = 0.096
-anchor_bottom = 0.044259265
-offset_top = -0.296
-offset_right = 0.40800476
-offset_bottom = 0.3199997
+anchor_bottom = 0.045
+offset_top = 0.055999994
+offset_right = 0.40799713
+offset_bottom = -0.16000175
 text = "Current Stage:"
+
+[node name="Stage" type="RichTextLabel" parent="ColorRect" unique_id=2052954373]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.098090276
+anchor_top = 0.0030864198
+anchor_right = 0.19109029
+anchor_bottom = 0.045024697
+offset_right = -0.32000732
+offset_bottom = -0.1760025
 metadata/_edit_use_anchors_ = true
 
-[node name="Button" type="Button" parent="ColorRect" unique_id=2073600037]
+[node name="Button" type="Button" parent="ColorRect" unique_id=1982578438]
+custom_minimum_size = Vector2(150, 50)
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -47,21 +73,190 @@ offset_top = -50.0
 offset_right = 75.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_is8sf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wpumh")
 text = "Next"
 
-[node name="Stage" type="RichTextLabel" parent="ColorRect" unique_id=1786086878]
+[node name="CharacterArea" type="ColorRect" parent="ColorRect" unique_id=1721399161]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.096354164
-anchor_top = 0.0030864198
-anchor_right = 0.19993056
-anchor_bottom = 0.045024697
+anchor_left = 0.0234375
+anchor_top = 0.25
+anchor_right = 0.36052084
+anchor_bottom = 0.96632105
 offset_right = -0.3199997
 offset_bottom = -0.1760025
+color = Color(1, 0.48235294, 0, 0.23529412)
 metadata/_edit_use_anchors_ = true
 
-[node name="ColorRect2" type="ColorRect" parent="ColorRect" unique_id=460824231]
+[node name="characterSprite" type="TextureRect" parent="ColorRect/CharacterArea" unique_id=1895883547]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.514
+anchor_top = 0.147
+anchor_right = 0.514
+anchor_bottom = 0.147
+offset_left = -74.43201
+offset_top = -49.208
+offset_right = 74.446014
+offset_bottom = 48.792
+grow_horizontal = 2
+expand_mode = 1
+
+[node name="characterName" type="Label" parent="ColorRect/CharacterArea" unique_id=1357963590]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.32216495
+anchor_top = 0.25215518
+anchor_right = 0.70616496
+anchor_bottom = 0.3021552
+offset_right = -0.14399719
+offset_bottom = -0.20000076
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/CharacterArea" unique_id=1998603926]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3298969
+anchor_top = 0.30375865
+anchor_right = 0.6595236
+anchor_bottom = 0.37479314
+offset_top = 0.055999756
+offset_right = 0.115982056
+offset_bottom = 0.09599304
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="ColorRect/CharacterArea/HBoxContainer" unique_id=1764004018]
+layout_mode = 2
+text = "HP:"
+
+[node name="hp" type="Label" parent="ColorRect/CharacterArea/HBoxContainer" unique_id=1468817146]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="ColorRect/CharacterArea/HBoxContainer" unique_id=759524449]
+layout_mode = 2
+text = "/"
+
+[node name="maxHp" type="Label" parent="ColorRect/CharacterArea/HBoxContainer" unique_id=1186503117]
+layout_mode = 2
+
+[node name="CardArea" type="Panel" parent="ColorRect/CharacterArea" unique_id=1019942938]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.514
+anchor_top = 0.666
+anchor_right = 0.514
+anchor_bottom = 0.666
+offset_left = -154.974
+offset_top = -133.02402
+offset_right = 155.026
+offset_bottom = 132.97598
+theme_override_styles/panel = SubResource("StyleBoxFlat_1kegh")
+
+[node name="slot1" type="Panel" parent="ColorRect/CharacterArea/CardArea" unique_id=159160047]
+custom_minimum_size = Vector2(100, 120)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.21900001
+anchor_top = 0.259
+anchor_right = 0.21900001
+anchor_bottom = 0.259
+offset_left = -51.964005
+offset_top = -49.376
+offset_right = 52.035995
+offset_bottom = 60.62401
+
+[node name="Label" type="Label" parent="ColorRect/CharacterArea/CardArea/slot1" unique_id=2084877326]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.3
+anchor_right = 0.5
+anchor_bottom = 0.3
+offset_left = -28.926003
+offset_top = -11.518005
+offset_right = 31.073997
+offset_bottom = 11.481995
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="slot2" type="Panel" parent="ColorRect/CharacterArea/CardArea" unique_id=82254326]
+custom_minimum_size = Vector2(100, 120)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.74700004
+anchor_top = 0.286
+anchor_right = 0.74700004
+anchor_bottom = 0.286
+offset_left = -49.932007
+offset_top = -56.075996
+offset_right = 50.067993
+offset_bottom = 53.923996
+
+[node name="Label" type="Label" parent="ColorRect/CharacterArea/CardArea/slot2" unique_id=1895256326]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.187
+anchor_right = 0.5
+anchor_bottom = 0.187
+offset_left = -35.638
+offset_top = -11.440001
+offset_right = 32.362
+offset_bottom = 11.559999
+
+[node name="slot3" type="Panel" parent="ColorRect/CharacterArea/CardArea" unique_id=792727254]
+custom_minimum_size = Vector2(100, 120)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.216
+anchor_top = 0.76900005
+anchor_right = 0.216
+anchor_bottom = 0.76900005
+offset_left = -54.896004
+offset_top = -51.554016
+offset_right = 55.103996
+offset_bottom = 59.445984
+
+[node name="Label" type="Label" parent="ColorRect/CharacterArea/CardArea/slot3" unique_id=1338537487]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.47200003
+anchor_top = 0.14600001
+anchor_right = 0.47200003
+anchor_bottom = 0.14600001
+offset_left = -30.983997
+offset_top = -11.520002
+offset_right = 31.016003
+offset_bottom = 11.479998
+
+[node name="slot4" type="Panel" parent="ColorRect/CharacterArea/CardArea" unique_id=1685379924]
+custom_minimum_size = Vector2(100, 120)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.744
+anchor_top = 0.78200006
+anchor_right = 0.744
+anchor_bottom = 0.78200006
+offset_left = -49.864014
+offset_top = -55.012024
+offset_right = 50.135986
+offset_bottom = 54.987976
+
+[node name="Label" type="Label" parent="ColorRect/CharacterArea/CardArea/slot4" unique_id=821302278]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.497
+anchor_top = 0.15400001
+anchor_right = 0.497
+anchor_bottom = 0.15400001
+offset_left = -31.475994
+offset_top = -11.480001
+offset_right = 31.524006
+offset_bottom = 11.519999
+
+[node name="Variables" type="ColorRect" parent="ColorRect" unique_id=169509750]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.021701388
@@ -73,7 +268,7 @@ offset_bottom = -0.1760025
 color = Color(0, 0.4333334, 1, 0.3529412)
 metadata/_edit_use_anchors_ = true
 
-[node name="ColorRect3" type="ColorRect" parent="ColorRect" unique_id=1771419814]
+[node name="Items" type="ColorRect" parent="ColorRect" unique_id=572257538]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.3828125
@@ -85,19 +280,7 @@ offset_bottom = -0.1760025
 color = Color(0.14999998, 1, 0, 0.1882353)
 metadata/_edit_use_anchors_ = true
 
-[node name="ColorRect" type="ColorRect" parent="ColorRect" unique_id=2126426798]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.020833334
-anchor_top = 0.25
-anchor_right = 0.36052084
-anchor_bottom = 0.96632105
-offset_right = -0.3199997
-offset_bottom = -0.1760025
-color = Color(1, 0.48235294, 0, 0.23529412)
-metadata/_edit_use_anchors_ = true
-
-[node name="ColorRect4" type="ColorRect" parent="ColorRect" unique_id=1450399227]
+[node name="BossArea" type="ColorRect" parent="ColorRect" unique_id=1102837946]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.6293403
@@ -109,4 +292,197 @@ offset_bottom = -0.1760025
 color = Color(1, 0, 0, 0.19215687)
 metadata/_edit_use_anchors_ = true
 
-[connection signal="button_up" from="ColorRect/Button" to="." method="_on_button_up_next_stage"]
+[node name="bossSprite" type="TextureRect" parent="ColorRect/BossArea" unique_id=1435163191]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.30179024
+anchor_top = 0.03655914
+anchor_right = 0.6851202
+anchor_bottom = 0.22578496
+offset_right = 0.117996216
+offset_bottom = 0.0099983215
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="bossName" type="Label" parent="ColorRect/BossArea" unique_id=187699653]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.30434778
+anchor_top = 0.2344086
+anchor_right = 0.68791837
+anchor_bottom = 0.283742
+offset_right = 0.023986816
+offset_bottom = 0.0599823
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/BossArea" unique_id=1069286984]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3094629
+anchor_top = 0.28408596
+anchor_right = 0.6933607
+anchor_bottom = 0.36987087
+offset_top = -0.099975586
+offset_right = -0.104034424
+offset_bottom = 0.010040283
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="ColorRect/BossArea/HBoxContainer" unique_id=1723801061]
+layout_mode = 2
+text = "HP:"
+metadata/_edit_use_anchors_ = true
+
+[node name="bossHp" type="Label" parent="ColorRect/BossArea/HBoxContainer" unique_id=751766736]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="ColorRect/BossArea/HBoxContainer" unique_id=1784431116]
+layout_mode = 2
+text = "/"
+
+[node name="bossMaxHp" type="Label" parent="ColorRect/BossArea/HBoxContainer" unique_id=446480555]
+layout_mode = 2
+
+[node name="BasicAttackProgress" type="ProgressBar" parent="ColorRect/BossArea" unique_id=978788824]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.04347826
+anchor_top = 0.92258066
+anchor_right = 0.9792072
+anchor_bottom = 0.98273116
+offset_right = 0.12997437
+offset_bottom = 0.02999878
+max_value = 10.0
+value = 9.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="bossCardArea" type="Panel" parent="ColorRect/BossArea" unique_id=178809282]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.499
+anchor_top = 0.60200006
+anchor_right = 0.499
+anchor_bottom = 0.60200006
+offset_left = -144.10901
+offset_top = -100.93002
+offset_right = 149.89099
+offset_bottom = 133.06998
+theme_override_styles/panel = SubResource("StyleBoxFlat_x0mfj")
+
+[node name="card1" type="Panel" parent="ColorRect/BossArea/bossCardArea" unique_id=1310108335]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.19600001
+anchor_top = 0.34
+anchor_right = 0.19600001
+anchor_bottom = 0.34
+offset_left = -58.624004
+offset_top = -83.6
+offset_right = 65.37599
+offset_bottom = 83.399994
+
+[node name="Label" type="Label" parent="ColorRect/BossArea/bossCardArea/card1" unique_id=1003656675]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.21900001
+anchor_right = 0.5
+anchor_bottom = 0.21900001
+offset_left = -45.0
+offset_top = -11.532993
+offset_right = 43.0
+offset_bottom = 20.467007
+autowrap_mode = 2
+
+[node name="card2" type="Panel" parent="ColorRect/BossArea/bossCardArea" unique_id=1591839942]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.757
+anchor_top = 0.34800002
+anchor_right = 0.757
+anchor_bottom = 0.34800002
+offset_left = -58.558014
+offset_top = -84.43199
+offset_right = 68.441986
+offset_bottom = 80.479996
+
+[node name="Label" type="Label" parent="ColorRect/BossArea/bossCardArea/card2" unique_id=996135328]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.24900001
+anchor_right = 0.5
+anchor_bottom = 0.24900001
+offset_left = -40.5
+offset_top = -18.063087
+offset_right = 44.5
+offset_bottom = 17.936913
+autowrap_mode = 2
+
+[node name="Time" type="Label" parent="ColorRect" unique_id=1688653298]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8003472
+anchor_top = 0.0061728396
+anchor_right = 0.96902776
+anchor_bottom = 0.041172843
+offset_right = -0.3199997
+offset_bottom = 0.3199997
+horizontal_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="logs" type="Panel" parent="ColorRect" unique_id=1179157682]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.568
+anchor_right = 0.5
+anchor_bottom = 0.568
+offset_left = -130.0
+offset_top = -204.06403
+offset_right = 123.0
+offset_bottom = 195.93597
+
+[node name="title" type="Panel" parent="ColorRect/logs" unique_id=1968817359]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.05
+anchor_right = 0.5
+anchor_bottom = 0.05
+offset_left = -126.5
+offset_top = -20.0
+offset_right = 126.5
+offset_bottom = 16.0
+
+[node name="Label" type="Label" parent="ColorRect/logs/title" unique_id=1268684177]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.105000004
+anchor_top = 0.5
+anchor_right = 0.105000004
+anchor_bottom = 0.5
+offset_left = -19.885
+offset_top = -11.0
+offset_right = 20.115
+offset_bottom = 12.0
+text = "</>"
+
+[node name="Accions" type="RichTextLabel" parent="ColorRect/logs" unique_id=1116275411]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.49800003
+anchor_top = 0.549
+anchor_right = 0.49800003
+anchor_bottom = 0.549
+offset_left = -116.993996
+offset_top = -169.6
+offset_right = 118.006
+offset_bottom = 169.4
+theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/bold_font_size = 12
+theme_override_font_sizes/bold_italics_font_size = 12
+theme_override_font_sizes/italics_font_size = 12
+theme_override_font_sizes/mono_font_size = 12

@@ -1,13 +1,16 @@
 [gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://1sj7irnejwwt"]
 
 [ext_resource type="Script" uid="uid://d1mmp7cbsynok" path="res://scripts/resources/enemyData.gd" id="1_362ri"]
+[ext_resource type="Resource" uid="uid://c83f1aksahy6o" path="res://resources/enemyCards/windowsD1.tres" id="1_oh0bv"]
+[ext_resource type="Resource" uid="uid://dyi3majyd565o" path="res://resources/enemyCards/windowsD2.tres" id="2_mleg4"]
 [ext_resource type="Texture2D" uid="uid://bjvt74mi445iu" path="res://images/enemies/final_boss.png" id="2_qgy5l"]
 
 [resource]
 script = ExtResource("1_362ri")
 name = "DoorDefender"
-enemyStage = 3
 hp = 1000
 maxHp = 1000
 sprite = ExtResource("2_qgy5l")
+cards = Array[Resource]([ExtResource("1_oh0bv"), ExtResource("2_mleg4")])
+enemyStage = 3
 metadata/_custom_type_script = "uid://d1mmp7cbsynok"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EnemyCardData" format=3 uid="uid://dyi3majyd565o"]
+
+[ext_resource type="Script" uid="uid://xb8tlp1c5sqa" path="res://scripts/resources/enemyCardData.gd" id="1_5nvfn"]
+
+[resource]
+script = ExtResource("1_5nvfn")
+idName = "windowsD2"
+name = "Speed Test"
+type = "time"
+description = "Inflinge 7 de daño "
+metadata/_custom_type_script = "uid://xb8tlp1c5sqa"

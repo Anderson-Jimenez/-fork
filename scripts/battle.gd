@@ -31,6 +31,7 @@ extends Control
 @onready var TimerLabel = $ColorRect/Time
 @onready var basicTime = $BasicAttackTimer
 @onready var BasicAttackProgress = $ColorRect/EnemyArea/BasicAttackProgress
+@onready var logsActions = $ColorRect/logs/Accions
 
 var card_scene = preload("res://scenes/cardScene.tscn")
 var enemies: Array[EnemyData] = []
@@ -66,6 +67,28 @@ func _ready() -> void:
 	Hp.text = str(CharacterStats.hp)
 	MaxHp.text = str(CharacterStats.maxHp)
 	CharacterName.text = CharacterStats.nameChar
+	
+	# Configurar el RichTextLabel para scroll automático
+	logsActions.scroll_following = true
+	
+	# Animación de entrada del log (opcional)
+	var tween = create_tween()
+	tween.tween_property(logsActions, "visible_ratio", 1.0, 1.5)
+
+func add_log(message: String, type: String = "info") -> void:
+	var color = "#ffffff"
+	match type:
+		"damage": color = "#ff8888"
+		"heal": color = "#88ff88"
+		"crit": color = "#ffff88"
+		"player": color = "#88ccff"
+		"enemy": color = "#ffaa66"
+		"error": color = "#ff6666"
+		_: color = "#cccccc"
+	
+	var colored_message = "[color=" + color + "]" + message + "[/color]"
+	logsActions.append_text(colored_message + "\n")
+	logsActions.scroll_to_line(logsActions.get_line_count() - 1)
 
 func load_enemies() -> void:
 	var path = "res://resources/enemies/stage" + str(GameManager.currentStage) + "/basicEnemies/"
@@ -110,11 +133,12 @@ func _process(delta: float) -> void:
 		if ec.remaining <= 0:
 			var func_name = ec.card.idName
 			if EnemyCardEffects.has_method(func_name):
+				add_log("Carta enemiga '" + ec.card.name + "' -> " + func_name, "enemy")
 				EnemyCardEffects.call(func_name, CharacterStats, EnemyStats)
 				Hp.text = str(CharacterStats.hp)
 				EnemyHp.text = str(EnemyStats.hp)
 			else:
-				print("ERROR: No existe función ", func_name)
+				add_log("ERROR: No existe función " + func_name, "error")
 			ec.remaining = ec.total
 
 func _card_type_time() -> void:
@@ -163,7 +187,8 @@ func _setup_special_timers() -> void:
 func _apply_setze_effect() -> void:
 	if setze_damage <= 0:
 		return
-	apply_damage_to_enemy(setze_damage, "idSetze (daño creciente)")
+	add_log("idSetze: " + str(setze_damage) + " de daño creciente", "damage")
+	apply_damage_to_enemy(setze_damage, "idSetze")
 	setze_damage *= 2
 
 func _setup_enemy_cards() -> void:
@@ -174,10 +199,7 @@ func _setup_enemy_cards() -> void:
 	for card in EnemyStats.cards:
 		if card_index >= containers.size():
 			break
-		
-		# Mostrar nombre
 		labels[card_index].text = card.name if card.name else "?"
-		
 		if card.type == "time":
 			var bar = ProgressBar.new()
 			bar.name = "CooldownBar_" + str(card_index)
@@ -197,26 +219,26 @@ func _setup_enemy_cards() -> void:
 		else:
 			var func_name = card.idName
 			if EnemyCardEffects.has_method(func_name):
+				add_log("Carta pasiva enemiga: " + card.name, "enemy")
 				EnemyCardEffects.call(func_name, CharacterStats, EnemyStats)
 				Hp.text = str(CharacterStats.hp)
 				EnemyHp.text = str(EnemyStats.hp)
 			else:
-				print("ERROR: No existe función pasiva ", func_name)
-		
+				add_log("ERROR: No existe función pasiva " + func_name, "error")
 		card_index += 1
 	
-	# Opcional: si hay menos cartas que contenedores, limpiar textos sobrantes
 	for i in range(card_index, containers.size()):
 		labels[i].text = "No Card"
 
 func _apply_time_card_effect(card: Resource, slot_index: int) -> void:
 	var func_name = card.idName
 	if CardEffects.has_method(func_name):
+		add_log("Carta '" + card.name + "' activa: " + func_name, "player")
 		CardEffects.call(func_name, EnemyStats)
 		EnemyHp.text = str(max(0, EnemyStats.hp))
 		Hp.text = str(max(0, CharacterStats.hp))
 	else:
-		print("ERROR: No existe función ", func_name)
+		add_log("ERROR: No existe función " + func_name, "error")
 
 func apply_damage_to_enemy(base_damage: float, source: String = "desconocido") -> void:
 	if enemy_defeated:
@@ -226,13 +248,13 @@ func apply_damage_to_enemy(base_damage: float, source: String = "desconocido") -
 		total_damage += 1
 	if _is_card_equipped_by_id("idDiset") and randf() <= 0.01:
 		total_damage = 9999
-		print("¡CRÍTICO! 9999 de daño")
+		add_log("¡CRÍTICO! 9999 de daño", "crit")
 	
 	EnemyStats.hp -= total_damage
 	if EnemyStats.hp < 0:
 		EnemyStats.hp = 0
 	EnemyHp.text = str(EnemyStats.hp)
-	print(source, " inflige ", total_damage, " de daño. Vida enemigo: ", EnemyStats.hp)
+	add_log(source + " inflige " + str(total_damage) + " de daño. Vida enemigo: " + str(EnemyStats.hp), "damage")
 	
 	if EnemyStats.hp <= 0 and not enemy_defeated:
 		enemy_defeated = true
@@ -243,20 +265,23 @@ func apply_heal_to_player(heal_amount: float, source: String = "desconocido") ->
 	CharacterStats.hp = min(CharacterStats.maxHp, CharacterStats.hp + heal_amount)
 	var healed = CharacterStats.hp - old_hp
 	Hp.text = str(CharacterStats.hp)
-	print(source, " cura ", healed, " HP")
+	add_log(source + " cura " + str(healed) + " HP", "heal")
 	
 	if healed > 0 and _is_card_equipped_by_id("idNou"):
 		var damage = floor(healed * 0.5)
 		if damage > 0:
-			apply_damage_to_enemy(damage, "idNou (efecto de cura)")
+			apply_damage_to_enemy(damage, "idNou")
 
 func on_player_takes_damage(damage_amount: float) -> void:
 	if _is_card_equipped_by_id("idDeu"):
-		apply_damage_to_enemy(5, "idDeu (contraataque)")
+		add_log("idDeu: contraataca con 5 de daño", "player")
+		apply_damage_to_enemy(5, "idDeu")
 	if _is_card_equipped_by_id("idOnze"):
-		apply_heal_to_player(1, "idOnze (cura al recibir daño)")
+		add_log("idOnze: cura 1 HP al recibir daño", "heal")
+		apply_heal_to_player(1, "idOnze")
 	if _is_card_equipped_by_id("idTretze") and randf() <= 0.1:
-		apply_damage_to_enemy(damage_amount, "idTretze (devolver daño)")
+		add_log("idTretze: devuelve " + str(damage_amount) + " de daño", "player")
+		apply_damage_to_enemy(damage_amount, "idTretze")
 	
 	if not quinze_used and _is_card_equipped_by_id("idQuinze"):
 		var threshold = CharacterStats.maxHp * 0.3
@@ -264,7 +289,8 @@ func on_player_takes_damage(damage_amount: float) -> void:
 			quinze_used = true
 			var damage = floor(EnemyStats.hp * 0.15)
 			if damage > 0:
-				apply_damage_to_enemy(damage, "idQuinze (15% vida enemigo)")
+				add_log("idQuinze: inflige " + str(damage) + " (15% vida enemigo)", "damage")
+				apply_damage_to_enemy(damage, "idQuinze")
 
 func _is_card_equipped_by_id(card_id: String) -> bool:
 	for card in CharacterStats.slots:
@@ -283,10 +309,11 @@ func _on_basic_attack_timer_timeout() -> void:
 	if CharacterStats.hp < 0:
 		CharacterStats.hp = 0
 	Hp.text = str(CharacterStats.hp)
-	print("El enemigo ataca por ", damage, " de daño")
+	add_log("El enemigo ataca por " + str(damage) + " de daño", "enemy")
 	on_player_takes_damage(damage)
 
 func _on_enemy_defeated() -> void:
+	add_log("Enemigo derrotado. Pasando a siguiente etapa...", "info")
 	timer.stop()
 	basicTime.stop()
 	if setze_timer:

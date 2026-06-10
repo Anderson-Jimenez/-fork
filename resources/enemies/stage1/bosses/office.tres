@@ -1,13 +1,15 @@
 [gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://bbqapliwaafwn"]
 
+[ext_resource type="Resource" uid="uid://kcpdot3suoa2" path="res://resources/enemyCards/word1.tres" id="1_u0rih"]
 [ext_resource type="Script" uid="uid://d1mmp7cbsynok" path="res://scripts/resources/enemyData.gd" id="1_ux6oh"]
+[ext_resource type="Resource" uid="uid://bmwiiedmvgqwp" path="res://resources/enemyCards/skype2.tres" id="2_7wo3j"]
 [ext_resource type="Texture2D" uid="uid://b42l8ltdpcnys" path="res://images/enemies/office.jpeg" id="2_hgxca"]
 
 [resource]
 script = ExtResource("1_ux6oh")
 name = "office"
-enemyStage = 1
-hp = 400
+hp = 100
 maxHp = 400
 sprite = ExtResource("2_hgxca")
+cards = Array[Resource]([ExtResource("1_u0rih"), ExtResource("2_7wo3j")])
 metadata/_custom_type_script = "uid://d1mmp7cbsynok"

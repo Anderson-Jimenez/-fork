@@ -1,13 +1,16 @@
 [gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://dq0jecoq87la3"]
 
+[ext_resource type="Resource" uid="uid://bevka7pumev7s" path="res://resources/enemyCards/excel1.tres" id="1_2fgha"]
 [ext_resource type="Script" uid="uid://d1mmp7cbsynok" path="res://scripts/resources/enemyData.gd" id="1_cqb8b"]
 [ext_resource type="Texture2D" uid="uid://c7p7f4ics0orl" path="res://images/enemies/rar.jpeg" id="2_1oxaa"]
+[ext_resource type="Resource" uid="uid://whv4p2jndnq4" path="res://resources/enemyCards/word2.tres" id="2_16ajy"]
 
 [resource]
 script = ExtResource("1_cqb8b")
 name = "rar"
-enemyStage = 3
 hp = 800
 maxHp = 800
 sprite = ExtResource("2_1oxaa")
+cards = Array[Resource]([ExtResource("1_2fgha"), ExtResource("2_16ajy")])
+enemyStage = 3
 metadata/_custom_type_script = "uid://d1mmp7cbsynok"

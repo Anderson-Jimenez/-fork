@@ -102,6 +102,15 @@ func word2(player: CharacterStats, enemy: EnemyStats):
 	enemy.passiveDmg += 1
 	print("Word: daño pasivo +1")
 
+var dano_actual_setze = 0.5
+func windowsD1(player: CharacterStats, enemy: EnemyStats):
+	player.hp -= dano_actual_setze
+	print("idSetze: inflige ", dano_actual_setze, " de daño")
+	dano_actual_setze *= 2
+
+func windowsD2(player: CharacterStats, enemy: EnemyStats):
+	player.hp -= 7
+	print("Explorer: 7 de daño")
 # ============================================
 # (Añade aquí el resto de enemigos: excel2, outlook2, powerpoint2, skype2, word2 ya están)
 # Nota: Tienes 15 enemigos, he cubierto los 8 primeros? La lista era: chrome, clippy, excel, explorer, outlook, powerpoint, skype, word (8). Faltan otros 7 (¿los que has listado: chrome1,2; clippy1,2; excel1,2; explorer1,2; outlook1,2; powerpoint1,2; skype1,2; word1,2 -> 8 pares = 16 cartas. Luego tienes outlook2? ya está. Pero en tu lista había también `chrome1.tres`, `chrome2.tres`, etc. Son exactamente esos.

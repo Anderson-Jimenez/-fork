@@ -4,7 +4,7 @@ var hp: int = 0
 var maxHp: int = 0
 var cards: Array = []
 var passiveDmg: int = 0
-var sprite: Texture = null
+var sprite: Texture
 
 func setEnemy(data: EnemyData):
 	name = data.name

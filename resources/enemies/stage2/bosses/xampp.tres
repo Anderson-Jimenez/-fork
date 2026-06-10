@@ -1,13 +1,16 @@
 [gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://cicmhh1e8rwli"]
 
 [ext_resource type="Script" uid="uid://d1mmp7cbsynok" path="res://scripts/resources/enemyData.gd" id="1_0d0ry"]
+[ext_resource type="Resource" uid="uid://mcilntqpam5w" path="res://resources/enemyCards/clippy1.tres" id="1_nsfos"]
 [ext_resource type="Texture2D" uid="uid://fp08ygwckqjf" path="res://images/enemies/xampp.jpeg" id="2_ob3s5"]
+[ext_resource type="Resource" uid="uid://bou74obdlkkyw" path="res://resources/enemyCards/skype1.tres" id="2_to8d1"]
 
 [resource]
 script = ExtResource("1_0d0ry")
 name = "Xampp"
-enemyStage = 2
 hp = 600
 maxHp = 600
 sprite = ExtResource("2_ob3s5")
+cards = Array[Resource]([ExtResource("1_nsfos"), ExtResource("2_to8d1")])
+enemyStage = 2
 metadata/_custom_type_script = "uid://d1mmp7cbsynok"

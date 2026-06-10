@@ -1,26 +1,124 @@
-[gd_scene format=3 uid="uid://bhlllfddrfaj7"]
+[gd_scene format=3 uid="uid://0njegebc0gsw"]
 
-[ext_resource type="Script" uid="uid://c7c1vvaurmc1a" path="res://scripts/battle.gd" id="1_dn72j"]
+[ext_resource type="Script" uid="uid://32hrh66tj6my" path="res://scripts/bossBattle.gd" id="1_wpumh"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mgoel"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_is8sf"]
+bg_color = Color(0.6, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wpumh"]
 bg_color = Color(0.92446744, 0.4446274, 0, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dn72j"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1kegh"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_th188"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x0mfj"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
-[node name="Battle" type="Control" unique_id=416529015]
+[node name="BossBattle" type="Control" unique_id=1192347188]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_dn72j")
+script = ExtResource("1_wpumh")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1570290577]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=299906907]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.29, 0, 0, 1)
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=728470646]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.002
+anchor_right = 0.096
+anchor_bottom = 0.044259265
+offset_top = -0.296
+offset_right = 0.40800476
+offset_bottom = 0.3199997
+text = "Current Stage:"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="ColorRect" unique_id=2073600037]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = -50.0
+offset_right = 75.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_is8sf")
+text = "Next"
+
+[node name="Stage" type="RichTextLabel" parent="ColorRect" unique_id=1786086878]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.096354164
+anchor_top = 0.0030864198
+anchor_right = 0.19993056
+anchor_bottom = 0.045024697
+offset_right = -0.3199997
+offset_bottom = -0.1760025
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect" unique_id=460824231]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021701388
+anchor_top = 0.047839507
+anchor_right = 0.36052084
+anchor_bottom = 0.22403704
+offset_right = -0.3199997
+offset_bottom = -0.1760025
+color = Color(0, 0.4333334, 1, 0.3529412)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect3" type="ColorRect" parent="ColorRect" unique_id=1771419814]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3828125
+anchor_top = 0.047839507
+anchor_right = 0.96902776
+anchor_bottom = 0.22403704
+offset_right = -0.3199997
+offset_bottom = -0.1760025
+color = Color(0.14999998, 1, 0, 0.1882353)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect" unique_id=2126426798]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.020833334
+anchor_top = 0.25
+anchor_right = 0.36052084
+anchor_bottom = 0.96632105
+offset_right = -0.3199997
+offset_bottom = -0.1760025
+color = Color(1, 0.48235294, 0, 0.23529412)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect4" type="ColorRect" parent="ColorRect" unique_id=1450399227]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6293403
+anchor_top = 0.24845679
+anchor_right = 0.96902776
+anchor_bottom = 0.96632105
+offset_right = -0.3199997
+offset_bottom = -0.1760025
+color = Color(1, 0, 0, 0.19215687)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect5" type="ColorRect" parent="ColorRect" unique_id=1311374838]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -29,7 +127,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.35, 0.11666668, 0, 1)
 
-[node name="Label" type="Label" parent="ColorRect" unique_id=1800575555]
+[node name="Label" type="Label" parent="ColorRect/ColorRect5" unique_id=689791892]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.003
@@ -40,7 +138,7 @@ offset_right = 0.40799713
 offset_bottom = -0.16000175
 text = "Current Stage:"
 
-[node name="Stage" type="RichTextLabel" parent="ColorRect" unique_id=819636788]
+[node name="Stage" type="RichTextLabel" parent="ColorRect/ColorRect5" unique_id=5228774]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.098090276
@@ -51,7 +149,7 @@ offset_right = -0.32000732
 offset_bottom = -0.1760025
 metadata/_edit_use_anchors_ = true
 
-[node name="Button" type="Button" parent="ColorRect" unique_id=985109610]
+[node name="Button" type="Button" parent="ColorRect/ColorRect5" unique_id=468152873]
 custom_minimum_size = Vector2(150, 50)
 layout_mode = 1
 anchors_preset = 7
@@ -64,10 +162,10 @@ offset_top = -50.0
 offset_right = 75.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/normal = SubResource("StyleBoxFlat_mgoel")
+theme_override_styles/normal = SubResource("StyleBoxFlat_wpumh")
 text = "Next"
 
-[node name="CharacterArea" type="ColorRect" parent="ColorRect" unique_id=740927196]
+[node name="CharacterArea" type="ColorRect" parent="ColorRect/ColorRect5" unique_id=5099022]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.0234375
@@ -79,7 +177,7 @@ offset_bottom = -0.1760025
 color = Color(1, 0.48235294, 0, 0.23529412)
 metadata/_edit_use_anchors_ = true
 
-[node name="characterSprite" type="TextureRect" parent="ColorRect/CharacterArea" unique_id=1767679493]
+[node name="characterSprite" type="TextureRect" parent="ColorRect/ColorRect5/CharacterArea" unique_id=866236153]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.514
@@ -93,7 +191,7 @@ offset_bottom = 48.792
 grow_horizontal = 2
 expand_mode = 1
 
-[node name="characterName" type="Label" parent="ColorRect/CharacterArea" unique_id=1495439821]
+[node name="characterName" type="Label" parent="ColorRect/ColorRect5/CharacterArea" unique_id=1183726244]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.32216495
@@ -105,7 +203,7 @@ offset_bottom = -0.20000076
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/CharacterArea" unique_id=476922350]
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/ColorRect5/CharacterArea" unique_id=1419253190]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.3298969
@@ -118,21 +216,21 @@ offset_bottom = 0.09599304
 alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="ColorRect/CharacterArea/HBoxContainer" unique_id=1372191059]
+[node name="Label" type="Label" parent="ColorRect/ColorRect5/CharacterArea/HBoxContainer" unique_id=1948880657]
 layout_mode = 2
 text = "HP:"
 
-[node name="hp" type="Label" parent="ColorRect/CharacterArea/HBoxContainer" unique_id=1099802650]
+[node name="hp" type="Label" parent="ColorRect/ColorRect5/CharacterArea/HBoxContainer" unique_id=1138167251]
 layout_mode = 2
 
-[node name="Label2" type="Label" parent="ColorRect/CharacterArea/HBoxContainer" unique_id=101385259]
+[node name="Label2" type="Label" parent="ColorRect/ColorRect5/CharacterArea/HBoxContainer" unique_id=1666449831]
 layout_mode = 2
 text = "/"
 
-[node name="maxHp" type="Label" parent="ColorRect/CharacterArea/HBoxContainer" unique_id=989070191]
+[node name="maxHp" type="Label" parent="ColorRect/ColorRect5/CharacterArea/HBoxContainer" unique_id=1179504417]
 layout_mode = 2
 
-[node name="CardArea" type="Panel" parent="ColorRect/CharacterArea" unique_id=2068766322]
+[node name="CardArea" type="Panel" parent="ColorRect/ColorRect5/CharacterArea" unique_id=403448319]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.514
@@ -143,9 +241,9 @@ offset_left = -154.974
 offset_top = -133.02402
 offset_right = 155.026
 offset_bottom = 132.97598
-theme_override_styles/panel = SubResource("StyleBoxFlat_dn72j")
+theme_override_styles/panel = SubResource("StyleBoxFlat_1kegh")
 
-[node name="slot1" type="Panel" parent="ColorRect/CharacterArea/CardArea" unique_id=867765708]
+[node name="slot1" type="Panel" parent="ColorRect/ColorRect5/CharacterArea/CardArea" unique_id=414325840]
 custom_minimum_size = Vector2(100, 120)
 layout_mode = 1
 anchors_preset = -1
@@ -158,7 +256,7 @@ offset_top = -49.376
 offset_right = 52.035995
 offset_bottom = 60.62401
 
-[node name="Label" type="Label" parent="ColorRect/CharacterArea/CardArea/slot1" unique_id=1206247799]
+[node name="Label" type="Label" parent="ColorRect/ColorRect5/CharacterArea/CardArea/slot1" unique_id=1943831293]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -172,7 +270,7 @@ offset_bottom = 11.481995
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="slot2" type="Panel" parent="ColorRect/CharacterArea/CardArea" unique_id=1060428246]
+[node name="slot2" type="Panel" parent="ColorRect/ColorRect5/CharacterArea/CardArea" unique_id=1571455893]
 custom_minimum_size = Vector2(100, 120)
 layout_mode = 1
 anchors_preset = -1
@@ -185,7 +283,7 @@ offset_top = -56.075996
 offset_right = 50.067993
 offset_bottom = 53.923996
 
-[node name="Label" type="Label" parent="ColorRect/CharacterArea/CardArea/slot2" unique_id=134269260]
+[node name="Label" type="Label" parent="ColorRect/ColorRect5/CharacterArea/CardArea/slot2" unique_id=1842897691]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -197,7 +295,7 @@ offset_top = -11.440001
 offset_right = 32.362
 offset_bottom = 11.559999
 
-[node name="slot3" type="Panel" parent="ColorRect/CharacterArea/CardArea" unique_id=2124331499]
+[node name="slot3" type="Panel" parent="ColorRect/ColorRect5/CharacterArea/CardArea" unique_id=1736494081]
 custom_minimum_size = Vector2(100, 120)
 layout_mode = 1
 anchors_preset = -1
@@ -210,7 +308,7 @@ offset_top = -51.554016
 offset_right = 55.103996
 offset_bottom = 59.445984
 
-[node name="Label" type="Label" parent="ColorRect/CharacterArea/CardArea/slot3" unique_id=1757005498]
+[node name="Label" type="Label" parent="ColorRect/ColorRect5/CharacterArea/CardArea/slot3" unique_id=1929443288]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.47200003
@@ -222,7 +320,7 @@ offset_top = -11.520002
 offset_right = 31.016003
 offset_bottom = 11.479998
 
-[node name="slot4" type="Panel" parent="ColorRect/CharacterArea/CardArea" unique_id=1519638038]
+[node name="slot4" type="Panel" parent="ColorRect/ColorRect5/CharacterArea/CardArea" unique_id=853386414]
 custom_minimum_size = Vector2(100, 120)
 layout_mode = 1
 anchors_preset = -1
@@ -235,7 +333,7 @@ offset_top = -55.012024
 offset_right = 50.135986
 offset_bottom = 54.987976
 
-[node name="Label" type="Label" parent="ColorRect/CharacterArea/CardArea/slot4" unique_id=1063475868]
+[node name="Label" type="Label" parent="ColorRect/ColorRect5/CharacterArea/CardArea/slot4" unique_id=592492619]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.497
@@ -247,7 +345,7 @@ offset_top = -11.480001
 offset_right = 31.524006
 offset_bottom = 11.519999
 
-[node name="Variables" type="ColorRect" parent="ColorRect" unique_id=1283931269]
+[node name="Variables" type="ColorRect" parent="ColorRect/ColorRect5" unique_id=257908139]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.021701388
@@ -259,7 +357,7 @@ offset_bottom = -0.1760025
 color = Color(0, 0.4333334, 1, 0.3529412)
 metadata/_edit_use_anchors_ = true
 
-[node name="Items" type="ColorRect" parent="ColorRect" unique_id=1260788371]
+[node name="Items" type="ColorRect" parent="ColorRect/ColorRect5" unique_id=1214834282]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.3828125
@@ -271,7 +369,7 @@ offset_bottom = -0.1760025
 color = Color(0.14999998, 1, 0, 0.1882353)
 metadata/_edit_use_anchors_ = true
 
-[node name="EnemyArea" type="ColorRect" parent="ColorRect" unique_id=2103252410]
+[node name="BossArea" type="ColorRect" parent="ColorRect/ColorRect5" unique_id=1165224276]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.6293403
@@ -283,7 +381,7 @@ offset_bottom = -0.1760025
 color = Color(1, 0, 0, 0.19215687)
 metadata/_edit_use_anchors_ = true
 
-[node name="enemySprite" type="TextureRect" parent="ColorRect/EnemyArea" unique_id=2006698831]
+[node name="bossSprite" type="TextureRect" parent="ColorRect/ColorRect5/BossArea" unique_id=2113296548]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.30179024
@@ -295,7 +393,7 @@ offset_bottom = 0.0099983215
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="enemyName" type="Label" parent="ColorRect/EnemyArea" unique_id=2020232579]
+[node name="bossName" type="Label" parent="ColorRect/ColorRect5/BossArea" unique_id=267381997]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.30434778
@@ -307,7 +405,7 @@ offset_bottom = 0.0599823
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/EnemyArea" unique_id=1584183319]
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/ColorRect5/BossArea" unique_id=12426233]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.3094629
@@ -320,22 +418,22 @@ offset_bottom = 0.010040283
 alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="Label" type="Label" parent="ColorRect/EnemyArea/HBoxContainer" unique_id=1436431133]
+[node name="Label" type="Label" parent="ColorRect/ColorRect5/BossArea/HBoxContainer" unique_id=1293202328]
 layout_mode = 2
 text = "HP:"
 metadata/_edit_use_anchors_ = true
 
-[node name="enemyHp" type="Label" parent="ColorRect/EnemyArea/HBoxContainer" unique_id=54855317]
+[node name="bossHp" type="Label" parent="ColorRect/ColorRect5/BossArea/HBoxContainer" unique_id=290911239]
 layout_mode = 2
 
-[node name="Label2" type="Label" parent="ColorRect/EnemyArea/HBoxContainer" unique_id=1414834216]
+[node name="Label2" type="Label" parent="ColorRect/ColorRect5/BossArea/HBoxContainer" unique_id=1583006119]
 layout_mode = 2
 text = "/"
 
-[node name="enemyMaxHp" type="Label" parent="ColorRect/EnemyArea/HBoxContainer" unique_id=1893558731]
+[node name="bossMaxHp" type="Label" parent="ColorRect/ColorRect5/BossArea/HBoxContainer" unique_id=593757268]
 layout_mode = 2
 
-[node name="BasicAttackProgress" type="ProgressBar" parent="ColorRect/EnemyArea" unique_id=2109006004]
+[node name="BasicAttackProgress" type="ProgressBar" parent="ColorRect/ColorRect5/BossArea" unique_id=1178779269]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.04347826
@@ -349,7 +447,7 @@ value = 9.0
 show_percentage = false
 metadata/_edit_use_anchors_ = true
 
-[node name="enemyCardArea" type="Panel" parent="ColorRect/EnemyArea" unique_id=93588014]
+[node name="bossCardArea" type="Panel" parent="ColorRect/ColorRect5/BossArea" unique_id=57865801]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.499
@@ -360,9 +458,9 @@ offset_left = -144.10901
 offset_top = -100.93002
 offset_right = 149.89099
 offset_bottom = 133.06998
-theme_override_styles/panel = SubResource("StyleBoxFlat_th188")
+theme_override_styles/panel = SubResource("StyleBoxFlat_x0mfj")
 
-[node name="card1" type="Panel" parent="ColorRect/EnemyArea/enemyCardArea" unique_id=1561656842]
+[node name="card1" type="Panel" parent="ColorRect/ColorRect5/BossArea/bossCardArea" unique_id=273439138]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.19600001
@@ -374,7 +472,7 @@ offset_top = -83.6
 offset_right = 65.37599
 offset_bottom = 83.399994
 
-[node name="Label" type="Label" parent="ColorRect/EnemyArea/enemyCardArea/card1" unique_id=645086180]
+[node name="Label" type="Label" parent="ColorRect/ColorRect5/BossArea/bossCardArea/card1" unique_id=766896051]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -387,7 +485,7 @@ offset_right = 43.0
 offset_bottom = 20.467007
 autowrap_mode = 2
 
-[node name="card2" type="Panel" parent="ColorRect/EnemyArea/enemyCardArea" unique_id=75793355]
+[node name="card2" type="Panel" parent="ColorRect/ColorRect5/BossArea/bossCardArea" unique_id=1282506647]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.757
@@ -399,7 +497,7 @@ offset_top = -84.43199
 offset_right = 68.441986
 offset_bottom = 80.479996
 
-[node name="Label" type="Label" parent="ColorRect/EnemyArea/enemyCardArea/card2" unique_id=2091363360]
+[node name="Label" type="Label" parent="ColorRect/ColorRect5/BossArea/bossCardArea/card2" unique_id=1708447225]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -412,7 +510,7 @@ offset_right = 44.5
 offset_bottom = 17.936913
 autowrap_mode = 2
 
-[node name="Time" type="Label" parent="ColorRect" unique_id=96965700]
+[node name="Time" type="Label" parent="ColorRect/ColorRect5" unique_id=1075628852]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.8003472
@@ -424,31 +522,31 @@ offset_bottom = 0.3199997
 horizontal_alignment = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="logs" type="Panel" parent="ColorRect" unique_id=1626092890]
+[node name="logs" type="Panel" parent="ColorRect/ColorRect5" unique_id=466056482]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.568
 anchor_right = 0.5
 anchor_bottom = 0.568
-offset_left = -119.0
-offset_top = -200.06403
-offset_right = 118.0
-offset_bottom = 199.93597
+offset_left = -130.0
+offset_top = -204.06403
+offset_right = 123.0
+offset_bottom = 195.93597
 
-[node name="title" type="Panel" parent="ColorRect/logs" unique_id=1380370611]
+[node name="title" type="Panel" parent="ColorRect/ColorRect5/logs" unique_id=1909102891]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.05
 anchor_right = 0.5
 anchor_bottom = 0.05
-offset_left = -118.5
+offset_left = -126.5
 offset_top = -20.0
-offset_right = 118.5
+offset_right = 126.5
 offset_bottom = 16.0
 
-[node name="Label" type="Label" parent="ColorRect/logs/title" unique_id=1641778601]
+[node name="Label" type="Label" parent="ColorRect/ColorRect5/logs/title" unique_id=1300054536]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.105000004
@@ -461,16 +559,16 @@ offset_right = 20.115
 offset_bottom = 12.0
 text = "</>"
 
-[node name="Accions" type="RichTextLabel" parent="ColorRect/logs" unique_id=1164269214]
+[node name="Accions" type="RichTextLabel" parent="ColorRect/ColorRect5/logs" unique_id=1362514665]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.49800003
 anchor_top = 0.549
 anchor_right = 0.49800003
 anchor_bottom = 0.549
-offset_left = -108.02601
+offset_left = -116.993996
 offset_top = -169.6
-offset_right = 107.97399
+offset_right = 118.006
 offset_bottom = 169.4
 theme_override_font_sizes/normal_font_size = 12
 theme_override_font_sizes/bold_font_size = 12
@@ -478,14 +576,4 @@ theme_override_font_sizes/bold_italics_font_size = 12
 theme_override_font_sizes/italics_font_size = 12
 theme_override_font_sizes/mono_font_size = 12
 
-[node name="BattleTimer" type="Timer" parent="." unique_id=573163317]
-wait_time = 60.0
-one_shot = true
-autostart = true
-
-[node name="BasicAttackTimer" type="Timer" parent="." unique_id=1690015104]
-wait_time = 10.0
-autostart = true
-
 [connection signal="button_up" from="ColorRect/Button" to="." method="_on_button_up_next_stage"]
-[connection signal="timeout" from="BasicAttackTimer" to="." method="_on_basic_attack_timer_timeout"]
