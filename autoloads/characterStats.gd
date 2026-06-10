@@ -1,17 +1,23 @@
 extends Node
 
-var nameChar;
-var hp;
-var maxHp;
-var slots = [];
-var money=50;
-var sprite;
-var startingHand;
-var cards = [];
+var nameChar
+var maxHp: int=100
+var hp: int = 100 :
+	set(valor):
+		hp = clampi(valor, 0, maxHp)
+		
+var slots = []
+var money: int = 50 :
+	set(valor):
+		money = maxi(valor, 0)
+		
+var sprite
+var startingHand
+var cards = []
 
-var cardActivated = 0;
-var dmgRecived = 0;
-var dmgDealed = 0;
+var cardActivated = 0
+var dmgRecived = 0
+var dmgDealed = 0
 
 
 func gameOver():
@@ -20,8 +26,8 @@ func gameOver():
 
 func setCharacter(char):
 	nameChar=char["NAME"]
-	hp=int(char["HP"])
 	maxHp=int(char["HP"])
+	hp=int(char["HP"])
 	slots=char["SLOTS"]
 	sprite=char["SPRITE"]
 	startingHand=char["SARTING_HAND"]

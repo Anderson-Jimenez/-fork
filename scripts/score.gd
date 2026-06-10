@@ -8,6 +8,9 @@ func _ready() -> void:
 	$TextSpam.play("text_spam")
 	$ScoreContent/AnimationPlayer.play("scorePopup")
 	$ScoreContent/Label/AnimationPlayer.play("text_wobble")
+	
+	var puntuacioTotal=(GameManager.totalWindows*100)+(GameManager.totalStages*1000)+(CharacterStats.money*10)
+	Db.afegir_puntuacio(CharacterStats.nameChar, puntuacioTotal, 1)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

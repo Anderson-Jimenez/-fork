@@ -125,7 +125,7 @@ offset_bottom = 407.0
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.84705883, 0.7058824, 0.99607843, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_con2f")
-text = "ESTADISTICAS"
+text = "PUNTACIONS	"
 
 [node name="Start" type="Button" parent="." unique_id=205049549]
 layout_mode = 0

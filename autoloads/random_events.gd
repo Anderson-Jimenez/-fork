@@ -18,8 +18,11 @@ func event_stg1_2(value):
 	var text=""
 	match value:
 		1:
-			CharacterStats.money += -100
-			return "Pagas per el office, -100€"
+			if CharacterStats.money<100:
+				return "No tens suficient diners per a pagar el office"
+			else:
+				CharacterStats.money += -100
+				return "Pagas per el office, -100€"
 		2:
 			return "Ignores el office i segueixes amb la teva vida"
 		3:
@@ -120,10 +123,15 @@ func event_stg1_6(value):
 			if probabilitat < 0.90:
 				
 				text="Borras el document i no passa res"
-			else:
-				CharacterStats.money+=-50
-				text="Perds 50 monedes"
 			
+			else:
+				if CharacterStats.money>50:
+					CharacterStats.money+=-50
+					text="Perds 50 monedes"
+				else:
+					CharacterStats.money=0
+					text="Perds totes les monedes"
+
 			return text
 		3:
 			return "Ignoras el document"
@@ -248,8 +256,12 @@ func event_stg2_4(value):
 				text="Aconsegueixes +100€"
 
 			else:
-				CharacterStats.money+=-100 
-				text="Perds -100€"
+				if CharacterStats.money>100:
+					CharacterStats.money+=-100 
+					text="Perds -100€"
+				else:
+					CharacterStats.money=0 
+					text="Perds tots els diners"
 
 			return text
 		2:
@@ -344,8 +356,12 @@ func event_stg3_2(value):
 	var text=""
 	match value:
 		1:
-			CharacterStats.hp = CharacterStats.maxHp
-			return "WinRar t'agraeix per comprar el winrar, et cura tota la vida"
+			if CharacterStats.money>100:
+				CharacterStats.money+=-100
+				CharacterStats.hp = CharacterStats.maxHp
+				return "WinRar t'agraeix per comprar el winrar, et cura tota la vida"
+			else:
+				return "No tens suficients diners per a comprar el winrar, el winrar s'enva trist"
 		2:
 			return "El winrar s'enva trist"
 
@@ -368,10 +384,16 @@ func event_stg3_3(value):
 				text="Trobes una contrasenya, guanyes +25 de vida maxima"
 				
 			else:
-				CharacterStats.hp +=-10
-				CharacterStats.maxHp+=-5
-				CharacterStats.money+=-50
-				text="Et perds en el laberint de arxius, perds 10 de vida, 5 de vida maxima i 50€"
+				if CharacterStats.money>50:
+					CharacterStats.hp +=-10
+					CharacterStats.maxHp+=-5
+					CharacterStats.money+=-50
+					text="Et perds en el laberint de arxius, perds 10 de vida, 5 de vida maxima i 50€"
+				else:
+					CharacterStats.hp +=-10
+					CharacterStats.maxHp+=-5
+					CharacterStats.money=0
+					text="Et perds en el laberint de arxius, perds 10 de vida, 5 de vida maxima i perds tots els diners"
 
 			return text
 		2:
@@ -382,18 +404,21 @@ func event_stg3_4(value):
 	var text=""
 	match value:
 		1:
-			CharacterStats.money+=-100
+			if CharacterStats.money>100:
+				CharacterStats.money+=-100
 
-			var probabilitat = randf()
+				var probabilitat = randf()
 
-			if probabilitat < 0.50:
-				CharacterStats.hp+=-20
-				text="Perds 20 de vida"
+				if probabilitat < 0.50:
+					CharacterStats.hp+=-20
+					text="Perds 20 de vida"
 
+				else:
+					CharacterStats.maxHp+=-10
+					text="Perds 10 de vida maxima"
 			else:
-				CharacterStats.maxHp+=-10
-				text="Perds 10 de vida maxima"
-
+				text="No tens diners suficients per a actuialitzar-ho"
+				
 			return text
 		2:
 			return "Decideixes no actualitzar-lo, +100€"
@@ -455,8 +480,18 @@ func event_stg3_8(value):
 	var text=""
 	match value:
 		1:
-			CharacterStats.money+=-200
-			return "Decideixes comprar la informació"
+			if CharacterStats.money>200:
+				CharacterStats.money+=-200
+				return "Decideixes comprar la informació"
+			
+			else:
+				var probabilitat = randf()
+			
+				if probabilitat < 0.30:
+					text="No tens suficients diners per a comprar la informació així que et fiques a buscar, aconsegueixes trobar la informació que necessitaves"
+				else:
+					CharacterStats.hp+=-25
+					text="No tens suficients diners per a comprar la informació així que et fiques a buscar, no aconsegueixes trobar la informació que necessitaves (-25 de vida)"
 		2:
 			var probabilitat = randf()
 			
