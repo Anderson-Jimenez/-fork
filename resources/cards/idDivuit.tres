@@ -9,4 +9,5 @@ name = "Kill -9"
 description = "Matas al enemigo despues de que pasen 59 segundos."
 rarity = 13
 type = "time"
+cooldown = 59.0
 metadata/_custom_type_script = "uid://bf0l5tn52vqvq"

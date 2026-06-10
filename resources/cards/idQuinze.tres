@@ -7,6 +7,6 @@ script = ExtResource("1_vsoo2")
 idName = "idQuinze"
 name = "Kernel Panic"
 description = "Cuando la vida baja del 30%, inflinges 15% de la vida del enemigo"
-rarity = 3
+rarity = 11
 type = "conditional"
 metadata/_custom_type_script = "uid://bf0l5tn52vqvq"
