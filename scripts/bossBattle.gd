@@ -22,6 +22,7 @@ func _process(delta: float) -> void:
 
 func _on_button_up_next_stage() -> void:
 	GameManager.currentStage+=1
+	GameManager.totalStages+=1
 	GameManager.nextStage()
 
 func load_enemies():

@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="RandomEventData" format=3 uid="uid://cfv46wj0vx7fh"]
+[gd_resource type="Resource" script_class="RandomEventData" format=3]
 
-[ext_resource type="Script" uid="uid://copokv2ebi74j" path="res://scripts/resources/ranodmEventData.gd" id="1_3e5vm"]
+[ext_resource type="Script" path="res://scripts/resources/ranodmEventData.gd" id="1_3e5vm"]
 
 [resource]
 script = ExtResource("1_3e5vm")
@@ -13,4 +13,5 @@ opcio2 = "Borrar el document"
 opcio2Value = 2
 opcio3 = "Ignorar el document"
 opcio3Value = 3
+happend = true
 metadata/_custom_type_script = "uid://copokv2ebi74j"

@@ -10,6 +10,7 @@ script = ExtResource("1_wfkbw")
 name = "outlook"
 hp = 100
 maxHp = 100
+passiveDmg = 50
 sprite = ExtResource("2_dme84")
 cards = Array[Resource]([ExtResource("1_vh8pi"), ExtResource("2_7pgob")])
 metadata/_custom_type_script = "uid://d1mmp7cbsynok"

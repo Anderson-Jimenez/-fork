@@ -6,7 +6,8 @@ extends Control
 func _ready() -> void:
 	var value = (GameManager.currentWindow / 30.0) * 100
 	quantity.text = str(int(value))
-	
+	var puntuacioTotal=(GameManager.totalWindows*100)+(GameManager.totalStages*1000)+(CharacterStats.money*10)
+	Db.afegir_puntuacio(CharacterStats.nameChar, puntuacioTotal, 0)
 	$ScoreContent/AnimationPlayer.play("scorePopup")
 
 

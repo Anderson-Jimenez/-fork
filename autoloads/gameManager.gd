@@ -4,7 +4,11 @@ extends Node
 var selectedCharacter = {}
 
 var currentWindow=0
-var currentStage=1
+var totalWindows=0 
+
+var currentStage=1 #D'aixo sols hi han 3, hi ha un lio de noms, stages en els altres llocs es del 1 al 30
+var totalStages=1 #D'aixo sols hi han 3, hi ha un lio de noms, stages en els altres llocs es del 1 al 30
+
 var stages={}
 var stageTypes=['battle','randomEvent']
 
@@ -24,6 +28,7 @@ func nextStage():
 		get_tree().change_scene_to_file("res://scenes/score.tscn")
 	
 	else:
+		totalWindows+=1
 		currentWindow+=1
 		get_tree().change_scene_to_file("res://scenes/"+stages[currentWindow]+".tscn")
 
