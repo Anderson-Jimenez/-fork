@@ -13,6 +13,8 @@ var cardNodes = {}
 
 func _ready():
 	var character = CharacterStats.getCharacter()
+	print(character["CARDS"])
+	#print(character["CARDS"][0].name)
 	for card in character["CARDS"]:
 		var card_node = card_scene.instantiate()
 		CardContainer.add_child(card_node)

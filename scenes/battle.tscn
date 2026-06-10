@@ -132,15 +132,67 @@ layout_mode = 2
 [node name="CardArea" type="Panel" parent="ColorRect/CharacterArea" unique_id=2068766322]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.675
-anchor_right = 0.5
-anchor_bottom = 0.675
-offset_left = -178.5
-offset_top = -132.20001
-offset_right = 177.5
-offset_bottom = 131.79999
+anchor_left = 0.514
+anchor_top = 0.666
+anchor_right = 0.514
+anchor_bottom = 0.666
+offset_left = -154.974
+offset_top = -133.02402
+offset_right = 155.026
+offset_bottom = 132.97598
 theme_override_styles/panel = SubResource("StyleBoxFlat_dn72j")
+
+[node name="slot1" type="Panel" parent="ColorRect/CharacterArea/CardArea" unique_id=867765708]
+custom_minimum_size = Vector2(100, 120)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.21900001
+anchor_top = 0.259
+anchor_right = 0.21900001
+anchor_bottom = 0.259
+offset_left = -51.964005
+offset_top = -49.376
+offset_right = 52.035995
+offset_bottom = 60.62401
+
+[node name="slot2" type="Panel" parent="ColorRect/CharacterArea/CardArea" unique_id=1060428246]
+custom_minimum_size = Vector2(100, 120)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.74700004
+anchor_top = 0.286
+anchor_right = 0.74700004
+anchor_bottom = 0.286
+offset_left = -49.932007
+offset_top = -56.075996
+offset_right = 50.067993
+offset_bottom = 53.923996
+
+[node name="slot3" type="Panel" parent="ColorRect/CharacterArea/CardArea" unique_id=2124331499]
+custom_minimum_size = Vector2(100, 120)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.216
+anchor_top = 0.76900005
+anchor_right = 0.216
+anchor_bottom = 0.76900005
+offset_left = -54.896004
+offset_top = -51.554016
+offset_right = 55.103996
+offset_bottom = 59.445984
+
+[node name="slot4" type="Panel" parent="ColorRect/CharacterArea/CardArea" unique_id=1519638038]
+custom_minimum_size = Vector2(100, 120)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.744
+anchor_top = 0.78200006
+anchor_right = 0.744
+anchor_bottom = 0.78200006
+offset_left = -49.864014
+offset_top = -55.012024
+offset_right = 50.135986
+offset_bottom = 54.987976
 
 [node name="Variables" type="ColorRect" parent="ColorRect" unique_id=1283931269]
 layout_mode = 1

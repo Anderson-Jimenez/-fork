@@ -13,7 +13,7 @@ var characters = {
 	"char1": {
 		"NAME": "Anderson",
 		"HP": "100",
-		"SLOTS": [{}, {}, {}, {}],
+		"SLOTS": [null, null, null, null],
 		"SPRITE": "res://images/p1.png",
 		"SARTING_HAND": 11,
 		"CARDS": []
@@ -22,7 +22,7 @@ var characters = {
 	"char2": {
 		"NAME": "Pep",
 		"HP": "200",
-		"SLOTS": [{}, {}, {}, {}],
+		"SLOTS": [null, null, null, null],
 		"SPRITE": "res://images/p2.png",
 		"SARTING_HAND": 12,
 		"CARDS": []
@@ -31,7 +31,7 @@ var characters = {
 	"char3": {
 		"NAME": "Luciano",
 		"HP": "50",
-		"SLOTS": [{}, {}, {}, {}],
+		"SLOTS": [null, null, null, null],
 		"SPRITE": "res://images/test.png",
 		"SARTING_HAND": 13,
 		"CARDS": []
