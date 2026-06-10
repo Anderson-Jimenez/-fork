@@ -26,8 +26,8 @@ func gameOver():
 
 func setCharacter(char):
 	nameChar = char["NAME"]
-	hp = int(char["HP"])
 	maxHp = int(char["HP"])
+	hp = int(char["HP"])
 	slots = [null, null, null, null]
 	sprite = char["SPRITE"]
 	startingHand = char["SARTING_HAND"]
