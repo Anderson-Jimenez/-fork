@@ -19,7 +19,6 @@ config/icon="res://icon.svg"
 
 CharacterStats="*uid://buw8qruadg71y"
 GameManager="*uid://0dffrhoypf5t"
-FuncionsCondicions="*uid://daeqynru56nf3"
 CardEffects="*uid://d30oc24x3joeb"
 RandomEvents="*uid://jpb8munrmftu"
 Db="*uid://cuq1783438qkh"
@@ -27,6 +26,10 @@ Db="*uid://cuq1783438qkh"
 [display]
 
 window/stretch/mode="canvas_items"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot-sqlite/plugin.cfg")
 
 [input]
 
