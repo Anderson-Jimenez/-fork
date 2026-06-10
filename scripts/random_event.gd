@@ -1,10 +1,14 @@
 extends Control
 
 @export var info : RandomEventData
+var eventFunction
+var eventResponse
+
 @onready var CurrentStage = $ColorRect/Stage
 @onready var Opcio1 = $ColorRect/Responses/Opcio1
 @onready var Opcio2 = $ColorRect/Responses/Opcio2
 @onready var Opcio3 = $ColorRect/Responses/Opcio3
+@onready var NextStage = $ColorRect/Responses/NextStage
 
 @onready var HP = $ColorRect/VBoxContainer/HBoxContainer/HP
 @onready var MaxHP = $ColorRect/VBoxContainer/HBoxContainer/maxHP
@@ -22,11 +26,15 @@ var rng = RandomNumberGenerator.new()
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#Agafo arxiu d'event aleatori
-	var resourceFiles = DirAccess.get_files_at("res://resources/randomEvent")
+	var stagePath = "res://resources/randomEvent/stage"+ str(GameManager.currentStage)
+	var resourceFiles = DirAccess.get_files_at(stagePath)
+	
 	var randomResource = resourceFiles[randi() % resourceFiles.size()]
+	var fullPath = stagePath + "/" + randomResource
 	
 	#Carrego el event escollit aleatoriament
-	info = load("res://resources/randomEvent/"+randomResource)
+	info = load(fullPath)
+	eventFunction = Callable(RandomEvents, info.id)
 	
 	CurrentStage.text=str(GameManager.currentStage)
 	Opcio1.text = info.opcio1
@@ -47,10 +55,36 @@ func _process(delta: float) -> void:
 
 #Trucar la funcio especifica del event al clicar una de les opcions
 func _on_opcio_1_button_up() -> void:
-	info.call(info.opcio1Value)
+	if info.opcio1Value==1:
+		eventResponse = eventFunction.call(int(info.opcio1Value))
+		Context.text = eventResponse
+		onOptionHide()
+	else:
+		pass
 	
 func _on_opcio_2_button_up() -> void:
-	info.call(info.opcio2Value)
-	
+	if info.opcio2Value==2:
+		eventResponse = eventFunction.call(int(info.opcio2Value))
+		Context.text = eventResponse
+		onOptionHide()
+	else:
+		pass
+		
 func _on_opcio_3_button_up() -> void:
-	info.call(info.opcio3Value)
+	if info.opcio3Value==3:
+		eventResponse = eventFunction.call(int(info.opcio3Value))
+		Context.text = eventResponse
+		onOptionHide()
+	else:
+		pass
+	
+	
+func onOptionHide():
+	Opcio1.visible = false
+	Opcio2.visible = false
+	Opcio3.visible = false
+	NextStage.visible = true
+
+
+func _on_next_stage_button_up() -> void:
+	GameManager.nextStage()

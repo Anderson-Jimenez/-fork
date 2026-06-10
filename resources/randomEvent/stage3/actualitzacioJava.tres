@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RandomEventData" format=3 uid="uid://cwpnopeva438q"]
+
+[ext_resource type="Script" uid="uid://copokv2ebi74j" path="res://scripts/resources/ranodmEventData.gd" id="1_t3rnm"]
+
+[resource]
+script = ExtResource("1_t3rnm")
+id = "event_stg3_4"
+name = "Actualització de Java"
+context = "El java esta demanant que l'actualitzis"
+opcio1 = "Pagar (100€)"
+opcio1Value = 1
+opcio2 = "No actualitzar"
+opcio2Value = 2
+metadata/_custom_type_script = "uid://copokv2ebi74j"

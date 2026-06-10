@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="RandomEventData" format=3 uid="uid://b1amk7tn8mmxe"]
+
+[ext_resource type="Script" uid="uid://copokv2ebi74j" path="res://scripts/resources/ranodmEventData.gd" id="1_ianwc"]
+
+[resource]
+script = ExtResource("1_ianwc")
+id = "event_stg1_5"
+name = "Document Word"
+context = "Et trobes un document word anomenat \"Hatim\""
+opcio1 = "Mirar el document"
+opcio1Value = 1
+opcio2 = "Borrar el document"
+opcio2Value = 2
+opcio3 = "Ignorar el document"
+opcio3Value = 3
+metadata/_custom_type_script = "uid://copokv2ebi74j"

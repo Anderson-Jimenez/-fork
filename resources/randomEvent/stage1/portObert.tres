@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="RandomEventData" format=3 uid="uid://claoropxpt7jb"]
+
+[ext_resource type="Script" uid="uid://copokv2ebi74j" path="res://scripts/resources/ranodmEventData.gd" id="1_b0qw0"]
+
+[resource]
+script = ExtResource("1_b0qw0")
+id = "event_stg1_1"
+name = "Port Obert"
+context = "Acabas de trobartre amb un port obert, que faras?"
+opcio1 = "Entrar en el Port"
+opcio1Value = 1
+opcio2 = "No entrar"
+opcio2Value = 2
+metadata/_custom_type_script = "uid://copokv2ebi74j"

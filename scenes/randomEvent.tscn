@@ -144,6 +144,21 @@ offset_bottom = -0.09200001
 theme_override_styles/normal = SubResource("StyleBoxFlat_o6fx3")
 metadata/_edit_use_anchors_ = true
 
+[node name="NextStage" type="Button" parent="ColorRect/Responses" unique_id=782686503]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0383077
+anchor_top = 0.39873952
+anchor_right = 0.96117955
+anchor_bottom = 0.6092941
+offset_left = 0.05999756
+offset_top = 0.09999943
+offset_right = 0.13998413
+offset_bottom = -0.012001038
+text = "Passar"
+metadata/_edit_use_anchors_ = true
+
 [node name="ColorRect4" type="ColorRect" parent="ColorRect" unique_id=1084786612]
 layout_mode = 1
 anchors_preset = -1
@@ -232,3 +247,4 @@ metadata/_edit_use_anchors_ = true
 [connection signal="button_up" from="ColorRect/Responses/Opcio1" to="." method="_on_opcio_1_button_up"]
 [connection signal="button_up" from="ColorRect/Responses/Opcio2" to="." method="_on_opcio_2_button_up"]
 [connection signal="button_up" from="ColorRect/Responses/Opcio3" to="." method="_on_opcio_3_button_up"]
+[connection signal="button_up" from="ColorRect/Responses/NextStage" to="." method="_on_next_stage_button_up"]
