@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://chwoq2q3amhux"]
+
+[ext_resource type="Script" uid="uid://bf0l5tn52vqvq" path="res://scripts/resources/cardData.gd" id="1_1quok"]
+
+[resource]
+script = ExtResource("1_1quok")
+idName = "idTretze"
+name = "Rubberbanding"
+description = "Cada vez que te atacan, tienes un 10% de probabilidad de devolver el daño al enemigo."
+rarity = 3
+type = "conditional"
+metadata/_custom_type_script = "uid://bf0l5tn52vqvq"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://2312arcnjqga"]
+
+[ext_resource type="Script" uid="uid://bf0l5tn52vqvq" path="res://scripts/resources/cardData.gd" id="1_hen4k"]
+
+[resource]
+script = ExtResource("1_hen4k")
+idName = "idCatorze"
+name = "LuckyOrNot"
+description = "Cada 10 segundos haces entre 1 y 10 de daño aleatoriamente."
+rarity = 12
+type = "time"
+cooldown = 5.0
+metadata/_custom_type_script = "uid://bf0l5tn52vqvq"

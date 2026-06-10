@@ -25,17 +25,17 @@ func gameOver():
 		get_tree().change_scene_to_file("res://scenes/score.tscn")
 
 func setCharacter(char):
-	nameChar=char["NAME"]
-	maxHp=int(char["HP"])
-	hp=int(char["HP"])
-	slots=char["SLOTS"]
-	sprite=char["SPRITE"]
-	startingHand=char["SARTING_HAND"]
-	cards = char["CARDS"] 
+	nameChar = char["NAME"]
+	hp = int(char["HP"])
+	maxHp = int(char["HP"])
+	slots = [null, null, null, null]
+	sprite = char["SPRITE"]
+	startingHand = char["SARTING_HAND"]
+	cards = char["CARDS"]
 
 func setStartingCards():
 	var results = []
-	var dir = DirAccess.open("res://resources/cards")  # la teva carpeta
+	var dir = DirAccess.open("res://resources/cards")
 	
 	if dir:
 		dir.list_dir_begin()
