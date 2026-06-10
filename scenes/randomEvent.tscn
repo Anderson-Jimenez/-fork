@@ -36,6 +36,18 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0.004333329, 0.13, 1)
 
+[node name="ColorRect2" type="ColorRect" parent="ColorRect" unique_id=553373743]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021701388
+anchor_top = 0.047839507
+anchor_right = 0.36052084
+anchor_bottom = 0.22403704
+offset_right = -0.32000732
+offset_bottom = -0.17599487
+color = Color(0, 0.4333334, 1, 0.3529412)
+metadata/_edit_use_anchors_ = true
+
 [node name="Character" type="ColorRect" parent="ColorRect" unique_id=1068112575]
 layout_mode = 1
 anchors_preset = -1
@@ -56,33 +68,23 @@ anchors_preset = -1
 anchor_top = 0.003
 anchor_right = 0.096
 anchor_bottom = 0.045
-offset_top = 0.055999994
-offset_right = 0.40799713
-offset_bottom = -0.16000175
+offset_left = 28.0
+offset_top = 58.056
+offset_right = 46.407997
+offset_bottom = 57.839996
 text = "Current window:"
 
 [node name="Stage" type="RichTextLabel" parent="ColorRect" unique_id=1061992253]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.098090276
-anchor_top = 0.0030864198
-anchor_right = 0.19645834
-anchor_bottom = 0.045024697
-offset_right = -0.3199997
-offset_bottom = -0.1760025
-metadata/_edit_use_anchors_ = true
-
-[node name="ColorRect2" type="ColorRect" parent="ColorRect" unique_id=553373743]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.021701388
-anchor_top = 0.047839507
-anchor_right = 0.36052084
-anchor_bottom = 0.22403704
-offset_right = -0.3199997
-offset_bottom = -0.1760025
-color = Color(0, 0.4333334, 1, 0.3529412)
-metadata/_edit_use_anchors_ = true
+anchor_left = 0.14022917
+anchor_top = 0.093
+anchor_right = 0.23822917
+anchor_bottom = 0.134
+offset_left = 0.45599365
+offset_top = -0.26399994
+offset_right = 0.5599823
+offset_bottom = 0.16799927
 
 [node name="ColorRect3" type="ColorRect" parent="ColorRect" unique_id=130366196]
 layout_mode = 1
@@ -243,6 +245,28 @@ metadata/_edit_use_anchors_ = true
 [node name="Money" type="Label" parent="ColorRect/VBoxContainer/HBoxContainer2" unique_id=348106363]
 layout_mode = 2
 metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="." unique_id=205620900]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.024305556
+anchor_top = 0.13425925
+anchor_right = 0.12100001
+anchor_bottom = 0.17
+offset_right = -0.39201355
+offset_bottom = -0.16000366
+text = "Current Stage:"
+
+[node name="Stage2" type="RichTextLabel" parent="." unique_id=717065831]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.12586805
+anchor_top = 0.13580246
+anchor_right = 0.18951389
+anchor_bottom = 0.17465432
+offset_right = -0.3199997
+offset_bottom = -0.1760025
+text_direction = 1
 
 [connection signal="button_up" from="ColorRect/Responses/Opcio1" to="." method="_on_opcio_1_button_up"]
 [connection signal="button_up" from="ColorRect/Responses/Opcio2" to="." method="_on_opcio_2_button_up"]
