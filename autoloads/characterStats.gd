@@ -7,7 +7,7 @@ var hp: int = 100 :
 		hp = clampi(valor, 0, maxHp)
 		
 var slots = []
-var money: int = 50 :
+var money: int = 100 :
 	set(valor):
 		money = maxi(valor, 0)
 		
