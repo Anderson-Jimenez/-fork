@@ -1,13 +1,15 @@
 [gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://dnkfmwyyvoaya"]
 
 [ext_resource type="Script" uid="uid://d1mmp7cbsynok" path="res://scripts/resources/enemyData.gd" id="1_bh6fm"]
+[ext_resource type="Resource" uid="uid://calhs53yr4v0b" path="res://resources/enemyCards/powerpoint1.tres" id="1_mea5i"]
+[ext_resource type="Resource" uid="uid://bas1q5v7ohmpq" path="res://resources/enemyCards/powerpoint2.tres" id="2_23koa"]
 [ext_resource type="Texture2D" uid="uid://bndeddgbnvmgx" path="res://images/enemies/powerPoint.jpeg" id="2_te6kr"]
 
 [resource]
 script = ExtResource("1_bh6fm")
 name = "PowerPoint"
-enemyStage = 1
 hp = 100
 maxHp = 100
 sprite = ExtResource("2_te6kr")
+cards = Array[Resource]([ExtResource("1_mea5i"), ExtResource("2_23koa")])
 metadata/_custom_type_script = "uid://d1mmp7cbsynok"

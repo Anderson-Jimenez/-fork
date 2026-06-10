@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EnemyCardData" format=3 uid="uid://bevka7pumev7s"]
+
+[ext_resource type="Script" uid="uid://xb8tlp1c5sqa" path="res://scripts/resources/enemyCardData.gd" id="1_435kn"]
+
+[resource]
+script = ExtResource("1_435kn")
+idName = "excel1"
+name = "Ataque1 excel"
+type = "time"
+description = "Infilges 5 de daño"
+metadata/_custom_type_script = "uid://xb8tlp1c5sqa"

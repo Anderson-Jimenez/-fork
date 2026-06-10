@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EnemyCardData" format=3 uid="uid://bodukk3fniuhs"]
+
+[ext_resource type="Script" uid="uid://xb8tlp1c5sqa" path="res://scripts/resources/enemyCardData.gd" id="1_0dc1r"]
+
+[resource]
+script = ExtResource("1_0dc1r")
+idName = "outlook2"
+name = "Ataque2 outlook"
+type = "heal"
+description = "Se cura 20 de vida"
+metadata/_custom_type_script = "uid://xb8tlp1c5sqa"

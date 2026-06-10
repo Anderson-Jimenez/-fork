@@ -8,6 +8,9 @@ bg_color = Color(0.92446744, 0.4446274, 0, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dn72j"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_th188"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
 [node name="Battle" type="Control" unique_id=416529015]
 layout_mode = 3
 anchors_preset = 15
@@ -67,7 +70,7 @@ text = "Next"
 [node name="CharacterArea" type="ColorRect" parent="ColorRect" unique_id=740927196]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.020833334
+anchor_left = 0.0234375
 anchor_top = 0.25
 anchor_right = 0.36052084
 anchor_bottom = 0.96632105
@@ -283,10 +286,10 @@ metadata/_edit_use_anchors_ = true
 [node name="enemySprite" type="TextureRect" parent="ColorRect/EnemyArea" unique_id=2006698831]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.60358053
-anchor_top = 0.010752688
-anchor_right = 0.9869105
-anchor_bottom = 0.1999785
+anchor_left = 0.30179024
+anchor_top = 0.03655914
+anchor_right = 0.6851202
+anchor_bottom = 0.22578496
 offset_right = 0.117996216
 offset_bottom = 0.0099983215
 expand_mode = 1
@@ -307,10 +310,10 @@ metadata/_edit_use_anchors_ = true
 [node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/EnemyArea" unique_id=1584183319]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.60358053
-anchor_top = 0.24967743
-anchor_right = 0.9874784
-anchor_bottom = 0.33546233
+anchor_left = 0.31202045
+anchor_top = 0.25612897
+anchor_right = 0.69591826
+anchor_bottom = 0.34191388
 offset_top = -0.099975586
 offset_right = -0.104034424
 offset_bottom = 0.010040283
@@ -335,16 +338,79 @@ layout_mode = 2
 [node name="BasicAttackProgress" type="ProgressBar" parent="ColorRect/EnemyArea" unique_id=2109006004]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.012787724
-anchor_top = 0.9311828
-anchor_right = 0.9868799
-anchor_bottom = 0.9891828
+anchor_left = 0.04347826
+anchor_top = 0.92258066
+anchor_right = 0.9792072
+anchor_bottom = 0.98273116
 offset_right = 0.12997437
 offset_bottom = 0.02999878
 max_value = 10.0
 value = 9.0
 show_percentage = false
 metadata/_edit_use_anchors_ = true
+
+[node name="enemyCardArea" type="Panel" parent="ColorRect/EnemyArea" unique_id=93588014]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.499
+anchor_top = 0.60200006
+anchor_right = 0.499
+anchor_bottom = 0.60200006
+offset_left = -144.10901
+offset_top = -100.93002
+offset_right = 149.89099
+offset_bottom = 133.06998
+theme_override_styles/panel = SubResource("StyleBoxFlat_th188")
+
+[node name="card1" type="Panel" parent="ColorRect/EnemyArea/enemyCardArea" unique_id=1561656842]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.19600001
+anchor_top = 0.34
+anchor_right = 0.19600001
+anchor_bottom = 0.34
+offset_left = -58.624004
+offset_top = -83.6
+offset_right = 65.37599
+offset_bottom = 83.399994
+
+[node name="Label" type="Label" parent="ColorRect/EnemyArea/enemyCardArea/card1" unique_id=645086180]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.21900001
+anchor_right = 0.5
+anchor_bottom = 0.21900001
+offset_left = -45.0
+offset_top = -11.532993
+offset_right = 43.0
+offset_bottom = 20.467007
+autowrap_mode = 2
+
+[node name="card2" type="Panel" parent="ColorRect/EnemyArea/enemyCardArea" unique_id=75793355]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.757
+anchor_top = 0.34800002
+anchor_right = 0.757
+anchor_bottom = 0.34800002
+offset_left = -58.558014
+offset_top = -84.43199
+offset_right = 68.441986
+offset_bottom = 80.479996
+
+[node name="Label" type="Label" parent="ColorRect/EnemyArea/enemyCardArea/card2" unique_id=2091363360]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.24900001
+anchor_right = 0.5
+anchor_bottom = 0.24900001
+offset_left = -40.5
+offset_top = -18.063087
+offset_right = 44.5
+offset_bottom = 17.936913
+autowrap_mode = 2
 
 [node name="Time" type="Label" parent="ColorRect" unique_id=96965700]
 layout_mode = 1

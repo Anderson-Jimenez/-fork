@@ -1,14 +1,16 @@
 [gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://dmjwnihydm7e6"]
 
+[ext_resource type="Resource" uid="uid://bevka7pumev7s" path="res://resources/enemyCards/excel1.tres" id="1_buu8k"]
 [ext_resource type="Script" uid="uid://d1mmp7cbsynok" path="res://scripts/resources/enemyData.gd" id="1_jkwtd"]
+[ext_resource type="Resource" uid="uid://dy38y6ggwvv58" path="res://resources/enemyCards/excel2.tres" id="2_864o0"]
 [ext_resource type="Texture2D" uid="uid://c8ow5uypwblnw" path="res://images/enemies/excel.jpeg" id="2_asu47"]
 
 [resource]
 script = ExtResource("1_jkwtd")
 name = "Excel"
-enemyStage = 1
 hp = 31
 maxHp = 31
-passiveDmg = 31
 sprite = ExtResource("2_asu47")
+passiveDmg = 31
+cards = Array[Resource]([ExtResource("1_buu8k"), ExtResource("2_864o0")])
 metadata/_custom_type_script = "uid://d1mmp7cbsynok"

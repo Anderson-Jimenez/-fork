@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://dg2g61qxb4dms"]
 
 [ext_resource type="Script" uid="uid://d1mmp7cbsynok" path="res://scripts/resources/enemyData.gd" id="1_8y8ml"]
+[ext_resource type="Resource" uid="uid://mcilntqpam5w" path="res://resources/enemyCards/clippy1.tres" id="1_fpw3c"]
 [ext_resource type="Texture2D" uid="uid://eajyl4at8c37" path="res://images/enemies/clippy.jpeg" id="2_e183r"]
+[ext_resource type="Resource" uid="uid://dgeqhykebm6m4" path="res://resources/enemyCards/clippy2.tres" id="2_wrohp"]
 
 [resource]
 script = ExtResource("1_8y8ml")
 name = "clippy"
-enemyStage = 2
-hp = 10
-maxHp = 10
 sprite = ExtResource("2_e183r")
+cards = Array[Resource]([ExtResource("1_fpw3c"), ExtResource("2_wrohp")])
 metadata/_custom_type_script = "uid://d1mmp7cbsynok"

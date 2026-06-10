@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EnemyCardData" format=3 uid="uid://kcpdot3suoa2"]
+
+[ext_resource type="Script" uid="uid://xb8tlp1c5sqa" path="res://scripts/resources/enemyCardData.gd" id="1_kr7wq"]
+
+[resource]
+script = ExtResource("1_kr7wq")
+idName = "word1"
+name = "Ataque1 word"
+type = "time"
+description = "Inflinge 5 de daño"
+metadata/_custom_type_script = "uid://xb8tlp1c5sqa"

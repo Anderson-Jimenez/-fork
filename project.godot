@@ -22,6 +22,8 @@ GameManager="*uid://0dffrhoypf5t"
 FuncionsCondicions="*uid://daeqynru56nf3"
 CardEffects="*uid://d30oc24x3joeb"
 RandomEvents="*uid://jpb8munrmftu"
+EnemyStats="*uid://bj0ex1sfk26uo"
+EnemyCardEffects="*uid://dfl1wcfs3sunt"
 
 [display]
 

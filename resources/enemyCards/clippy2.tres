@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="EnemyCardData" format=3 uid="uid://dgeqhykebm6m4"]
+
+[ext_resource type="Script" uid="uid://xb8tlp1c5sqa" path="res://scripts/resources/enemyCardData.gd" id="1_668ew"]
+
+[resource]
+script = ExtResource("1_668ew")
+idName = "clippy2"
+name = "Ataque2 clippy"
+type = "passive"
+cooldown = 0.0
+description = "Al recibir daño, 20% de probabilidad de devolver 5"
+metadata/_custom_type_script = "uid://xb8tlp1c5sqa"

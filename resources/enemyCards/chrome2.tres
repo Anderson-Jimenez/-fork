@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="EnemyCardData" format=3 uid="uid://p8jhj0p7qqd7"]
+
+[ext_resource type="Script" uid="uid://xb8tlp1c5sqa" path="res://scripts/resources/enemyCardData.gd" id="1_nx4mq"]
+
+[resource]
+script = ExtResource("1_nx4mq")
+idName = "chrome2"
+name = "Ataque2 chrome"
+type = "passive"
+cooldown = 10.0
+description = "cada 10s hace +1 de daño pasivo"
+metadata/_custom_type_script = "uid://xb8tlp1c5sqa"

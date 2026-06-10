@@ -1,14 +1,17 @@
 [gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://c1y2lkvfly8e5"]
 
+[ext_resource type="Resource" uid="uid://c6wu2pb7wjhop" path="res://resources/enemyCards/chrome1.tres" id="1_2jeun"]
 [ext_resource type="Script" uid="uid://d1mmp7cbsynok" path="res://scripts/resources/enemyData.gd" id="1_lthhg"]
 [ext_resource type="Texture2D" uid="uid://cr5nd4hpgra04" path="res://images/enemies/chrome.jpeg" id="2_gp5ld"]
+[ext_resource type="Resource" uid="uid://p8jhj0p7qqd7" path="res://resources/enemyCards/chrome2.tres" id="2_lswmj"]
 
 [resource]
 script = ExtResource("1_lthhg")
 name = "chrome"
-enemyStage = 2
 hp = 300
 maxHp = 300
-passiveDmg = 10
 sprite = ExtResource("2_gp5ld")
+passiveDmg = 10
+cards = Array[Resource]([ExtResource("1_2jeun"), ExtResource("2_lswmj")])
+enemyStage = 2
 metadata/_custom_type_script = "uid://d1mmp7cbsynok"

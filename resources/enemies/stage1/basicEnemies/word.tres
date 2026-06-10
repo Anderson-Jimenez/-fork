@@ -1,13 +1,15 @@
 [gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://qbewqwmwsqxo"]
 
+[ext_resource type="Resource" uid="uid://kcpdot3suoa2" path="res://resources/enemyCards/word1.tres" id="1_taim2"]
 [ext_resource type="Script" uid="uid://d1mmp7cbsynok" path="res://scripts/resources/enemyData.gd" id="1_wtw06"]
+[ext_resource type="Resource" uid="uid://whv4p2jndnq4" path="res://resources/enemyCards/word2.tres" id="2_gp5el"]
 [ext_resource type="Texture2D" uid="uid://brln37wuxc38l" path="res://images/enemies/wold.jpeg" id="2_td1d3"]
 
 [resource]
 script = ExtResource("1_wtw06")
 name = "word"
-enemyStage = 1
 hp = 100
 maxHp = 100
 sprite = ExtResource("2_td1d3")
+cards = Array[Resource]([ExtResource("1_taim2"), ExtResource("2_gp5el")])
 metadata/_custom_type_script = "uid://d1mmp7cbsynok"

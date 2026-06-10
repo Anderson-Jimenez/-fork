@@ -1,13 +1,16 @@
 [gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://ds6ra2qewwuu6"]
 
+[ext_resource type="Resource" uid="uid://bou74obdlkkyw" path="res://resources/enemyCards/skype1.tres" id="1_8gcpk"]
 [ext_resource type="Script" uid="uid://d1mmp7cbsynok" path="res://scripts/resources/enemyData.gd" id="1_wofuv"]
 [ext_resource type="Texture2D" uid="uid://cq5inbhesr3cw" path="res://images/enemies/skype.jpeg" id="2_1f3g7"]
+[ext_resource type="Resource" uid="uid://bmwiiedmvgqwp" path="res://resources/enemyCards/skype2.tres" id="2_gu8ki"]
 
 [resource]
 script = ExtResource("1_wofuv")
 name = "skipe"
-enemyStage = 2
 hp = 400
 maxHp = 400
 sprite = ExtResource("2_1f3g7")
+cards = Array[Resource]([ExtResource("1_8gcpk"), ExtResource("2_gu8ki")])
+enemyStage = 2
 metadata/_custom_type_script = "uid://d1mmp7cbsynok"
