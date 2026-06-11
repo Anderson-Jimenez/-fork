@@ -10,6 +10,8 @@ func event_stg1_1(value):
 	match value:
 		1:
 			GameManager.currentWindow = 29
+			GameManager.currentStage = 3
+			
 			return "Entras al port i et transporta a un lloc inexplorat"
 		2:
 			return "Ignores el port i segueixes"

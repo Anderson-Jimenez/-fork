@@ -35,14 +35,6 @@ border_width_right = 2
 border_width_bottom = 2
 border_color = Color(0.13333334, 0.827451, 0.93333334, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yqeox"]
-bg_color = Color(0.14901961, 0.3882353, 0.92156863, 0.4117647)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.14509805, 0.3882353, 0.92156863, 1)
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mhnvy"]
 bg_color = Color(0.8494162, 0.050708726, 0, 0.39100003)
 border_width_left = 2
@@ -139,23 +131,12 @@ theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxFlat_vjb58")
 text = "INICIAR SISTEMA"
 
-[node name="Settings" type="Button" parent="." unique_id=965060673]
-layout_mode = 0
-offset_left = 445.0
-offset_top = 423.0
-offset_right = 755.0
-offset_bottom = 459.0
-size_flags_horizontal = 3
-theme_override_colors/font_color = Color(0.06873588, 0.4275245, 0.837577, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_yqeox")
-text = "CONFIGURACION"
-
 [node name="Quit" type="Button" parent="." unique_id=270279086]
 layout_mode = 0
-offset_left = 445.0
-offset_top = 472.0
-offset_right = 755.0
-offset_bottom = 508.0
+offset_left = 446.0
+offset_top = 421.0
+offset_right = 756.0
+offset_bottom = 457.0
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.8509804, 0.050980393, 0, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_mhnvy")
@@ -163,5 +144,4 @@ text = "Salir"
 
 [connection signal="pressed" from="Stats" to="." method="_on_stats_pressed"]
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

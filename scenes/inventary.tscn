@@ -42,6 +42,7 @@ offset_left = 494.0
 offset_top = 168.0
 offset_right = 652.0
 offset_bottom = 289.0
+expand_mode = 1
 
 [node name="Label" type="Label" parent="ColorRect" unique_id=1033913147]
 layout_mode = 1

@@ -48,20 +48,6 @@ offset_bottom = -0.17599487
 color = Color(0, 0.4333334, 1, 0.3529412)
 metadata/_edit_use_anchors_ = true
 
-[node name="Character" type="ColorRect" parent="ColorRect" unique_id=1068112575]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.022111125
-anchor_top = 0.26508644
-anchor_right = 0.19511117
-anchor_bottom = 0.41651854
-offset_left = -0.47201538
-offset_top = 0.2239685
-offset_right = 0.2319336
-offset_bottom = 0.09597778
-color = Color(0, 0, 0, 1)
-metadata/_edit_use_anchors_ = true
-
 [node name="Label" type="Label" parent="ColorRect" unique_id=2084276907]
 layout_mode = 1
 anchors_preset = -1
@@ -245,6 +231,19 @@ metadata/_edit_use_anchors_ = true
 [node name="Money" type="Label" parent="ColorRect/VBoxContainer/HBoxContainer2" unique_id=348106363]
 layout_mode = 2
 metadata/_edit_use_anchors_ = true
+
+[node name="Character" type="TextureRect" parent="ColorRect" unique_id=1667813531]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.109000005
+anchor_top = 0.379
+anchor_right = 0.109000005
+anchor_bottom = 0.379
+offset_left = -83.56801
+offset_top = -56.59201
+offset_right = 82.43199
+offset_bottom = 56.40799
+expand_mode = 1
 
 [node name="Label2" type="Label" parent="." unique_id=205620900]
 layout_mode = 1

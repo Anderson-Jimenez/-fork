@@ -16,7 +16,7 @@ var eventResponse
 @onready var MaxHP = $ColorRect/VBoxContainer/HBoxContainer/maxHP
 @onready var Money = $ColorRect/VBoxContainer/HBoxContainer2/Money
 @onready var NameChar = $ColorRect/VBoxContainer/Name
-
+@onready var charSprite = $ColorRect/Character
 @onready var Title = $ColorRect/ColorRect4/Title
 @onready var Context = $ColorRect/ColorRect4/Context
 
@@ -52,7 +52,7 @@ func _ready() -> void:
 	HP.text = str(CharacterStats.hp)
 	MaxHP.text = str(CharacterStats.maxHp)
 	Money.text = str(CharacterStats.money)
-
+	charSprite.texture = load(CharacterStats.sprite)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
