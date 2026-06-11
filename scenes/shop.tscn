@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://eifr05hwg884"]
 
 [ext_resource type="Script" uid="uid://vqr7vuge2lj6" path="res://scripts/shop.gd" id="1_lx5au"]
+[ext_resource type="Texture2D" uid="uid://b68oxmyrg6ifq" path="res://images/storeClerk.png" id="2_xfvoa"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bdmwb"]
 bg_color = Color(0.18300292, 0.72100425, 5.7756904e-07, 1)
@@ -23,25 +24,38 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.08836722, 0.18808767, 0, 1)
 
+[node name="ColorRect2" type="ColorRect" parent="ColorRect" unique_id=236512937]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021701388
+anchor_top = 0.047839507
+anchor_right = 0.36052084
+anchor_bottom = 0.22403704
+offset_right = -0.32000732
+offset_bottom = -0.17599487
+color = Color(0, 0.4333334, 1, 0.3529412)
+metadata/_edit_use_anchors_ = true
+
 [node name="Label" type="Label" parent="ColorRect" unique_id=2092771366]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.0050000004
-anchor_right = 0.096
-anchor_bottom = 0.042716052
+anchor_left = 0.024305556
+anchor_top = 0.096049376
+anchor_right = 0.13800001
+anchor_bottom = 0.134
 offset_top = -0.24000025
-offset_right = 0.40799713
-offset_bottom = 0.3199997
-text = "Current Stage:"
+offset_right = -19.976013
+offset_bottom = 0.1680069
+text = "Current Window:"
 metadata/_edit_use_anchors_ = true
 
 [node name="Stage" type="RichTextLabel" parent="ColorRect" unique_id=2024997406]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.098090276
-anchor_top = 0.0046296297
-anchor_right = 0.19211806
-anchor_bottom = 0.043481484
+anchor_left = 0.1467014
+anchor_top = 0.094135806
+anchor_right = 0.24072917
+anchor_bottom = 0.13298766
 offset_right = -0.3199997
 offset_bottom = -0.1760025
 metadata/_edit_use_anchors_ = true
@@ -62,18 +76,6 @@ grow_vertical = 0
 theme_override_styles/normal = SubResource("StyleBoxFlat_bdmwb")
 text = "Next"
 
-[node name="ColorRect2" type="ColorRect" parent="ColorRect" unique_id=236512937]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.021701388
-anchor_top = 0.047839507
-anchor_right = 0.36052084
-anchor_bottom = 0.22403704
-offset_right = -0.3199997
-offset_bottom = -0.1760025
-color = Color(0, 0.4333334, 1, 0.3529412)
-metadata/_edit_use_anchors_ = true
-
 [node name="ColorRect3" type="ColorRect" parent="ColorRect" unique_id=354814761]
 layout_mode = 1
 anchors_preset = -1
@@ -84,6 +86,30 @@ anchor_bottom = 0.22403704
 offset_right = -0.3199997
 offset_bottom = -0.1760025
 color = Color(0.14999998, 1, 0, 0.1882353)
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect" unique_id=491732850]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6805556
+anchor_top = 0.2638889
+anchor_right = 0.96902776
+anchor_bottom = 0.4570617
+offset_right = -0.3199997
+offset_bottom = -0.1760025
+color = Color(0, 0.38431373, 0, 0.2901961)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="ColorRect" unique_id=1369747755]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.024305556
+anchor_top = 0.13425925
+anchor_right = 0.12100001
+anchor_bottom = 0.17
+offset_right = -0.39201355
+offset_bottom = -0.16000366
+text = "Current Stage:"
 metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=1234647778]
@@ -109,6 +135,53 @@ anchor_right = 0.9911704
 anchor_bottom = 0.96203005
 offset_right = -0.36700058
 offset_bottom = 0.099998474
+metadata/_edit_use_anchors_ = true
+
+[node name="StoreClerk" type="TextureRect" parent="." unique_id=607749028]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8602431
+anchor_top = 0.27314818
+anchor_right = 0.9648681
+anchor_bottom = 0.45041975
+offset_right = -0.5280762
+offset_bottom = 0.12799072
+texture = ExtResource("2_xfvoa")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CharacterSprite" type="TextureRect" parent="." unique_id=1339568043]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.021701388
+anchor_top = 0.2654321
+anchor_right = 0.159
+anchor_bottom = 0.4523704
+offset_right = -0.16801453
+offset_bottom = -0.13601685
+metadata/_edit_use_anchors_ = true
+
+[node name="ClerkText" type="RichTextLabel" parent="." unique_id=761673974]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6848958
+anchor_top = 0.31944445
+anchor_right = 0.8576528
+anchor_bottom = 0.45077777
+offset_right = -0.01599884
+offset_bottom = -0.10400009
+metadata/_edit_use_anchors_ = true
+
+[node name="Stage2" type="RichTextLabel" parent="." unique_id=1522811436]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.12586805
+anchor_top = 0.13580246
+anchor_right = 0.18951389
+anchor_bottom = 0.17465432
+offset_right = -0.3199997
+offset_bottom = -0.1760025
+text_direction = 1
 metadata/_edit_use_anchors_ = true
 
 [connection signal="button_up" from="ColorRect/Button" to="." method="_on_button_up_next_stage"]

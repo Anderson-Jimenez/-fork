@@ -4,7 +4,9 @@ extends Control
 var eventFunction
 var eventResponse
 
-@onready var CurrentStage = $ColorRect/Stage
+@onready var CurrentWindow = $ColorRect/Stage
+@onready var CurrentStage = $Stage2
+
 @onready var Opcio1 = $ColorRect/Responses/Opcio1
 @onready var Opcio2 = $ColorRect/Responses/Opcio2
 @onready var Opcio3 = $ColorRect/Responses/Opcio3
@@ -35,8 +37,10 @@ func _ready() -> void:
 	#Carrego el event escollit aleatoriament
 	info = load(fullPath)
 	eventFunction = Callable(RandomEvents, info.id)
-	
+
+	CurrentWindow.text=str(GameManager.currentWindow)
 	CurrentStage.text=str(GameManager.currentStage)
+	
 	Opcio1.text = info.opcio1
 	Opcio2.text = info.opcio2
 	Opcio3.text = info.opcio3

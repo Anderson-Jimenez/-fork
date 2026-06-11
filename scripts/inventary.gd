@@ -1,4 +1,6 @@
 extends Node
+@onready var CurrentWindow = $Stage
+@onready var CurrentStage = $Stage2
 @onready var CardContainer = $ColorRect/Inventory/HBoxContainer
 @onready var characterIdle = $ColorRect/Character
 @onready var slot1 = $ColorRect/Slot1/cardN
@@ -12,6 +14,8 @@ var currentSelectedCard = {}
 var cardNodes = {}
 
 func _ready():
+	CurrentWindow.text=str(GameManager.currentWindow)
+	CurrentStage.text=str(GameManager.currentStage)
 	var character = CharacterStats.getCharacter()
 	print(character["CARDS"])
 	#print(character["CARDS"][0].name)
