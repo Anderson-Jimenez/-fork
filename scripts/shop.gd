@@ -1,14 +1,21 @@
 extends Control
 
-@onready var CurrentStage = $ColorRect/Stage
+@onready var CurrentWindow = $ColorRect/Stage
+@onready var CurrentStage = $Stage2
 @onready var CardContainer = $ColorRect2/CardsOnSale
+@onready var CharacterSprite= $CharacterSprite
+
+@onready var ClerkText= $ClerkText
 
 var card_scene = preload("res://scenes/cardSceneShop.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	CurrentWindow.text=str(GameManager.currentWindow)
 	CurrentStage.text=str(GameManager.currentStage)
-
+	
+	CharacterSprite.texture= load(CharacterStats.sprite)
+	
 	var cards = []
 	var dir = DirAccess.open("res://resources/cards")
 
@@ -45,14 +52,22 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_card_clicked(card_data, preu, card_node):
+	ClerkText.text=""
+	ClerkText.visible_ratio = 0.0  # comença ocult
+	var tween = create_tween()
+	tween.tween_property(ClerkText, "visible_ratio", 1.0, 2.0)  # 2 segons
+	
 	print(preu)
 	print(CharacterStats.money)
+	
 	if CharacterStats.money >= preu:
 		CharacterStats.money+=-preu
 		CharacterStats.cards.append(card_data)
 		card_node.comprar()
+		ClerkText.text= "Gracies per comprar!"
 	else:
-		print("No tens la money")
+		ClerkText.text= "No tens suficients diners per a comprar la carta"
+		
 
 
 func _on_button_up_next_stage() -> void:

@@ -365,6 +365,50 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_8m5ol")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_gqg4k")
 text = "Assignar Slot 4"
 
+[node name="Label" type="Label" parent="." unique_id=1939417010]
+anchors_preset = -1
+anchor_top = 0.003
+anchor_right = 0.096
+anchor_bottom = 0.045
+offset_left = 31.0
+offset_top = 58.056
+offset_right = 49.407997
+offset_bottom = 57.839996
+text = "Current window:"
+
+[node name="Stage" type="RichTextLabel" parent="." unique_id=398754726]
+anchors_preset = -1
+anchor_left = 0.14022917
+anchor_top = 0.093
+anchor_right = 0.23822917
+anchor_bottom = 0.134
+offset_left = 3.4559937
+offset_top = -0.26399994
+offset_right = 3.5599976
+offset_bottom = 0.16799927
+
+[node name="Label2" type="Label" parent="." unique_id=304383337]
+anchors_preset = -1
+anchor_left = 0.024305556
+anchor_top = 0.13425925
+anchor_right = 0.12100001
+anchor_bottom = 0.17
+offset_left = 3.0
+offset_right = 2.6079865
+offset_bottom = -0.16000366
+text = "Current Stage:"
+
+[node name="Stage2" type="RichTextLabel" parent="." unique_id=84866842]
+anchors_preset = -1
+anchor_left = 0.12586805
+anchor_top = 0.13580246
+anchor_right = 0.18951389
+anchor_bottom = 0.17465432
+offset_left = 3.0
+offset_right = 2.6799927
+offset_bottom = -0.17599487
+text_direction = 1
+
 [connection signal="button_up" from="ColorRect/Button" to="." method="_on_button_button_up"]
 [connection signal="pressed" from="ColorRect/MoveToSlot1" to="." method="_on_move_to_slot_1_pressed"]
 [connection signal="pressed" from="ColorRect/MoveToSlot2" to="." method="_on_move_to_slot_2_pressed"]
